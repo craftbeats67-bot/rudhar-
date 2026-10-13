@@ -454,7 +454,7 @@ jobs:
           }
           RUDHAR_EOF
       - name: Build APK
-        run: gradle assembleDebug --no-daemon --stacktrace
+        run: if [ -f logo.png ]; then mkdir -p app/src/main/res/drawable; cp logo.png app/src/main/res/drawable/ic_launcher.png; sed -i 's|android:label="RUDHAR"|android:label="RUDHAR" android:icon="@drawable/ic_launcher"|' app/src/main/AndroidManifest.xml; fi; gradle assembleDebug --no-daemon --stacktrace
       - uses: actions/upload-artifact@v4
         with:
           name: RUDHAR-apk
