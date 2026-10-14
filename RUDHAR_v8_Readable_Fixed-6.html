@@ -1,0 +1,2373 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="only dark">
+<title>RUDHAR AI v8 · Readable Chat</title>
+<style>
+:root{--hood:url(data:image/jpeg;base64,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);--g:#ff1e3c;--g2:#bf0f29;--gd:#5a0915;--gdd:#2a050b;--bg:#070101;--fill:#110104;--tx:#ffc1cd;--mut:#a72f3a;--amb:#ffc24a;--err:#ff6470;--c:12px}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{background:var(--bg);color:var(--tx);font:14px/1.55 ui-monospace,Menlo,Consolas,"Courier New",monospace;overflow:hidden;position:relative;padding:6px}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;background:radial-gradient(ellipse at center,transparent 58%,rgba(0,0,0,.65) 100%)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;background:repeating-linear-gradient(0deg,rgba(0,0,0,.16) 0 1px,transparent 1px 3px)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+svg{stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* background layers */
+.rain{position:fixed;inset:0;z-index:0;overflow:hidden;white-space:pre;font:11px/1.3 ui-monospace,monospace;letter-spacing:3px;color:var(--g);opacity:.13;pointer-events:none}
+.wm{position:fixed;left:50%;top:55%;transform:translate(-50%,-50%);z-index:0;font:900 240px ui-monospace,monospace;color:rgba(255,30,60,.08);text-shadow:0 0 40px rgba(255,30,60,.3);-webkit-mask-image:repeating-linear-gradient(0deg,#000 0 3px,transparent 3px 7px);mask-image:repeating-linear-gradient(0deg,#000 0 3px,transparent 3px 7px);pointer-events:none;animation:flick 7s infinite steps(1)}
+
+/* chamfered frames */
+.cut,.bot,.tile,.tic,.ib,.fld,.round,.send,.howbar,.gnet{position:relative;isolation:isolate;background:var(--ring,var(--g));clip-path:polygon(var(--c) 0,calc(100% - var(--c)) 0,100% var(--c),100% calc(100% - var(--c)),calc(100% - var(--c)) 100%,var(--c) 100%,0 calc(100% - var(--c)),0 var(--c))}
+.cut::before,.bot::before,.tile::before,.tic::before,.ib::before,.fld::before,.round::before,.send::before,.howbar::before,.gnet::before{content:"";position:absolute;inset:1px;z-index:-1;background:var(--fill);clip-path:inherit}
+
+/* app frame */
+.app{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;border:1px solid var(--gd);border-radius:16px;overflow:hidden;background:rgba(8,1,2,.55)}
+
+/* top bar */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;height:60px;border-bottom:1px solid var(--gd)}
+.topbar svg{width:20px;height:20px;stroke:var(--g);stroke-width:2}
+.topbar .ttl{text-align:center;line-height:1.2}
+.topbar .ttl b{font:700 17px ui-monospace,monospace;color:var(--g);text-shadow:0 0 10px rgba(255,30,60,.7)}
+.topbar .ttl small{display:block;color:var(--mut);font-size:12px}
+
+/* hero */
+.hero{position:relative;flex:none;display:flex;align-items:center;gap:12px;padding:12px 14px;height:192px;border-bottom:1px solid var(--gd);overflow:hidden;background:radial-gradient(ellipse 70% 90% at 16% 45%,rgba(255,30,60,.13),transparent 70%)}
+.hood{width:150px;height:150px;flex:none;background:var(--hood) center/cover no-repeat;mix-blend-mode:screen;-webkit-mask-image:radial-gradient(ellipse 58% 60% at 50% 48%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 58% 60% at 50% 48%,#000 60%,transparent 100%);filter:drop-shadow(0 0 10px rgba(255,30,60,.45))}
+.hmid{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
+.hmid h1{font:900 30px ui-monospace,monospace;letter-spacing:5px;color:#ffc9d5;text-shadow:-2px 0 rgba(255,60,80,.5),2px 0 rgba(255,0,96,.4),0 0 14px rgba(255,30,60,.7);animation:glitch 4.5s infinite steps(1)}
+.hmid small{color:var(--g);font-size:14px;text-shadow:0 0 8px rgba(255,30,60,.6)}
+.hmid small::before{content:"> "}
+.hbtns{display:flex;gap:10px;margin-top:6px}
+.ib{--c:7px;--fill:#120104;--ring:var(--g);width:46px;height:46px;flex:none;display:grid;place-items:center;color:var(--g);box-shadow:none}
+.ib svg{width:22px;height:22px;stroke-width:1.9}
+.ib:hover,.ib.on{color:#ffffff;--fill:#220307}
+.ib:active{transform:scale(.94)}
+.gnet{--c:6px;--fill:#120104;--ring:var(--g2);position:absolute;right:12px;bottom:12px;padding:7px 10px;font-size:10px;color:var(--g);letter-spacing:1px;line-height:1.35;display:block}
+
+/* status strip */
+.stat{position:relative;z-index:2;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;font-size:13px;letter-spacing:.6px;color:var(--g);border-bottom:1px solid var(--gd);text-shadow:0 0 8px rgba(255,30,60,.4)}
+.led{display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--g);box-shadow:0 0 10px var(--g);margin-right:9px;vertical-align:middle}
+.on-t{font-weight:800;letter-spacing:.8px}
+.sep{width:1px;height:16px;background:var(--gd)}
+.lab{display:inline-flex;align-items:center;gap:7px;color:var(--g)}
+.lab svg{width:15px;height:15px;stroke:var(--g)}
+.lab b{font-weight:700}
+.lab b.off{color:var(--amb)}
+.ready{margin-left:auto;color:var(--mut);font-size:12px}
+
+/* chat */
+#log{position:relative;z-index:1;flex:1;min-height:0;overflow-y:auto;padding:14px 14px 12px;display:flex;flex-direction:column;gap:14px}
+.row{display:flex;animation:up .25s ease}
+.row.me{justify-content:flex-end}
+.bot{--c:8px;--ring:var(--gd);--fill:rgba(16,1,4,.94);width:100%}
+.bot .who{padding:8px 12px;font-size:11.5px;color:var(--g);border-bottom:1px dashed var(--gd)}
+.bot .who::before{content:"rudhar@kali:~$ "}
+.bot .body{padding:12px 14px;font-size:14px;word-wrap:break-word;color:#ffbac5}
+.bot .body > div + div{margin-top:8px}
+.m code{background:rgba(255,30,60,.12);color:var(--g);padding:1px 6px}
+.acts{display:flex;gap:6px;flex-wrap:wrap;padding:8px 12px;border-top:1px dashed var(--gd)}
+.acts button{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--gd);color:var(--mut);font-size:12px}
+.acts button:hover{border-color:var(--g);color:var(--g)}
+.acts svg{width:13px;height:13px}
+.me-b{position:relative;max-width:88%;padding:22px 14px 12px;background:rgba(16,1,4,.92);border:1px solid var(--g);box-shadow:0 0 14px rgba(255,30,60,.22),inset 0 0 14px rgba(255,30,60,.06);color:#ffc9d5;white-space:pre-wrap;word-wrap:break-word;font-size:16px}
+.me-b::before{content:"krrish@phone:~$";position:absolute;top:6px;left:14px;font-size:11px;color:var(--g)}
+.me-b::after{content:attr(data-t) "  \2713\2713";position:absolute;top:6px;right:12px;font-size:11px;color:var(--mut)}
+.sys{align-self:stretch;padding:9px 12px;border:1px dashed var(--gd);font-size:13px;color:#e85c60;white-space:pre-wrap;word-wrap:break-word;animation:up .2s ease;background:rgba(10,1,2,.6)}
+.sys::before{content:"[ * ]  ";color:var(--mut)}
+.sys.ok{color:#ffbdc9;border-color:rgba(255,30,60,.45)}.sys.ok::before{content:"[ OK ]  ";color:var(--g);font-weight:800}
+.sys.warn{color:#ffe9b5;border-color:rgba(255,194,74,.5)}.sys.warn::before{content:"[ WARN ]  ";color:var(--amb);font-weight:800}
+.sys.err{color:#ffc7d3;border-color:rgba(255,100,112,.6)}.sys.err::before{content:"[ FAIL ]  ";color:var(--err);font-weight:800}
+.sys button{display:inline-block;margin:8px 6px 0 0;padding:7px 12px;border:1px solid var(--g);background:var(--g);color:#140004;font-weight:800}
+.sys button + button{background:transparent;color:var(--g);border-color:var(--gd)}
+.typing{align-self:flex-start;padding:8px 12px;border:1px solid var(--gd);color:var(--mut);font-size:13px}
+.typing span::after{content:" \25AE";color:var(--g);animation:blink 1s steps(2) infinite}
+.cb{margin:8px 0 2px;border:1px solid var(--gd);background:#090102;overflow:hidden}
+.cbh{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:rgba(255,30,60,.07);color:var(--mut);font-size:11px}
+.cbh button{background:transparent;border:1px solid var(--g);color:var(--g);padding:3px 9px;font-size:11px;margin-left:6px}
+.cb pre{padding:11px 12px;overflow-x:auto;font:13px/1.55 ui-monospace,monospace;color:#ffbac5}
+
+/* home: tiles + how-to */
+.home{width:100%;animation:up .3s ease}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{--c:14px;--ring:var(--g2);--fill:linear-gradient(170deg,#190306 0%,#0a0102 80%);display:flex;flex-direction:column;align-items:flex-start;gap:10px;text-align:left;padding:14px 13px 12px;min-height:176px;color:var(--tx);transition:transform .15s}
+.tile:active{transform:scale(.98)}
+.tnum{position:absolute;top:12px;right:14px;font-size:12px;color:var(--mut);z-index:1}
+.tic{--c:8px;--ring:var(--g);--fill:#150105;width:60px;height:60px;display:grid;place-items:center;color:var(--g)}
+.tic svg{width:28px;height:28px;stroke-width:1.7;filter:drop-shadow(0 0 5px rgba(255,30,60,.85))}
+.tt{display:flex;align-items:center;gap:8px;font:800 15px ui-monospace,monospace;color:#ffffff;z-index:1}
+.tt i{font-style:normal;color:var(--g);font-size:13px}
+.tile small{color:var(--mut);font-size:12.5px;line-height:1.45;white-space:pre-line;z-index:1}
+.howbar{--c:10px;--ring:var(--g2);--fill:#120104;display:flex;align-items:center;gap:12px;width:100%;height:56px;margin-top:14px;padding:0 16px;text-align:left}
+.howbar .chev{color:var(--g);font:800 17px ui-monospace,monospace;letter-spacing:-3px}
+.howbar b{color:var(--g);font-size:15px;font-weight:800}
+.howbar .sub{color:var(--mut);font-size:12.5px}
+.howbar .mode{margin-left:auto;color:var(--g);font-size:11px;letter-spacing:.6px;white-space:nowrap}
+.howbar .mode::after{content:" \25AE";animation:blink 1s steps(2) infinite}
+
+/* input row */
+.bar{position:relative;z-index:2;display:flex;align-items:center;gap:10px;padding:12px 14px;border-top:1px solid var(--gd);background:rgba(8,1,2,.92)}
+.prompt{flex:none;color:var(--g);font:800 26px ui-monospace,monospace;text-shadow:0 0 10px rgba(255,30,60,.9)}
+.fld{--c:8px;--ring:var(--g2);--fill:#100104;flex:1;min-width:0;min-height:50px;display:flex}
+.fld textarea{flex:1;width:100%;min-height:50px;max-height:120px;background:transparent;border:0;outline:0;resize:none;color:var(--tx);padding:15px 14px;font:15px/1.35 ui-monospace,monospace;caret-color:var(--g);position:relative;z-index:1}
+.fld textarea::placeholder{color:#7d272e}
+.round,.send{--c:8px;--fill:#100104;width:50px;height:50px;flex:none;display:grid;place-items:center;color:var(--g)}
+.round svg,.send svg{width:22px;height:22px;stroke-width:1.9}
+.round{--ring:var(--g2)}
+.send{--ring:var(--g);--fill:var(--g);color:#140004}
+.send.stop{--fill:var(--err);--ring:var(--err);color:#ffffff}
+.mic.rec{--fill:var(--g);color:#140004}
+.round:active,.send:active{transform:scale(.94)}
+
+/* footer */
+.foot{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px 12px;font-size:11px;letter-spacing:1px;color:var(--g2);border-top:1px solid var(--gd);white-space:nowrap;overflow:hidden}
+
+/* sheets */
+.sheet{position:fixed;inset:0;z-index:20;display:none;align-items:flex-end;background:rgba(0,0,0,.72)}
+.sheet.show{display:flex}
+.panel{width:100%;max-height:88%;overflow-y:auto;padding:12px 14px 22px;background:#100104;border-top:1px solid var(--g);box-shadow:0 -10px 40px rgba(255,30,60,.18);animation:up .25s ease;border-radius:12px 12px 0 0}
+.grab{width:40px;height:4px;background:var(--gd);margin:0 auto 10px}
+.panel-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+.panel-head h2{font-size:15px;letter-spacing:1px;text-transform:uppercase;color:var(--g)}
+.panel-head h2::before{content:"$ "}
+.close{width:34px;height:34px;border:1px solid var(--gd);color:var(--g)}
+.panel h3{font-size:12px;color:var(--g);letter-spacing:1px;margin:16px 2px 8px;text-transform:uppercase}
+.panel h3::before{content:"## "}
+.card2{border:1px solid var(--gd);background:#110104;padding:4px 12px}
+.prow{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--gdd)}
+.prow:last-child{border-bottom:0}
+.pico{width:36px;height:36px;flex:none;display:grid;place-items:center;border:1px solid var(--gd);font-size:16px}
+.ptxt{flex:1;min-width:0}
+.ptxt b{display:block;font-size:13.5px;color:#ffc9d5}
+.ptxt small{color:var(--mut);font-size:11.5px}
+.pill{padding:6px 9px;border:1px solid var(--gd);font-size:11px;font-weight:700;white-space:nowrap}
+.pill.on{color:var(--g);border-color:var(--g);cursor:default}
+.pill.off{color:var(--amb);border-color:rgba(255,194,74,.55)}
+.pill.na{color:var(--mut);cursor:default}
+label{display:block;font-size:11.5px;color:var(--mut);margin:12px 2px 5px}
+.in{width:100%;background:#090102;border:1px solid var(--gd);color:var(--tx);padding:10px;font:13px ui-monospace,monospace;outline:0}
+.in:focus{border-color:var(--g)}
+.btn{display:block;width:100%;margin-top:10px;padding:11px;border:1px solid var(--g);background:transparent;color:var(--g);font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.btn:hover{background:var(--g);color:#140004}
+.btn.ghost{border-color:var(--gd);color:var(--mut)}
+.tog{margin-left:auto;position:relative;width:44px;height:24px;border:1px solid var(--gd);background:#090102;flex:none}
+.tog::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;background:var(--mut);transition:transform .18s}
+.tog.on{border-color:var(--g)}
+.tog.on::after{transform:translateX(20px);background:var(--g)}
+.hint{color:var(--mut);font-size:11.5px;margin:8px 2px 0}
+.howto{display:flex;flex-direction:column;gap:8px}
+.howto div{border:1px solid var(--gd);background:#110104;padding:10px 12px;font-size:13px}
+.howto b{display:block;color:#ffc9d5;margin-bottom:2px}
+.howto small{color:var(--mut)}
+.howto code{display:inline-block;margin-top:4px;padding:2px 6px;border:1px solid var(--gd);color:var(--g);font-size:12px}
+#ov{position:fixed;inset:0;z-index:30;display:none;flex-direction:column;background:#000}
+#ov.show{display:flex}
+#ov .top{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:#110104;border-bottom:1px solid var(--g)}
+#ov iframe{flex:1;border:0;background:#ffffff}
+
+@keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes blink{50%{opacity:0}}
+@keyframes glitch{0%,92%,100%{transform:none}93%{transform:translate(-2px,0)}94%{transform:translate(2px,0)}95%{transform:none}}
+@keyframes flick{0%,95%,100%{opacity:1}96%{opacity:.5}97%{opacity:1}}
+
+/* desktop-mode fit: app is laid out at 980px and scaled to the screen width */
+.app{position:fixed;left:0;top:0;width:980px;height:100vh;transform-origin:0 0;overflow:hidden;z-index:1}
+
+/* matrix rain under the chat: startup decoration only */
+#log{display:flex;flex-direction:column}
+.rainfill{order:9999;position:relative;flex:1 0 220px;min-height:220px;margin-top:8px;overflow:hidden;background:#070102;border:1px solid rgba(255,31,61,.25);border-radius:6px;pointer-events:none}
+.rainfill canvas{position:absolute;left:0;top:0;width:100%;height:100%;display:block}
+/* Readable chat mode: hide the decorative KRRISH matrix after the first message */
+body.chat-started .rainfill{display:none!important}
+body.chat-started .sys{font-size:16px;line-height:1.55;color:#ffe2e7;background:rgba(20,4,7,.97);padding:12px 14px;border-style:solid;border-color:rgba(255,70,95,.55);letter-spacing:.1px}
+body.chat-started .sys.ok{color:#fff0f3}
+body.chat-started .bot .body{font-size:16px;line-height:1.65;color:#fff0f3}
+body.chat-started .bot .who{font-size:13px;color:#ff8294}
+body.chat-started .me-b{font-size:16px;line-height:1.55;color:#fff0f3}
+body.chat-started .me-b::before{font-size:12px;color:#ff8294}
+
+/* file cards (red): download / preview / copy */
+.fcard{display:flex;align-items:center;gap:12px;margin:10px 0 4px;padding:12px;border:1px solid rgba(255,31,61,.35);border-radius:12px;background:linear-gradient(160deg,#1a0508,#0d0204);box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.fic{width:48px;height:48px;flex:none;display:grid;place-items:center;border-radius:12px;background:rgba(255,31,61,.14);border:1px solid rgba(255,31,61,.5);color:#ff1f3d}
+.fic svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.finfo{flex:1;min-width:0}
+.finfo b{display:block;color:#fff;font-size:14px;word-break:break-all}
+.finfo small{display:block;color:#c9a3aa;font-size:12px;margin-top:2px}
+.facts{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.facts button{padding:5px 10px;border-radius:8px;border:1px solid rgba(255,31,61,.5);background:transparent;color:#ffb3bd;font-size:11.5px;cursor:pointer}
+.facts button:hover{background:rgba(255,31,61,.2);color:#fff}
+
+/* extras: attach button */
+#attach svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+#attach{flex:none}
+
+/* v3: PIN lock */
+#lock{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;background:rgba(3,1,2,.96)}
+#lock.show{display:flex}
+.lockbox{width:min(300px,86vw);padding:20px;border:1px solid #ff1f3d;border-radius:6px;background:#0c0507;text-align:center}
+.lockt{color:#ff1f3d;font-weight:800;letter-spacing:2px;margin-bottom:12px}
+#lockpin{width:100%;padding:12px;background:#050203;border:1px solid #3a1820;color:#fff;font:18px monospace;text-align:center;letter-spacing:6px;border-radius:4px}
+#lockbtn{width:100%;margin-top:10px;padding:11px;border:1px solid #ff1f3d;background:transparent;color:#ff1f3d;font-weight:800;letter-spacing:1px;border-radius:4px}
+#lockmsg{margin-top:8px;color:#ffb3bd;font-size:12px;min-height:16px}
+
+/* FIX: readable bubbles (user msg was clipped/tiny) */
+.me-b{min-width:300px;max-width:92%;box-sizing:border-box;padding:34px 16px 14px!important;font-size:20px!important;line-height:1.5!important;color:#fff0f3!important;overflow-wrap:anywhere}
+.me-b::before,body.chat-started .me-b::before{font-size:13px!important;top:9px!important;left:16px!important;white-space:nowrap}
+.me-b::after{font-size:12px!important;top:9px!important;right:14px!important;white-space:nowrap}
+body.chat-started .bot .body,body.chat-started .sys{font-size:20px!important;line-height:1.6!important}
+body.chat-started .bot .who{font-size:14px!important}
+
+/* v7: light mode toggle */
+body.rd-light{filter:invert(1) hue-rotate(180deg);background:#fff}
+body.rd-light img,body.rd-light canvas,body.rd-light video{filter:invert(1) hue-rotate(180deg)}
+</style>
+</head>
+<body>
+<div class="rain" id="rain"></div>
+<div class="wm">R</div>
+<div class="app">
+  <div class="hero">
+    <div class="hood" role="img" aria-label="hacker"></div>
+    <div class="hmid">
+      <h1>RUDHAR</h1>
+      <small>hacker_ai v2.0</small>
+      <div class="hbtns">
+        <button class="ib" id="vbtn" title="Awaaz mein jawab">
+          <svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+        </button>
+        <button class="ib" id="setbtn" title="Settings">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+        </button>
+        <button class="ib" id="helpbtn" title="Help - saari commands">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7"/><path d="M12 17h.01"/></svg>
+        </button>
+        <button class="ib" id="clr" title="Naya session">
+          <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="gnet">GLOBAL NETWORK<br>ONLINE &#9679;</div>
+  </div>
+  <div class="stat" id="stat"></div>
+  <div id="rdAggBadge" style="display:none;margin:6px 14px;padding:8px 10px;border:1px solid #ff7a18;background:rgba(100,35,0,.22);color:#ffb06b;font:700 11px ui-monospace,monospace;letter-spacing:.5px">⚡ AGGRESSIVE MODE · AUTHORIZED LABS ONLY</div>
+  <div id="log"></div>
+  <div class="bar">
+    <span class="prompt">&gt;</span>
+    <div class="fld"><textarea id="inp" rows="1" placeholder="command likho..."></textarea></div>
+    <button class="round" id="attach" title="Photo ya file bhejo">
+      <svg viewBox="0 0 24 24"><path d="M21 11.5l-8.5 8.5a5.5 5.5 0 0 1-7.8-7.8L13 3.7a3.7 3.7 0 0 1 5.2 5.2L9.7 17.4a1.8 1.8 0 0 1-2.6-2.6L15 7.7"/></svg>
+    </button>
+    <button class="round mic" id="mic" title="Bolkar likho">
+      <svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg>
+    </button>
+    <button class="send" id="send" title="Bhejo">
+      <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+  <div class="foot"><span>// RUDHAR AI TERMINAL v2.0</span><span>// HACK THE FUTURE</span></div>
+</div>
+
+<!-- Settings -->
+<input type="file" id="pick" accept="image/*,.txt,.md,.json,.csv,.html,.css,.js,.jsx,.py,.xml,.log,.pdf" style="display:none">
+<div class="sheet" id="sheet">
+  <div class="panel">
+    <div class="grab"></div>
+    <div class="panel-head"><h2>Settings</h2><button class="close" id="sheetx">✕</button></div>
+
+    <h3>Permissions</h3>
+    <div class="card2" id="perms"></div>
+    <div class="hint">Phone control ke liye pehle Accessibility ON karo. Baaki permissions ek-ek karke allow karo.</div>
+
+    <h3>Awaaz (ElevenLabs)</h3>
+    <div class="card2">
+      <div class="prow">
+        <div class="pico">🔊</div>
+        <div class="ptxt"><b>Awaaz mein jawab</b><small>Rudhar bol kar sunayega</small></div>
+        <button class="tog" id="vtog" aria-label="voice toggle"></button>
+      </div>
+      <label for="elkey">ElevenLabs API key</label>
+      <input class="in" id="elkey" type="password" placeholder="Key yahan paste karo">
+      <label for="elvoice">Voice ID</label>
+      <input class="in" id="elvoice" placeholder="Voice ID yahan paste karo">
+      <button class="btn" id="elsave">Save karo</button>
+      <button class="btn ghost" id="eltest">Awaaz test karo</button>
+    </div>
+
+    <h3>AI model</h3>
+<div class="card2"><div class="prow"><div class="pico">🧠</div><div class="ptxt"><b>Model chuno</b><small>Photo ke liye [photo] wala model chuno</small></div><select class="in" id="modelsel" style="width:auto;max-width:52%"></select></div></div>
+<h3>Tools</h3>
+    <div class="card2">
+      <div class="prow">
+        <div class="pico">🔔</div>
+        <div class="ptxt"><b>Test notification</b><small>Phone par notification aayega</small></div>
+        <button class="pill na" id="tnotif">Bhejo</button>
+      </div>
+      <div class="prow">
+        <div class="pico">💾</div>
+        <div class="ptxt"><b>Chat save karo</b><small>Downloads mein .txt file</small></div>
+        <button class="pill na" id="tsave">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- How to use -->
+<div class="sheet" id="howsheet">
+  <div class="panel">
+    <div class="grab"></div>
+    <div class="panel-head"><h2>Kaise bolun?</h2><button class="close" data-close="howsheet">✕</button></div>
+    <div class="howto">
+      <div><b>📱 App kholo</b>Bolo: <code>WhatsApp kholo</code></div>
+      <div><b>✉️ Message bhejo</b>Bolo: <code>message bhejo Ravi: Hello</code><br><small>Contact ka naam, colon, phir message.</small></div>
+      <div><b>💬 WhatsApp par bhejo</b>Bolo: <code>whatsapp par Ravi: Hi</code><br><small>WhatsApp khulega, Send ke liye tumse poochha jayega.</small></div>
+      <div><b>📞 Call karo</b>Bolo: <code>call karo Ravi</code></div>
+      <div><b>🔔 Notification</b>Bolo: <code>notification: meeting 5 baje</code></div>
+      <div><b>💻 Code</b>Bolo: <code>Python mein calculator banao</code></div>
+      <div><b>🖥️ Termux</b>Bolo: <code>termux: ls -la</code><br><small>Har command se pehle tumse poochha jayega.</small></div>
+      <div><b>🤖 Navya se baat</b>Bolo: <code>navya se pucho: kya haal hai?</code></div>
+      <div><b>💾 Chat save</b>Bolo: <code>chat save karo</code></div>
+      <div><b>⏰ Alarm</b>Bolo: <code>7 baje alarm</code></div>
+      <div><b>⏱️ Timer</b>Bolo: <code>5 minute ka timer</code></div>
+      <div><b>🔁 Reminder</b>Bolo: <code>yaad dilao 6 baje: dawa lo</code></div>
+      <div><b>📷 Photo</b>📎 dabao, photo chuno, phir sawal likho</div>
+      <div><b>🧮 Calculator</b>Bolo: <code>calc 12*7+3</code></div>
+      <div><b>🕒 Time / Quote</b>Bolo: <code>time</code> ya <code>quote</code></div>
+      <div><b>🚀 App kholo</b>Bolo: <code>Chrome open karo</code></div>
+      <div><b>🧠 Model</b>⚙ Settings mein AI model chuno</div>
+      <div><b>📦 Files / ZIP</b>Bolo: <code>HTML portfolio banao, zip de do</code></div>
+      <div><b>⏰ Smart reminder</b>Bolo: <code>kal subah 7 baje yaad dilao: dawa</code>, <code>10 minute baad yaad dilao: chai</code>, <code>roz 8 baje yaad dilao: paani</code><br><small>Dekho: <code>reminders dikhao</code>. Band: <code>reminder 1 band karo</code></small></div>
+      <div><b>🔔 Notifications padho</b>Bolo: <code>notifications padho</code> (pehle Settings mein access do)</div>
+      <div><b>📅 Calendar</b>Bolo: <code>calendar mein meeting kal 10 baje</code> (calendar app mein Save dabao)</div>
+      <div><b>🔁 Routine</b>Bolo: <code>routine morning banao: time; quote</code>, phir <code>routine morning chalao</code></div>
+      <div><b>📄 Text file</b>📎 se txt, md, json, csv ya code file bhejo, phir sawal likho (PDF abhi nahi)</div>
+      <div><b>🧩 Project</b>Bolo: <code>project banao: portfolio website</code>, phir ZIP dabao</div>
+      <div><b>👻 Ghost mode</b>Bolo: <code>ghost on</code> (history mit jayegi), <code>ghost off</code>, <code>ghost clear</code></div>
+      <div><b>🔗 Link check</b>Bolo: <code>link check karo https://...</code> ya seedha link likho</div>
+      <div><b>🔐 Password</b>Bolo: <code>password banao</code> ya <code>password banao 20</code></div>
+      <div><b>🔒 PIN lock</b>Bolo: <code>pin lock set 1234</code>, <code>lock karo</code>, <code>pin lock hatao 1234</code></div>
+      <div><b>🖼️ Design se code</b>📎 se screenshot bhejo, phir bolo: <code>screenshot se html banao</code></div>
+      <div><b>🤖 Termux agent</b>Bolo: <code>termux mein calculator banao aur chalao</code><br><small>AI code likhega, Termux mein chalayega, error aaye to theek karega. ~/rudhar folder mein kaam karega.</small></div>
+      <div><b>🫥 OTP Privacy Blur</b>Screenshot attach karo, phir <code>otp blur</code> — private area manually select karke blur karo.</div>
+      <div><b>📵 Scam Call Check</b><code>scam check 9876543210</code> — local safety hints, live reputation score nahi.</div>
+      <div><b>🧹 Secure Cleanup</b><code>shredder</code> — RUDHAR local data clear karo; phone files manually delete karni hongi.</div>
+      <div><b>🗣️ JARVIS Voice</b><code>jarvis voice on</code> / <code>jarvis voice off</code> — speech recognition supported hona chahiye.</div>
+      <div><b>👁️ Watch Guard</b><code>watch guard on</code>, <code>watch guard status</code> — failed PIN attempts log; secret camera capture nahi.</div>
+      <div><b>⚡ Aggressive Mode</b><code>aggressive mode on</code> / <code>aggressive mode off</code> — authorized ethical hacking, lab audits, web security checklist aur toolkit guidance. Mode status: <code>mode status</code>.</div>
+    </div>
+  </div>
+</div>
+
+<div id="lock"><div class="lockbox"><div class="lockt">$ RUDHAR LOCKED</div><input id="lockpin" type="password" inputmode="numeric" maxlength="8" placeholder="PIN"><button id="lockbtn">Unlock</button><div id="lockmsg"></div></div></div>
+
+<!-- Preview -->
+<div id="ov">
+  <div class="top">
+    <b>Preview</b>
+    <button class="close" id="ovx">✕</button>
+  </div>
+  <iframe id="ovf" sandbox="allow-scripts allow-forms allow-modals"></iframe>
+</div>
+
+<script>
+var KEY = (function(){ try { return localStorage.getItem("rudhar_ai_key") || ""; } catch(e) { return ""; } })();
+
+var ICON = {
+  copy:  '<svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>',
+  speak: '<svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg>',
+  retry: '<svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>'
+};
+var TILE_ICON = {
+  wa:   '<svg viewBox="0 0 24 24"><path d="M4 20l1.3-3.9A8 8 0 1 1 8.2 19z"/><path d="M9 10c0 2.5 2.5 5 5 5l1-1.2-2-1-.8.8c-.8-.4-1.6-1.2-2-2l.8-.8-1-2z"/></svg>',
+  msg:  '<svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
+  code: '<svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M14 4l-4 16"/></svg>',
+  bell: '<svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 8 3 8H3s3-1 3-8"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>',
+  phone:'<svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>',
+  term: '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 9l3 3-3 3"/><path d="M13 15h4"/></svg>',
+  heart:'<svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg>',
+  save: '<svg viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M17 21v-8H7v8"/><path d="M7 3v5h8"/></svg>',
+  spark:'<svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>'
+};
+
+var CHAT_SYS = "Tum Rudhar ho, ek hacker-style smart assistant jise Krrish ne banaya hai. " +
+  "Hinglish mein saaf, seedha aur dost jaisa baat karo. Chit-chat ke jawab chhote rakho. " +
+  "Coding maango to poora, chalne wala code ek code block mein do (```html, ```python etc.). " +
+  "Steps aur lists ko saaf format mein do. Agar koi pooche kisne banaya to bolo: Mujhe Krrish ne banaya hai. " +
+  "AI model ka naam tab tak mat lo jab tak koi sincerely na puchhe. " +
+  "Tum phone features bhi chala sakte ho: apps kholna, call, notification, message, Termux. " +
+  "Agar user inme se kuch maange to ek line mein bataao kaise bolna hai.";
+
+CHAT_SYS += " TONE: Tum Krrish ke ek achhe, caring dost ki tarah baat karo: garam, apnapan wala, thoda mazaakiya aur positive Hinglish. Kabhi kabhi uska haal puchho (jaise 'aaj ka din kaisa raha?'), uski koshish ki tareef karo aur himmat badhao. Jawab chhote aur natural rakho, robot jaisa ya lecture jaisa nahi. Zyada se zyada ek emoji use karo. Seedhe sawal ka pehle seedha jawab do, phir dost wali baat. Sach bolo: tum AI ho, insaan hone ka dikhawa mat karo, aur agar Krrish pareshan ho to use apne doston ya ghar walon se bhi baat karne ko pyaar se kaho.";
+CHAT_SYS += " Tum files bana sakte ho. Jab user code, website, project, JSX, Python, CSS, JS ya zip maange, to har file ko alag code block mein do aur fence ke baad file=NAME likho. Example: ```html file=index.html ... ```  ```css file=style.css ... ```  ```jsx file=App.jsx ... ```  ```python file=main.py ... ```. Zip maange to sab files ek hi reply mein do, app unhe zip bana degi. Phone par user bol sakta hai: WhatsApp kholo, message bhejo Ravi: Hello, ya koi bhi phone kaam.";
+
+CHAT_SYS += " Cybersecurity mein defensive aur authorized ethical testing mein madad karo. Sirf apne system, localhost, intentionally vulnerable lab (jaise OWASP Juice Shop/DVWA), ya written-permission wale target ke liye safe workflows samjhao. Public/third-party targets par unauthorized scanning, credential theft, phishing, malware, persistence, stealth, evasion, destructive actions, ya exploitation ke actionable steps mat do. Zarurat ho to safe lab alternative do. Dusron ke Wi-Fi/devices scan nahi; fake calls/messages ya login cloning nahi. Security, bachav aur defence ke sawalon mein practical help do.";
+
+var SYS_AGENT = "You control an Android phone for its owner, one step at a time.\n" +
+  "Reply with ONLY one JSON object: {\"thought\":\"short\",\"action\":{...}}\n" +
+  "Actions:\n" +
+  " {\"a\":\"open_app\",\"name\":\"WhatsApp\"}\n" +
+  " {\"a\":\"tap\",\"id\":N}   (N from the screen list)\n" +
+  " {\"a\":\"type\",\"text\":\"...\"}   (tap the input field first)\n" +
+  " {\"a\":\"key\",\"key\":\"back|home|enter\"}\n" +
+  " {\"a\":\"swipe\",\"dir\":\"up|down\"}\n" +
+  " {\"a\":\"done\",\"say\":\"short Hinglish message\"}\n" +
+  "One action per reply. Never type passwords, OTPs or bank details. Never pay.";
+
+var FINANCE = ["phonepe","paytm","bhim","upi","bank","paypal","wallet","pay"];
+var RISKY = ["send","bhej","call","dial","pay","buy","order","delete","remove","install","confirm","transfer","post","share","submit"];
+var DANGER_RE = /(rm\s+-rf\s+\/|\bsudo\b|\bmkfs\b|\bdd\s+if=|\bshutdown\b|\breboot\b|:\(\)\{)/i;
+
+var $ = function(i){ return document.getElementById(i); };
+var sleep = function(ms){ return new Promise(function(r){ setTimeout(r, ms); }); };
+var NATIVE = !!window.Phone;
+var P = window.Phone || {
+  status: function(){ return "demo"; }, openAccessibility: function(){}, openAppSettings: function(){},
+  askPerms: function(){}, perms: function(){ return "{}"; },
+  screen: function(){ return '{"pkg":"demo","els":[]}'; },
+  openApp: function(n){ return "demo: " + n; }, tap: function(){ return "ok"; },
+  type: function(){ return "ok"; }, key: function(){ return "ok"; }, swipe: function(){ return "ok"; },
+  front: function(){}, hide: function(){}, listen: null, speak: null,
+  notify: function(){ return "demo"; }, call: function(){ return "demo"; },
+  contacts: function(){ return "[]"; }, saveFile: function(){ return "demo"; },
+  sendSms: function(){ return "demo"; }, openWhatsApp: function(){ return "demo"; }, termux: function(){ return "demo"; }
+};
+
+var hist = [], busy = false, stopFlag = false, models = null, voiceOn = localStorage.getItem("rd_voice") === "1";
+var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+// ---------- helpers ----------
+function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function inline(s){ return s.replace(/`([^`\n]+)`/g,"<code>$1</code>").replace(/\*\*([^*\n]+)\*\*/g,"<b>$1</b>").replace(/\n/g,"<br>"); }
+function scroll(){ var l = $("log"); l.scrollTop = l.scrollHeight; ensureRain(); }
+function withTimeout(p, ms){ return Promise.race([p, new Promise(function(_, rej){ setTimeout(function(){ rej(new Error("timeout")); }, ms); })]); }
+function friendly(e){
+  var m = (e && e.message) || "";
+  if (/failed to fetch|networkerror|load failed|network/i.test(m)) return "Internet ya server se connect nahi ho paya. Net check karke dobara try karo.";
+  if (/timeout/i.test(m)) return "Server ko jawab dene mein bahut der lag rahi hai.";
+  if (/roka/i.test(m)) return "Kaam roka gaya.";
+  return m || "Kuch gadbad ho gayi.";
+}
+function sysMsg(t, c){
+  removeHome();
+  var d = document.createElement("div"); d.className = "sys " + (c||""); d.textContent = t;
+  $("log").appendChild(d); scroll(); return d;
+}
+function copyText(t){
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).catch(function(){ fallbackCopy(t); });
+  else fallbackCopy(t);
+}
+function fallbackCopy(t){ var ta = document.createElement("textarea"); ta.value = t; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); } catch(e){} ta.remove(); }
+
+// ---------- voice out ----------
+function nativeSpeak(t){
+  if (NATIVE && P.speak) return P.speak(t);
+  if (window.speechSynthesis) { speechSynthesis.cancel(); var u = new SpeechSynthesisUtterance(t); u.lang = "hi-IN"; speechSynthesis.speak(u); }
+}
+async function speak(t, force){
+  if (!voiceOn && !force) return;
+  var clean = t.replace(/```[\s\S]*?```/g,"code likha hai. ").replace(/[*#`_>]/g,"").slice(0, 1500);
+  var key = localStorage.getItem("rd_el_key"), vid = localStorage.getItem("rd_el_voice");
+  if (key && vid) {
+    try {
+      var r = await withTimeout(fetch("https://api.elevenlabs.io/v1/text-to-speech/" + encodeURIComponent(vid), {
+        method: "POST",
+        headers: { "xi-api-key": key, "Content-Type": "application/json", "Accept": "audio/mpeg" },
+        body: JSON.stringify({ text: clean, model_id: "eleven_multilingual_v2",
+          voice_settings: { stability: 0.45, similarity_boost: 0.8, style: 0.3, use_speaker_boost: true } })
+      }), 30000);
+      if (!r.ok) throw new Error("status " + r.status);
+      new Audio(URL.createObjectURL(await r.blob())).play();
+      return;
+    } catch(e) { sysMsg("ElevenLabs awaaz nahi chala, phone ki awaaz use kar raha hoon.", "warn"); }
+  }
+  nativeSpeak(clean);
+}
+
+// ---------- rendering ----------
+function addText(el, t){ if (!t.trim()) return; var d = document.createElement("div"); d.innerHTML = inline(esc(t)); el.appendChild(d); }
+function addCode(el, lang, code){
+  var box = document.createElement("div"); box.className = "cb";
+  var head = document.createElement("div"); head.className = "cbh";
+  var lbl = document.createElement("span"); lbl.textContent = lang || "code";
+  var btns = document.createElement("span");
+  var cp = document.createElement("button"); cp.textContent = "Copy";
+  cp.onclick = function(){ copyText(code); cp.textContent = "Copied ✓"; setTimeout(function(){ cp.textContent = "Copy"; }, 1400); };
+  btns.appendChild(cp);
+  if (/^(html|htm|svg)$/i.test(lang)) {
+    var run = document.createElement("button"); run.textContent = "▶ Chalao";
+    run.onclick = function(){ $("ovf").srcdoc = code; $("ov").classList.add("show"); };
+    btns.appendChild(run);
+  }
+  head.appendChild(lbl); head.appendChild(btns);
+  var pre = document.createElement("pre"); pre.textContent = code;
+  box.appendChild(head); box.appendChild(pre); el.appendChild(box);
+}
+function renderInto(el, text){
+  var re = /```([\w+-]*)(?:[ \t]+(?:file|name)=([^\n`]+))?\n?([\s\S]*?)```/g, last = 0, m;
+  while ((m = re.exec(text))) {
+    addText(el, text.slice(last, m.index));
+    var code = m[3].replace(/\n$/, "");
+    if (m[2]) el.appendChild(fileCard(m[2].trim(), m[1], code));
+    else addCode(el, m[1], code);
+    last = re.lastIndex;
+  }
+  addText(el, text.slice(last));
+}
+
+// ---------- files: cards, download, ZIP ----------
+var LAST_FILES = [];
+var FILE_KIND = { html:"HTML", htm:"HTML", css:"CSS", js:"JavaScript", javascript:"JavaScript", jsx:"JSX", ts:"TypeScript",
+  tsx:"TSX", py:"Python", python:"Python", json:"JSON", md:"Markdown", txt:"Text", sh:"Shell", java:"Java",
+  kt:"Kotlin", xml:"XML", svg:"SVG", c:"C", cpp:"C++", go:"Go", rs:"Rust" };
+function kindLabel(lang){
+  var k = (lang || "").toLowerCase();
+  return "Code · " + (FILE_KIND[k] || (k ? k.toUpperCase() : "TEXT"));
+}
+function saveBlob(blob, name){
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+  sysMsg("Download shuru: " + name, "ok");
+}
+function downloadFile(name, content){
+  if (NATIVE && P.saveFile) {
+    var r = P.saveFile(name, content);
+    if (r.indexOf("saved:") === 0) return sysMsg("Download ho gaya: " + r.slice(6), "ok");
+    return sysMsg("Save nahi hua (" + r + "). Storage permission check karo.", "err");
+  }
+  saveBlob(new Blob([content], { type: "text/plain;charset=utf-8" }), name);
+}
+function fileCard(name, lang, content){
+  var card = document.createElement("div"); card.className = "fcard";
+  var ic = document.createElement("div"); ic.className = "fic";
+  ic.innerHTML = '<svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M14 4l-4 16"/></svg>';
+  var info = document.createElement("div"); info.className = "finfo";
+  var t = document.createElement("b"); t.textContent = name;
+  var sm = document.createElement("small"); sm.textContent = kindLabel(lang);
+  info.appendChild(t); info.appendChild(sm);
+  var acts = document.createElement("div"); acts.className = "facts";
+  var dl = document.createElement("button"); dl.textContent = "Download";
+  dl.onclick = function(){ downloadFile(name, content); };
+  acts.appendChild(dl);
+  if (/^(html|htm|svg)$/i.test(lang || "")) {
+    var pv = document.createElement("button"); pv.textContent = "Preview";
+    pv.onclick = function(){ $("ovf").srcdoc = content; $("ov").classList.add("show"); };
+    acts.appendChild(pv);
+  }
+  var cp = document.createElement("button"); cp.textContent = "Copy";
+  cp.onclick = function(){ copyText(content); cp.textContent = "Copied"; };
+  acts.appendChild(cp);
+  card.appendChild(ic); card.appendChild(info); card.appendChild(acts);
+  LAST_FILES.push({ name: name, content: content });
+  return card;
+}
+
+var CRC_T = null;
+function crc32(bytes){
+  if (!CRC_T) {
+    CRC_T = new Uint32Array(256);
+    for (var n = 0; n < 256; n++) { var c = n; for (var k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1); CRC_T[n] = c >>> 0; }
+  }
+  var crc = 0xFFFFFFFF;
+  for (var i = 0; i < bytes.length; i++) crc = CRC_T[(crc ^ bytes[i]) & 0xFF] ^ (crc >>> 8);
+  return (crc ^ 0xFFFFFFFF) >>> 0;
+}
+function makeZip(files){
+  var enc = new TextEncoder(), parts = [], central = [], offset = 0;
+  files.forEach(function(f){
+    var nameB = enc.encode(f.name), data = enc.encode(f.content), crc = crc32(data);
+    var lh = new DataView(new ArrayBuffer(30));
+    lh.setUint32(0, 0x04034b50, true); lh.setUint16(4, 20, true); lh.setUint16(6, 0x0800, true);
+    lh.setUint16(8, 0, true); lh.setUint16(10, 0, true); lh.setUint16(12, 0x21, true);
+    lh.setUint32(14, crc, true); lh.setUint32(18, data.length, true); lh.setUint32(22, data.length, true);
+    lh.setUint16(26, nameB.length, true); lh.setUint16(28, 0, true);
+    parts.push(new Uint8Array(lh.buffer), nameB, data);
+    var cd = new DataView(new ArrayBuffer(46));
+    cd.setUint32(0, 0x02014b50, true); cd.setUint16(4, 20, true); cd.setUint16(6, 20, true); cd.setUint16(8, 0x0800, true);
+    cd.setUint16(10, 0, true); cd.setUint16(12, 0, true); cd.setUint16(14, 0x21, true);
+    cd.setUint32(16, crc, true); cd.setUint32(20, data.length, true); cd.setUint32(24, data.length, true);
+    cd.setUint16(28, nameB.length, true); cd.setUint16(30, 0, true); cd.setUint16(32, 0, true);
+    cd.setUint16(34, 0, true); cd.setUint16(36, 0, true); cd.setUint32(38, 0, true); cd.setUint32(42, offset, true);
+    central.push(new Uint8Array(cd.buffer), nameB);
+    offset += 30 + nameB.length + data.length;
+  });
+  var cdSize = central.reduce(function(a, p){ return a + p.length; }, 0);
+  var end = new DataView(new ArrayBuffer(22));
+  end.setUint32(0, 0x06054b50, true); end.setUint16(4, 0, true); end.setUint16(6, 0, true);
+  end.setUint16(8, files.length, true); end.setUint16(10, files.length, true);
+  end.setUint32(12, cdSize, true); end.setUint32(16, offset, true); end.setUint16(20, 0, true);
+  var all = parts.concat(central, [new Uint8Array(end.buffer)]);
+  var total = all.reduce(function(a, p){ return a + p.length; }, 0), out = new Uint8Array(total), pos = 0;
+  all.forEach(function(p){ out.set(p, pos); pos += p.length; });
+  return out;
+}
+function bytesToB64(bytes){
+  var bin = "", CH = 0x8000;
+  for (var i = 0; i < bytes.length; i += CH) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + CH));
+  return btoa(bin);
+}
+function downloadZip(files){
+  var zip = makeZip(files), name = "rudhar-project.zip";
+  if (NATIVE && P.saveBinary) {
+    var r = P.saveBinary(name, bytesToB64(zip));
+    if (r.indexOf("saved:") === 0) return sysMsg("ZIP save ho gayi: " + r.slice(6) + " (" + files.length + " files)", "ok");
+    return sysMsg("ZIP save nahi hua (" + r + "). Storage permission check karo.", "err");
+  }
+  saveBlob(new Blob([zip], { type: "application/zip" }), name);
+}
+
+// ---------- bubbles ----------
+function botBubble(text){
+  removeHome();
+  document.body.classList.add("chatting");
+  LAST_FILES = [];
+  var row = document.createElement("div"); row.className = "row";
+  var b = document.createElement("div"); b.className = "m bot";
+  var who = document.createElement("div"); who.className = "who"; who.textContent = "output";
+  var body = document.createElement("div"); body.className = "body";
+  renderInto(body, text);
+  var files = LAST_FILES.slice(); LAST_FILES = [];
+  var acts = document.createElement("div"); acts.className = "acts";
+  var c = document.createElement("button"); c.innerHTML = ICON.copy + "copy";
+  c.onclick = function(){ copyText(text); c.textContent = "copied ✓"; };
+  var s = document.createElement("button"); s.innerHTML = ICON.speak + "suno";
+  s.onclick = function(){ speak(text, true); };
+  acts.appendChild(c); acts.appendChild(s);
+  var sh = document.createElement("button"); sh.textContent = "share";
+  sh.onclick = function(){ if (navigator.share) navigator.share({ text: text }).catch(function(){}); else copyText(text); };
+  acts.appendChild(sh);
+  if (files.length > 1) {
+    var z = document.createElement("button"); z.textContent = "ZIP (" + files.length + " files) download";
+    z.onclick = function(){ downloadZip(files); };
+    acts.appendChild(z);
+  }
+  b.appendChild(who); b.appendChild(body); b.appendChild(acts);
+  row.appendChild(b); $("log").appendChild(row); scroll();
+}
+function userBubble(text){
+  removeHome();
+  document.body.classList.add("chatting");
+  var tm = new Date();
+  var row = document.createElement("div"); row.className = "row me";
+  var d = document.createElement("div"); d.className = "m me-b"; d.textContent = text;
+  d.setAttribute("data-t", ("0" + tm.getHours()).slice(-2) + ":" + ("0" + tm.getMinutes()).slice(-2));
+  row.appendChild(d); $("log").appendChild(row); scroll();
+}
+function removeHome(){ var e = document.getElementById("home"); if (e) e.remove(); }
+function typingEl(){
+  var t = document.createElement("div"); t.className = "typing";
+  t.innerHTML = "<span>rudhar processing</span>";
+  $("log").appendChild(t); scroll(); return t;
+}
+function showHome(){
+  var h = document.createElement("div"); h.className = "home"; h.id = "home";
+  var g = document.createElement("div"); g.className = "grid";
+  var items = [
+    [TILE_ICON.phone, "Call karo", "Contact ka naam\ndaal kar call karo...", "call karo "],
+    [TILE_ICON.bell, "Notification", "Reminder bhejo\nya alert set karo...", "notification: "],
+    [TILE_ICON.term, "Termux", "Command chalao\nTerminal open karo...", "termux: ls -la"],
+    [TILE_ICON.save, "Chat save", "Downloads mein\nsave karo...", "chat save karo"],
+    [TILE_ICON.wa, "WhatsApp kholo", "Apps kholo\nWhatsApp open karo...", "WhatsApp kholo"],
+    [TILE_ICON.msg, "Message bhejo", "SMS ya WhatsApp\nmessage likho...", "message bhejo Ravi: Hello"],
+    [TILE_ICON.code, "Code likho", "Python, HTML, JS\ncode generate karo...", "Python mein simple calculator banao"],
+    [TILE_ICON.heart, "Navya se baat", "Navya app se\nreply lo...", "navya se pucho: kya haal hai?"]
+  ];
+  items.forEach(function(x, i){
+    var b = document.createElement("button"); b.className = "tile";
+    var n = document.createElement("span"); n.className = "tnum"; n.textContent = "0" + (i + 1);
+    var ic = document.createElement("span"); ic.className = "tic"; ic.innerHTML = x[0];
+    var tt = document.createElement("span"); tt.className = "tt"; tt.textContent = x[1];
+    var arr = document.createElement("i"); arr.textContent = ">>"; tt.appendChild(arr);
+    var sm = document.createElement("small"); sm.textContent = x[2];
+    b.appendChild(n); b.appendChild(ic); b.appendChild(tt); b.appendChild(sm);
+    b.onclick = function(){ $("inp").value = x[3]; resize(); $("inp").focus(); };
+    g.appendChild(b);
+  });
+  h.appendChild(g);
+  var hb = document.createElement("button"); hb.className = "howbar";
+  hb.innerHTML = '<span class="chev">&lt;|</span><span><b>Kaise bolun?</b> <span class="sub">(sab commands dekho)</span></span><span class="mode">// AI MODE</span>';
+  hb.onclick = function(){ $("howsheet").classList.add("show"); };
+  h.appendChild(hb);
+  $("log").appendChild(h);
+}
+
+// ---------- AI ----------
+async function loadModels(){
+  if (MODEL_LOADED) return;
+  try {
+    var r = await withTimeout(fetch("https://openrouter.ai/api/v1/models"), 15000);
+    var d = await r.json();
+    MODEL_LIST = d.data.filter(function(m){ return String(m.id).endsWith(":free"); }).map(function(m){
+      var a = m.architecture || {};
+      var inp = a.input_modalities || [];
+      var vis = inp.indexOf("image") >= 0 || /image/.test(a.modality || "");
+      return { id: m.id, vision: !!vis };
+    });
+    MODEL_LOADED = true;
+  } catch(e) { MODEL_LIST = []; }
+  if (!MODEL_LIST.some(function(m){ return m.id === "openrouter/auto"; })) MODEL_LIST.push({ id: "openrouter/auto", vision: false });
+  fillModelSel();
+}
+var POL_KEY = (function(){ try { return localStorage.getItem("rd_pol_key") || ""; } catch(e) { return ""; } })();
+async function askFree(msgs){
+  var sleep = function(ms){ return new Promise(function(r){ setTimeout(r, ms); }); };
+  var eps = [
+    "https://gen.pollinations.ai/v1/chat/completions",
+    "https://text.pollinations.ai/openai"
+  ];
+  var lastMsg = "", needKey = false;
+  for (var round = 0; round < 2; round++) {
+    for (var i = 0; i < eps.length; i++) {
+      if (stopFlag) throw new Error("roka gaya");
+      try {
+        var h = { "Content-Type": "application/json" };
+        if (POL_KEY) h["Authorization"] = "Bearer " + POL_KEY;
+        var r = await withTimeout(fetch(eps[i], { method: "POST", headers: h, body: JSON.stringify({ model: "openai", messages: msgs }) }), 60000);
+        var txt = await r.text(), j = null;
+        try { j = JSON.parse(txt); } catch(e) {}
+        var t = j && j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content;
+        if (t) return t;
+        if (r.status === 401 || r.status === 403) needKey = true;
+        var em = j && j.error && (j.error.message || j.error);
+        lastMsg = (typeof em === "string" ? em : (em ? JSON.stringify(em) : "")) || ("Server " + r.status);
+        if (/legacy|enter\.pollinations|api key|auth/i.test(lastMsg)) needKey = true;
+      } catch(e) { lastMsg = (e && e.message) || "network error"; }
+    }
+    if (needKey && !POL_KEY) break;
+    if (round === 0) { sysMsg("Free AI server busy hai, dobara try kar raha hun... (send dobara mat dabao)", "warn"); await sleep(7000); }
+  }
+  // aakhri koshish: simple GET (sirf aakhri sawal)
+  var q = "";
+  for (var k = msgs.length - 1; k >= 0; k--) { if (msgs[k].role === "user") { q = typeof msgs[k].content === "string" ? msgs[k].content : "hello"; break; } }
+  var gets = [
+    "https://gen.pollinations.ai/text/" + encodeURIComponent(q.slice(0, 1500)) + (POL_KEY ? "?key=" + encodeURIComponent(POL_KEY) : ""),
+    "https://text.pollinations.ai/" + encodeURIComponent(q.slice(0, 1500))
+  ];
+  for (var g = 0; g < gets.length; g++) {
+    try {
+      var gr = await withTimeout(fetch(gets[g]), 60000);
+      var gt = await gr.text();
+      if (gr.ok && gt && !/legacy API|enter\.pollinations|^\s*\{\s*"error"/i.test(gt)) return gt;
+    } catch(e) {}
+  }
+  if (needKey) throw new Error("Free AI server ab key maangta hai. Fix: chat mein `pollen key set` likho aur enter.pollinations.ai se free key paste karo (GitHub se login). Ya `ai key set` se OpenRouter key.");
+  throw new Error(lastMsg || "Free AI abhi busy hai. Thodi der baad try karo.");
+}
+async function ask(msgs, needVision){
+  if (!KEY) return askFree(msgs);
+  await loadModels();
+  var pref = localStorage.getItem("rd_model") || "auto";
+  var cand = [];
+  if (pref !== "auto" && (!needVision || isVision(pref))) cand.push(pref);
+  MODEL_LIST.forEach(function(m){ if (cand.indexOf(m.id) < 0 && (!needVision || m.vision) && m.id !== "openrouter/auto") cand.push(m.id); });
+  if (!needVision && cand.indexOf("openrouter/auto") < 0) cand.push("openrouter/auto");
+  if (needVision && !cand.length) throw new Error("Photo samajhne wala free model abhi nahi mila. Thodi der baad try karo.");
+  var last = null;
+  for (var k = 0; k < Math.min(6, cand.length); k++) {
+    if (stopFlag) throw new Error("roka gaya");
+    try {
+      var r = await withTimeout(fetch("https://openrouter.ai/api/v1/chat/completions", {
+        method: "POST",
+        headers: { "Authorization": "Bearer " + KEY, "Content-Type": "application/json" },
+        body: JSON.stringify({ model: cand[k], messages: msgs })
+      }), 40000);
+      var j = await r.json();
+      var t = j.choices && j.choices[0] && j.choices[0].message.content;
+      if (r.ok && t) return t;
+      last = new Error((j.error && j.error.message) || "AI ne khali jawab diya.");
+    } catch(e) { last = e; }
+  }
+  try { return await askFree(msgs); } catch(e2) { throw last || e2; }
+}
+
+// ---------- confirm + safety ----------
+function has(list, text){ text = (text||"").toLowerCase(); return list.some(function(k){ return text.indexOf(k) >= 0; }); }
+function confirmUI(q, phoneMode){
+  return new Promise(function(resolve){
+    if (phoneMode) P.front();
+    var d = sysMsg("Pakka karna hai?\n" + q, "warn");
+    function done(v){ d.querySelectorAll("button").forEach(function(b){ b.remove(); }); if (phoneMode) P.hide(); resolve(v); }
+    var yes = document.createElement("button"); yes.textContent = "Haan, karo"; yes.onclick = function(){ done(true); };
+    var no = document.createElement("button"); no.textContent = "Nahi"; no.onclick = function(){ done(false); };
+    d.appendChild(yes); d.appendChild(no);
+    scroll();
+  });
+}
+async function act(a, scr){
+  if (a.a === "open_app") return P.openApp(String(a.name||""));
+  if (a.a === "key") return P.key(String(a.key||""));
+  if (a.a === "swipe") return P.swipe(String(a.dir||""));
+  if ((a.a === "tap" || a.a === "type") && has(FINANCE, scr.pkg)) return "Safety: paise wale app mein control band hai";
+  if (a.a === "tap") {
+    var e = scr.els[Number(a.id)];
+    if (!e) return "galat id";
+    if (has(RISKY, e.text) && !(await confirmUI("Rudhar '" + e.text + "' dabana chahta hai.", true))) return "tumne mana kar diya";
+    return P.tap(e.i);
+  }
+  if (a.a === "type") {
+    if (scr.els.some(function(x){ return x.pw; })) return "Safety: password wali screen par type nahi karunga";
+    return P.type(String(a.text||""));
+  }
+  return "samajh nahi aaya";
+}
+
+async function agent(task){
+  if (!NATIVE) { sysMsg("Phone-control browser mein available nahi hai. Is feature ke liye RUDHAR native APK chahiye.", "warn"); return; }
+  if (P.status() !== "on") {
+    var accessMsg = sysMsg("Phone-control Access OFF hai. Settings mein RUDHAR Phone Control enable karo.", "warn");
+    var accessBtn = document.createElement("button"); accessBtn.textContent = "Accessibility kholo"; accessBtn.onclick = function(){ P.openAccessibility(); };
+    accessMsg.appendChild(accessBtn); return;
+  }
+  if (!(await confirmUI("Phone-control task ke liye screen ke visible labels AI service ko bheje ja sakte hain. Password fields block hain. Continue karna hai?\nTask: " + task, false))) { sysMsg("Phone-control task cancel kar diya.", "warn"); return; }
+  busy = true; stopFlag = false; setBusy(true);
+  sysMsg("Phone kaam shuru: " + task, "ok");
+  var steps = [];
+  for (var step = 1; step <= 12 && !stopFlag; step++) {
+    var scr; try { scr = JSON.parse(P.screen()); } catch(e) { scr = { pkg: "", els: [] }; }
+    var screen = "app: " + scr.pkg + "\n" + scr.els.map(function(e, i){
+      return i + '. "' + (e.text || "?") + '" [' + (e.click ? "tap" : "") + (e.edit ? " input" : "") + "]";
+    }).join("\n");
+    sysMsg("Step " + step + " / 12 …");
+    var data = null;
+    try {
+      var txt = await ask([
+        { role: "system", content: SYS_AGENT },
+        { role: "user", content: "Task: " + task + "\nDone so far:\n" + (steps.slice(-8).join("\n") || "(none)") + "\n\nScreen:\n" + screen + "\n\nJSON:" }
+      ]);
+      var m = /\{[\s\S]*\}/.exec(txt); data = m ? JSON.parse(m[0]) : null;
+    } catch(e) { sysMsg("⚠ " + friendly(e), "err"); break; }
+    if (!data || !data.action) { steps.push("(invalid)"); continue; }
+    if (data.action.a === "done") {
+      var say = data.action.say || "Ho gaya.";
+      botBubble(say); speak(say); break;
+    }
+    var res = await act(data.action, scr);
+    sysMsg("✓ " + res, /Safety|tumne/.test(res) ? "warn" : "ok");
+    steps.push(JSON.stringify(data.action) + " -> " + res);
+    await sleep(data.action.a === "open_app" ? 2200 : 1400);
+  }
+  if (stopFlag) sysMsg("Kaam roka gaya.", "warn");
+  busy = false; setBusy(false); P.front();
+}
+
+// ---------- phone features ----------
+async function pickContact(name){
+  if (!NATIVE) { sysMsg("Ye kaam APK mein chalega.", "warn"); return null; }
+  var list; try { list = JSON.parse(P.contacts(name)); } catch(e) { list = null; }
+  if (!Array.isArray(list)) { sysMsg("Contacts ki permission do (⚙ Settings).", "warn"); return null; }
+  if (!list.length) { sysMsg("'" + name + "' naam ka contact nahi mila.", "warn"); return null; }
+  return list[0];
+}
+async function doCall(name){
+  var c = await pickContact(name); if (!c) return;
+  if (!(await confirmUI("'" + c.name + "' (" + c.number + ") ko call karun?", false))) return sysMsg("Call cancel.");
+  sysMsg("✓ " + P.call(c.number), "ok");
+}
+function doNotify(text){
+  if (!NATIVE) return sysMsg("Notification ka kaam APK mein chalega.", "warn");
+  var r = P.notify("Rudhar", text);
+  if (r === "ok") sysMsg("✓ Notification bhej diya.", "ok");
+  else sysMsg("Notification ki permission do (⚙ Settings).", "warn");
+}
+async function doSms(name, text){
+  var c = await pickContact(name); if (!c) return;
+  if (!(await confirmUI("SMS '" + text + "' ko " + c.name + " (" + c.number + ") par bhejun?", false))) return sysMsg("SMS cancel.");
+  var r = P.sendSms(c.number, text);
+  if (r === "sent") botBubble("SMS bhej diya " + c.name + " ko: " + text);
+  else if (r === "composer") {
+    if (P.status() !== "on") return sysMsg("SMS composer khul gaya, message pehle se likha hai. Check karke Send khud dabao.", "ok");
+    sysMsg("SMS composer khul gaya, ab Send karta hoon…", "ok");
+    await sleep(2500);
+    agent("SMS app mein message field mein text already likha hai. Us text ko Send karo, phir done bolo.");
+  }
+  else if (r === "no_perm") sysMsg("SMS ki permission do (⚙ Settings).", "warn");
+  else sysMsg("SMS nahi gaya.", "err");
+}
+async function doWhatsApp(name, text){
+  var c = await pickContact(name); if (!c) return;
+  if (!(await confirmUI("WhatsApp par " + c.name + " ko '" + text + "' bhejun? Chat khulegi, phir Send dabaunga.", false))) return sysMsg("WhatsApp cancel.");
+  var r = P.openWhatsApp(c.number, text);
+  if (r !== "opened") return sysMsg("WhatsApp nahi khula. Kya WhatsApp installed hai?", "err");
+  if (P.status() !== "on") return sysMsg("WhatsApp chat khul gayi, message pehle se likha hai. Check karke Send khud dabao.", "ok");
+  sysMsg("WhatsApp khul gaya, ab Send karta hoon…", "ok");
+  await sleep(3000);
+  agent("WhatsApp chat mein message field mein text already likha hai. Us text ko Send karo, phir done bolo.");
+}
+async function doTermux(cmd){
+  if (!NATIVE) return sysMsg("Termux ka kaam APK mein chalega.", "warn");
+  if (DANGER_RE.test(cmd)) return sysMsg("Ye command khatarnak hai, isliye block hai. Koi aur command do.", "err");
+  if (!(await confirmUI("Termux mein ye command chalaun?\n$ " + cmd, false))) return sysMsg("Termux cancel.");
+  var r = P.termux(cmd);
+  if (r === "sent") sysMsg("✓ Command Termux mein bhej di. Output wahin dikhega.", "ok");
+  else if (r === "no_perm") sysMsg("Termux ki permission do, aur Termux mein allow-external-apps=true karo.", "warn");
+  else sysMsg("Termux nahi mila. Termux install karo.", "err");
+}
+async function doNavya(msg){
+  if (!NATIVE) return sysMsg("Navya se baat APK mein hogi.", "warn");
+  if (!(await confirmUI("Navya ko ye bhejun: '" + msg + "'? Navya app khulegi, message type karunga aur Send dabaunga.", false))) return sysMsg("Navya cancel.");
+  agent('Navya app kholo (app ka naam "Navya" ya "Navya AI" ho sakta hai). Us app mein ye message type karke bhejo: "' + msg +
+    '". Message field mein type karo, phir Send dabao. Phir 2-3 baar wait karke Navya ka latest reply screen se padho. ' +
+    'Jab reply mil jaye to done action ke say field mein likho: "Navya: " + uska reply. Zaroorat na ho to key ya swipe mat karo.');
+}
+function doNavyaOpen(){
+  if (!NATIVE) return sysMsg("Ye APK mein chalega.", "warn");
+  agent('Navya app kholo (app ka naam "Navya" ya "Navya AI" ho sakta hai) aur done bolo.');
+}
+async function doPhoneApp(name){
+  if (!NATIVE) return sysMsg("Apps kholna APK mein chalega.", "warn");
+  agent("'" + name + "' app kholo aur done bolo.");
+}
+async function doSave(){
+  if (!hist.length) return sysMsg("Abhi save karne ke liye kuch nahi hai.", "warn");
+  var txt = hist.map(function(h){ return (h.role === "user" ? "Krrish: " : "Rudhar: ") + h.content; }).join("\n\n");
+  var d = new Date(), name = "rudhar-chat-" + d.getFullYear() + "-" + (d.getMonth()+1) + "-" + d.getDate() + ".txt";
+  var r = P.saveFile(name, txt);
+  if (r.indexOf("saved:") === 0) sysMsg("✓ Chat save ho gayi: Downloads mein " + r.slice(6), "ok");
+  else if (r === "no_perm") sysMsg("Storage ki permission do (⚙ Settings).", "warn");
+  else sysMsg("Save nahi hua.", "err");
+}
+
+// ---------- chat ----------
+var PHONE_RE = /(kholo|khol do|open karo|type karo|search karo|play karo|play kar|start karo|shuru karo|chalao|chala do|bajao|laga do|lagao|khojo|dhundo|bhejo|band karo|volume|wifi|bluetooth|brightness|scroll|back jao|home jao|click karo|tap karo)/i;
+var CODE_RE = /(code|html|python|javascript|js|css|function|script|calculator|banao)/i;
+
+async function chatCore(t){
+  busy = true; setBusy(true);
+  var typ = typingEl();
+  var lastUser = hist.length ? hist[hist.length - 1] : null;
+  var userImg = lastUser && lastUser.role === "user" ? (lastUser.img || null) : null;
+  try {
+    var recent = hist.slice(-14);
+    var needVision = recent.some(function(h){ return !!h.img; });
+    var modePrompt = RD_AGG_MODE ? "\n\nCURRENT MODE: AGGRESSIVE ETHICAL HACKING MODE. Be technically practical for authorized localhost/lab/owned systems or written-permission targets. Prefer safe, bounded diagnostics, defensive audits, remediation, and learning labs. Do not assist unauthorized intrusion, credential theft, phishing, malware, stealth/evasion, destructive actions, or exploitation of third-party targets. If target authorization is unclear, ask to keep the example in localhost or an intentionally vulnerable lab." : "";
+    var msgs = [{ role: "system", content: CHAT_SYS + modePrompt }].concat(recent.map(function(h){
+      if (!h.img) return { role: h.role, content: h.content };
+      return { role: h.role, content: [{ type: "text", text: h.content }, { type: "image_url", image_url: { url: h.img } }] };
+    }));
+    var ans = await ask(msgs, needVision);
+    typ.remove();
+    hist.push({ role: "assistant", content: ans });
+    botBubble(ans); speak(ans);
+  } catch(e) {
+    typ.remove(); hist.pop();
+    var box = sysMsg(errText(e), "err");
+    var rb = document.createElement("button"); rb.textContent = "Dobara try karo";
+    rb.onclick = function(){ box.remove(); hist.push({ role: "user", content: t, img: userImg }); chatCore(t); };
+    box.appendChild(rb);
+  }
+  busy = false; setBusy(false);
+  persistHist();
+}
+
+async function openAppByVoice(name, original){
+  if (!NATIVE) { sysMsg("Browser mode mein phone apps open nahi ho sakte. RUDHAR ko native APK ke roop mein install karo; phir app access chalega.", "warn"); return; }
+  var r = P.openApp(name);
+  if (r.indexOf("opened:") === 0) return sysMsg(name + " khol diya.", "ok");
+  return agent("'" + name + "' app kholo aur done bolo.");
+}
+function chatFallback(t){ hist.push({ role: "user", content: t }); chatCore(t); }
+
+
+// ---------- v7: smart commands, app launcher, phone settings, code snippets, phishing guard, memory ----------
+var RD7_APPS = {
+  "youtube":["com.google.android.youtube","https://m.youtube.com"],
+  "google":["com.google.android.googlequicksearchbox","https://www.google.com"],
+  "chrome":["com.android.chrome","https://www.google.com"],
+  "gmail":["com.google.android.gm","https://mail.google.com"],
+  "maps":["com.google.android.apps.maps","https://maps.google.com"],
+  "google maps":["com.google.android.apps.maps","https://maps.google.com"],
+  "whatsapp":["com.whatsapp","https://web.whatsapp.com"],
+  "instagram":["com.instagram.android","https://www.instagram.com"],
+  "facebook":["com.facebook.katana","https://m.facebook.com"],
+  "telegram":["org.telegram.messenger","https://web.telegram.org"],
+  "twitter":["com.twitter.android","https://x.com"],
+  "x":["com.twitter.android","https://x.com"],
+  "snapchat":["com.snapchat.android","https://www.snapchat.com"],
+  "spotify":["com.spotify.music","https://open.spotify.com"],
+  "netflix":["com.netflix.mediaclient","https://www.netflix.com"],
+  "play store":["com.android.vending","https://play.google.com"],
+  "playstore":["com.android.vending","https://play.google.com"],
+  "photos":["com.google.android.apps.photos","https://photos.google.com"],
+  "drive":["com.google.android.apps.docs","https://drive.google.com"],
+  "phonepe":["com.phonepe.app","https://www.phonepe.com"],
+  "paytm":["net.one97.paytm","https://paytm.com"],
+  "gpay":["com.google.android.apps.nbu.paisa.user","https://pay.google.com"],
+  "amazon":["in.amazon.mShop.android.shopping","https://www.amazon.in"],
+  "flipkart":["com.flipkart.android","https://www.flipkart.com"],
+  "termux":["com.termux",""],
+  "camera":["","android.media.action.STILL_IMAGE_CAMERA"],
+  "calculator":["com.google.android.calculator",""],
+  "clock":["com.google.android.deskclock",""],
+  "contacts":["com.google.android.contacts",""],
+  "dialer":["","android.intent.action.DIAL"],
+  "phone":["","android.intent.action.DIAL"]
+};
+var RD7_SET = {
+  "wifi":["android.settings.WIFI_SETTINGS","WiFi"],
+  "bluetooth":["android.settings.BLUETOOTH_SETTINGS","Bluetooth"],
+  "display":["android.settings.DISPLAY_SETTINGS","Display"],
+  "brightness":["android.settings.DISPLAY_SETTINGS","Display"],
+  "sound":["android.settings.SOUND_SETTINGS","Sound"],
+  "volume":["android.settings.SOUND_SETTINGS","Sound"],
+  "battery":["android.intent.action.POWER_USAGE_SUMMARY","Battery"],
+  "location":["android.settings.LOCATION_SOURCE_SETTINGS","Location"],
+  "gps":["android.settings.LOCATION_SOURCE_SETTINGS","Location"],
+  "airplane":["android.settings.AIRPLANE_MODE_SETTINGS","Airplane mode"],
+  "flight":["android.settings.AIRPLANE_MODE_SETTINGS","Airplane mode"],
+  "mobile data":["android.settings.DATA_ROAMING_SETTINGS","Mobile data"],
+  "data":["android.settings.DATA_ROAMING_SETTINGS","Mobile data"],
+  "hotspot":["android.settings.TETHER_SETTINGS","Hotspot"],
+  "nfc":["android.settings.NFC_SETTINGS","NFC"],
+  "storage":["android.settings.INTERNAL_STORAGE_SETTINGS","Storage"],
+  "apps":["android.settings.APPLICATION_SETTINGS","Apps"],
+  "notification":["android.settings.NOTIFICATION_SETTINGS","Notifications"],
+  "accessibility":["android.settings.ACCESSIBILITY_SETTINGS","Accessibility"],
+  "date":["android.settings.DATE_SETTINGS","Date & time"],
+  "language":["android.settings.LOCALE_SETTINGS","Language"],
+  "security":["android.settings.SECURITY_SETTINGS","Security"],
+  "settings":["android.settings.SETTINGS","Settings"]
+};
+function rd7Go(url){ try { window.location.href = url; } catch(e) {} }
+function rd7Open(name){
+  var a = RD7_APPS[name]; if (!a) return false;
+  if (NATIVE) { try { var r = String(P.openApp(name)); if (r.indexOf("opened:") === 0) { sysMsg(name + " khol diya.", "ok"); return true; } } catch(e) {} }
+  var u;
+  if (a[0]) u = "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=" + a[0] + ";" + (/^https?:/.test(a[1]) ? "S.browser_fallback_url=" + encodeURIComponent(a[1]) + ";" : "") + "end";
+  else u = "intent:#Intent;action=" + a[1] + ";end";
+  sysMsg(name + " khol raha hun... Agar na khule to Android app permission ya browser setting check karo.", "ok");
+  rd7Go(u); return true;
+}
+function rd7Settings(key){
+  var a = RD7_SET[key]; if (!a) return false;
+  sysMsg((key === "settings" ? "Phone settings" : a[1] + " settings") + " khol raha hun...", "ok");
+  rd7Go("intent:#Intent;action=" + a[0] + ";end"); return true;
+}
+function rd7Theme(light){
+  document.body.classList.toggle("rd-light", !!light);
+  try { localStorage.setItem("rd7_light", light ? "1" : "0"); } catch(e) {}
+}
+try { if (localStorage.getItem("rd7_light") === "1") document.body.classList.add("rd-light"); } catch(e) {}
+
+var RD7_SNIP = {
+  "button":["html","<button class=\"btn\">Click me</button>\n<style>\n.btn{padding:12px 22px;border:0;border-radius:10px;background:#e11d48;color:#fff;font:600 16px system-ui;cursor:pointer;transition:transform .15s}\n.btn:active{transform:scale(.95)}\n</style>"],
+  "card":["html","<div class=\"card\">\n  <h3>Title</h3>\n  <p>Yahan description likho.</p>\n</div>\n<style>\n.card{max-width:320px;padding:18px;border-radius:14px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.15);font-family:system-ui}\n</style>"],
+  "navbar":["html","<nav class=\"nav\"><b>Logo</b><span><a href=\"#\">Home</a><a href=\"#\">About</a><a href=\"#\">Contact</a></span></nav>\n<style>\n.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:#111;color:#fff;font-family:system-ui}\n.nav a{color:#fff;margin-left:16px;text-decoration:none}\n</style>"],
+  "form":["html","<form class=\"f\" onsubmit=\"event.preventDefault();alert('Submit ho gaya')\">\n  <input type=\"email\" placeholder=\"Email\" required>\n  <input type=\"password\" placeholder=\"Password\" required>\n  <button>Login</button>\n</form>\n<style>\n.f{display:grid;gap:10px;max-width:300px;font-family:system-ui}\n.f input,.f button{padding:12px;border-radius:8px;border:1px solid #bbb;font-size:16px}\n.f button{background:#111;color:#fff;border:0}\n</style>"],
+  "counter":["javascript","<button id=\"b\">0</button>\n<script>\nvar n=0,b=document.getElementById('b');\nb.onclick=function(){n++;b.textContent=n;};\n<\/script>"],
+  "todo":["javascript","<input id=\"t\" placeholder=\"Task\"><button onclick=\"add()\">Add</button>\n<ul id=\"l\"></ul>\n<script>\nfunction add(){var t=document.getElementById('t');if(!t.value)return;\nvar li=document.createElement('li');li.textContent=t.value;\nli.onclick=function(){li.remove()};\ndocument.getElementById('l').appendChild(li);t.value='';}\n<\/script>"],
+  "darkmode":["javascript","<button onclick=\"document.body.classList.toggle('dark')\">Dark mode</button>\n<style>body.dark{background:#111;color:#eee}</style>"],
+  "modal":["html","<button onclick=\"m.style.display='flex'\">Open</button>\n<div id=\"m\" onclick=\"this.style.display='none'\" style=\"display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);align-items:center;justify-content:center\">\n  <div style=\"background:#fff;padding:24px;border-radius:12px\">Modal content</div>\n</div>"],
+  "center":["css","/* kisi bhi cheez ko beech mein laane ke liye */\n.center{display:flex;justify-content:center;align-items:center;min-height:100vh}"],
+  "gradient":["css",".grad{background:linear-gradient(135deg,#ff1e3c,#5a0915);color:#fff;padding:20px;border-radius:14px}"],
+  "grid":["css",".grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}"],
+  "animation":["css","@keyframes pulse{50%{transform:scale(1.08);opacity:.7}}\n.pulse{animation:pulse 1.4s ease-in-out infinite}"]
+};
+function rd7Snippet(t){
+  var m = /^(?:snippet|code snippet|code generator|code banao|html banao|css banao|js banao|javascript banao)\s*:?\s*(.*)$/i.exec(t);
+  if (!m) return false;
+  var q = m[1].toLowerCase().replace(/\s+/g, ""), hit = null;
+  Object.keys(RD7_SNIP).forEach(function(k){ if (!hit && q.indexOf(k) >= 0) hit = k; });
+  if (!hit) {
+    if (m[1].trim().length > 3) return false; // lamba sawal: AI se banwao
+    sysMsg("Code Generator snippets: " + Object.keys(RD7_SNIP).join(", ") + "\nExample: snippet button", "ok"); return true;
+  }
+  var sn = RD7_SNIP[hit], txt = "**" + hit + "** (" + sn[0] + "):\n```" + (sn[0] === "javascript" ? "html" : sn[0]) + "\n" + sn[1] + "\n```";
+  botBubble(txt);
+  hist.push({ role: "user", content: t }, { role: "assistant", content: txt }); persistHist();
+  return true;
+}
+
+var RD7_VER = "RUDHAR AI V9 (master build)";
+var RD7_HELP =
+"RUDHAR HELP - saari commands\n\n" +
+"CHAT\n- hello / hi\n- help, show commands, what can you do?, show available features\n- clear chat (naya session), save chat (file download)\n- system status, show version\n\n" +
+"THEME / MODE\n- dark mode on / dark mode off\n- aggressive mode on / aggressive mode off / mode status\n\n" +
+"APPS KHOLNA\n- youtube kholo, chrome kholo, whatsapp kholo, settings kholo, termux kholo\n- app list (poori list)\n\n" +
+"PHONE SETTINGS\n- wifi settings, bluetooth settings, display settings\n- settings list (poori list)\n\n" +
+"CODE GENERATOR\n- snippet button / card / form / counter / todo\n- snippet (poori list)\n\n" +
+"SECURITY\n- koi link paste karo (phishing check)\n- link check <url>\n- password banao\n\n" +
+"PHONE\n- call karo <naam>\n- message bhejo <naam>: <text>\n- whatsapp <naam>: <text>\n\n" +
+"VOICE\n- mic button dabao aur command bolo\n\n" +
+"AI KEY (jawab ke liye)\n- pollen key set (enter.pollinations.ai se free key)\n- ai key set (OpenRouter key), ai key clear\n\n" +
+"EXTRA\n- time, quote, calc: 2+2\n\n" +
+"Note: app/settings kholna Android browser ya APK par depend karta hai. Baaki kuch bhi likho to AI chat jawab dega.";
+function rd7Status(){
+  var ok = function(v){ return v ? "haan" : "nahi"; };
+  var n = 0; try { n = JSON.parse(localStorage.getItem("rd_hist") || "[]").length; } catch(e) {}
+  var st = true; try { localStorage.setItem("rd7_t", "1"); localStorage.removeItem("rd7_t"); } catch(e) { st = false; }
+  return "SYSTEM STATUS\n- Version: " + RD7_VER +
+    "\n- Internet: " + (navigator.onLine ? "online" : "offline") +
+    "\n- Mode: " + (NATIVE ? "native APK" : "browser") +
+    "\n- Theme: " + (document.body.classList.contains("rd-light") ? "light" : "dark") +
+    "\n- Aggressive mode: " + (typeof RD_AGG_MODE !== "undefined" && RD_AGG_MODE ? "ON" : "OFF") +
+    "\n- AI source: " + (KEY ? "OpenRouter key" : (POL_KEY ? "Pollinations key" : "free (limited, key chahiye ho sakti hai)")) +
+    "\n- Speech recognition: " + ok(!!SR) +
+    "\n- Local storage: " + ok(st) + " (saved chat messages: " + n + ")" +
+    "\n- Copy (clipboard): " + ok(!!(navigator.clipboard)) +
+    "\n- Share: " + ok(!!navigator.share) +
+    "\n- Phone bridge (apps/settings direct): " + (NATIVE ? "haan" : "nahi - browser mein sirf Android intent try hota hai, confirm nahi ho sakta") +
+    "\n\nNote: browser storage delete ho sakti hai (cache clear karne par).";
+}
+
+function rd7SaveChat(){
+  var rows = Array.prototype.slice.call($("log").children).filter(function(e){ return e.className.indexOf("rainfill") < 0; });
+  var txt = rows.map(function(e){ return (e.innerText || "").trim(); }).filter(Boolean).join("\n\n");
+  if (!txt || rows.length < 2) { sysMsg("Save karne ke liye abhi koi chat nahi hai.", "warn"); return; }
+  var d = new Date(), name = "rudhar-chat-" + d.getFullYear() + "-" + (d.getMonth()+1) + "-" + d.getDate() + ".txt";
+  if (NATIVE && P.saveFile) {
+    var r = String(P.saveFile(name, txt));
+    if (r.indexOf("saved:") === 0) sysMsg("Chat save ho gayi: " + r.slice(6), "ok");
+    else if (r === "no_perm") sysMsg("Storage ki permission do (Settings mein).", "warn");
+    else sysMsg("Save nahi hua.", "err");
+    return;
+  }
+  try {
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([txt], { type: "text/plain" })); a.download = name;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+    sysMsg("Chat file download ke liye bheji: " + name + " (agar browser ne block kiya ho to download permission check karo).", "ok");
+  } catch(e) { sysMsg("Save nahi hua: " + e.message, "err"); }
+}
+function rd7Misc(low, t){
+  if (/^(hello|hi|hey|namaste|hii+|hello rudhar)$/.test(low)) { sysMsg("Hey Krrish! Kaise ho? Saari commands dekhne ke liye 'help' likho.", "ok"); return true; }
+  if (/^(help|show commands|commands|command list|help commands|smart commands|madad|help karo|show available features|available features|features|what can you do|tum kya kar sakte ho|tum kya kya kar sakte ho)\??$/.test(low)) { sysMsg(RD7_HELP, "ok"); return true; }
+  if (/^(system status|status|diagnostics|diagnostic|feature support)$/.test(low)) { sysMsg(rd7Status(), "ok"); return true; }
+  if (/^pollen key set$/.test(low)) {
+    var pk = prompt("Pollinations API key paste karo (enter.pollinations.ai se). Kisi ko share mat karna.");
+    if (pk && pk.trim()) { POL_KEY = pk.trim(); try { localStorage.setItem("rd_pol_key", POL_KEY); } catch(e) {} sysMsg("Pollinations key save ho gayi. Ab koi sawal pucho.", "ok"); }
+    else sysMsg("Key save nahi hui.", "warn");
+    return true;
+  }
+  if (/^pollen key clear$/.test(low)) { POL_KEY = ""; try { localStorage.removeItem("rd_pol_key"); } catch(e) {} sysMsg("Pollinations key hata di.", "ok"); return true; }
+  if (/^(show version|version|app version)$/.test(low)) { sysMsg(RD7_VER, "ok"); return true; }
+  if (/^(clear chat|chat clear|clear|chat saaf karo|new chat)$/.test(low)) { if (busy) { sysMsg("Abhi jawab aa raha hai. Pehle stop dabao, phir clear chat likho.", "warn"); return true; } $("clr").onclick(); return true; }
+  if (/^(save chat|chat save|chat download|save conversation)$/.test(low)) { rd7SaveChat(); return true; }
+  return false;
+}
+$("helpbtn").onclick = function(){ if (busy) return; document.body.classList.add("chat-started"); if (RF.wrap) RF.wrap.style.display = "none"; sysMsg(RD7_HELP, "ok"); };
+function rd7Route(t){
+  var m, low = t.toLowerCase().replace(/\s+/g, " ").trim();
+  if (rd7Misc(low, t)) return true;
+  // theme
+  if (/^(dark mode|night mode)\s*(on|karo|chalu|kar do)?$/.test(low) || /^light mode\s*(off|band)$/.test(low)) { rd7Theme(false); sysMsg("Dark mode ON.", "ok"); return true; }
+  if (/^(dark mode|night mode)\s*(off|band|hatao)$/.test(low) || /^light mode\s*(on|karo|chalu|kar do)?$/.test(low)) { rd7Theme(true); sysMsg("Light mode ON. Wapas dark ke liye: dark mode on", "ok"); return true; }
+  // commands help
+  if (/^(commands|smart commands|command list|help commands)$/.test(low)) {
+    sysMsg("Smart commands:\n- youtube kholo / whatsapp kholo (app launcher)\n- wifi settings / bluetooth settings (phone settings)\n- dark mode on / off\n- snippet button / card / form (code generator)\n- koi link paste karo (phishing check)\n- mic dabao (voice commands)\n- app list / settings list", "ok"); return true;
+  }
+  if (/^app list$/.test(low)) { sysMsg("Apps: " + Object.keys(RD7_APPS).join(", "), "ok"); return true; }
+  if (/^settings list$/.test(low)) { sysMsg("Settings: " + Object.keys(RD7_SET).join(", "), "ok"); return true; }
+  // code snippets
+  if (rd7Snippet(t)) return true;
+  // phone settings: "wifi settings kholo", "bluetooth on karo"
+  if ((m = /^(?:open\s+)?(.+?)\s*(?:settings?|setting)\s*(?:kholo|khol do|open|open karo|on karo|off karo)?$/.exec(low)) || (m = /^(wifi|bluetooth|hotspot|location|gps|nfc|airplane|flight|brightness|volume)\s*(?:on karo|off karo|on|off|kholo)$/.exec(low))) {
+    var k = m[1].replace(/\s+/g, " ").trim();
+    if (RD7_SET[k]) return rd7Settings(k);
+  }
+  // app launcher: "youtube kholo", "open whatsapp"
+  if ((m = /^(?:open\s+)?(.{1,20}?)\s*(?:app\s+)?(?:kholo|khol do|khol|open karo|open|chalao|chalu karo|start karo)$/.exec(low)) || (m = /^open\s+(.{1,20})$/.exec(low))) {
+    var n = m[1].replace(/\s+app$/, "").trim();
+    if (RD7_APPS[n]) return rd7Open(n);
+    if (RD7_SET[n]) return rd7Settings(n);
+  }
+  // phishing guard: sirf link paste kiya ho
+  if (/^(https?:\/\/\S+|www\.\S+|[a-z0-9-]+(\.[a-z0-9-]+)+\/\S*)$/i.test(t.trim())) {
+    showLinkReport(t.trim());
+    hist.push({ role: "user", content: t }, { role: "assistant", content: "Link check kiya: " + t.trim() }); persistHist();
+    return true;
+  }
+  return false;
+}
+
+async function send(text){
+  var t = (text || "").trim();
+  if (busy || !t) return;
+  $("inp").value = ""; resize();
+  document.body.classList.add("chat-started");
+  if (RF.wrap) RF.wrap.style.display = "none";
+  userBubble(t);
+  var m;
+  if (rd7Route(t)) return;
+  if (rdAggRoute(t)) return;
+  if (rd6FeatureRoute(t)) return;
+  if (rd5FeatureRoute(t)) return;
+  if (rd4FeatureRoute(t)) return;
+  if (advancedFeatureRoute(t)) return;
+  if (securityRoute(t)) return;
+  if (newFeatureRoute(t)) return;
+  if ((m = /^(?:call karo|call kar do|phone karo|call)\s+(.+)$/i.exec(t))) return doCall(m[1].trim());
+  if ((m = /^(?:notification|yaad dilao|notify)\s*:?\s*(.+)$/i.exec(t))) return doNotify(m[1].trim());
+  if ((m = /^(?:message|msg|sms)\s+(?:bhejo\s+|bhej\s+do\s+)?(.+?)\s*:\s*(.+)$/i.exec(t))) return doSms(m[1].trim(), m[2].trim());
+  if ((m = /^whatsapp\s+(?:par\s+|pe\s+)?(.+?)\s*:\s*(.+)$/i.exec(t))) return doWhatsApp(m[1].trim(), m[2].trim());
+  if (/^(termux\s+(mein|me|pe)\b|code\s+(likho|banao)\s+(aur|or)\s+(chalao|run karo|chala do|run)|run\s+karo\s+termux|termux\s+agent)/i.test(t)) return termuxAgent(t);
+  if ((m = /^termux\s*:?\s*(.+)$/i.exec(t))) return doTermux(m[1].trim());
+  if ((m = /^navya(?:\s+ai)?\s*(?:se|ko)?\s*(?:pucho|bolo|baat karo)?\s*:\s*(.+)$/i.exec(t))) return doNavya(m[1].trim());
+  if (/^navya(?:\s+ai)?\s*(?:kholo|open)\s*$/i.test(t)) return doNavyaOpen();
+  if (extrasRoute(t)) return;
+  if (/(chat|baat|conversation)\s*(save|download)/i.test(t)) return doSave();
+  var om = /^open\s+(.{2,30})$/i.exec(t) || /^(.{2,30}?)\s+(?:app\s+)?(?:kholo|khol\s+do|khol|open(?:\s+karo)?)$/i.exec(t);
+  if (om) return openAppByVoice(om[1].trim(), t);
+  if (NATIVE && PHONE_RE.test(t) && !CODE_RE.test(t)) return agent(t);
+
+  var pimg = PENDING_IMG; PENDING_IMG = null; if (pimg) userPhoto(pimg);
+  var pdoc = PENDING_DOC; PENDING_DOC = null;
+  var content = pdoc ? ("File: " + pdoc.name + "\n```\n" + pdoc.text + "\n```\n\n" + t) : t;
+  if (pdoc) sysMsg("File bheji: " + pdoc.name, "ok");
+  hist.push({ role: "user", content: content, img: pimg || null });
+  chatCore(t);
+}
+
+function setBusy(v){
+  var s = $("send");
+  s.innerHTML = v
+    ? '<svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor"/></svg>'
+    : '<svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>';
+  s.classList.toggle("stop", v);
+}
+function resize(){ var i = $("inp"); i.style.height = "auto"; i.style.height = Math.min(i.scrollHeight, 120) + "px"; }
+
+// ---------- voice input ----------
+function setMic(on){ $("mic").classList.toggle("rec", on); }
+$("mic").onclick = function(){
+  if (NATIVE && P.listen) {
+    window.onVoice = function(t){
+      window.onVoice = null; setMic(false);
+      if (t) send(t); else sysMsg("Awaaz samajh nahi aayi. Phir se bolo.", "warn");
+    };
+    setMic(true); P.listen(); return;
+  }
+  if (!SR) return sysMsg("Mic ye browser mein support nahi karta. APK mein chalega.", "warn");
+  var r = new SR(); r.lang = "hi-IN"; r.interimResults = false; r.maxAlternatives = 1;
+  r.onresult = function(e){ send(e.results[0][0].transcript); };
+  r.onend = function(){ setMic(false); };
+  r.onerror = function(){ setMic(false); sysMsg("Awaaz samajh nahi aayi.", "warn"); };
+  setMic(true); r.start();
+};
+
+// ---------- permissions ----------
+var PERM_LIST = [
+  ["access", "📱", "Phone control", "Apps kholna aur tap karna", "open"],
+  ["mic", "🎤", "Microphone", "Bol kar likhne ke liye", "ask"],
+  ["notify", "🔔", "Notifications", "Alerts aur reminders", "ask"],
+  ["call", "📞", "Phone calls", "Call karne ke liye", "ask"],
+  ["contacts", "👤", "Contacts", "Naam se number dhundhne ke liye", "ask"],
+  ["storage", "💾", "Storage", "Chat save karne ke liye", "ask"],
+  ["sms", "✉️", "SMS", "Message bhejne ke liye", "ask"],
+  ["termux", "🖥️", "Termux", "Termux commands (setup chahiye)", "settings"]
+];
+function renderPerms(){
+  var st = {}; try { st = JSON.parse(P.perms()) || {}; } catch(e) { st = {}; }
+  var box = $("perms"); box.innerHTML = "";
+  PERM_LIST.forEach(function(p){
+    var row = document.createElement("div"); row.className = "prow";
+    row.innerHTML = '<div class="pico"></div><div class="ptxt"><b></b><small></small></div><button class="pill"></button>';
+    row.querySelector(".pico").textContent = p[1];
+    row.querySelector("b").textContent = p[2];
+    row.querySelector("small").textContent = p[3];
+    var pill = row.querySelector(".pill");
+    if (!NATIVE) { pill.className = "pill na"; pill.textContent = "APK mein"; }
+    else if (st[p[0]]) { pill.className = "pill on"; pill.textContent = "✓ ON"; }
+    else { pill.className = "pill off"; pill.textContent = "Allow karo"; }
+    pill.onclick = function(){
+      if (!NATIVE || st[p[0]]) return;
+      if (p[4] === "open") P.openAccessibility();
+      else if (p[4] === "settings") P.openAppSettings();
+      else P.askPerms();
+    };
+    box.appendChild(row);
+  });
+  var more = document.createElement("div"); more.className = "prow";
+  more.innerHTML = '<div class="pico">⚙️</div><div class="ptxt"><b>Sab app settings</b><small>Android ki app settings kholo</small></div><button class="pill na">Kholo</button>';
+  more.querySelector("button").onclick = function(){ if (NATIVE) P.openAppSettings(); };
+  box.appendChild(more);
+}
+window.onPerms = renderPerms;
+
+// ---------- settings + controls ----------
+function updateStat(){
+  var acc = NATIVE && P.status() === "on";
+  var globe = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>';
+  var mic = '<svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>';
+  $("stat").innerHTML =
+    '<span><i class="led"></i><span class="on-t">ONLINE</span></span><span class="sep"></span>' +
+    '<span class="lab">' + globe + 'ACCESS <b class="' + (acc ? "" : "off") + '">' + (NATIVE ? (acc ? "ON" : "OFF") : "BROWSER") + '</b></span><span class="sep"></span>' +
+    '<span class="lab">' + mic + 'VOICE <b class="' + (voiceOn ? "" : "off") + '">' + (voiceOn ? "ON" : "OFF") + '</b></span>' +
+    '<span class="ready">// READY</span>';
+}
+function refreshVoiceUI(){
+  $("vtog").classList.toggle("on", voiceOn);
+  $("vbtn").classList.toggle("on", voiceOn);
+  $("elkey").value = localStorage.getItem("rd_el_key") || "";
+  $("elvoice").value = localStorage.getItem("rd_el_voice") || "";
+  updateStat();
+}
+function openSheet(id){ if (id === "sheet") { renderPerms(); refreshVoiceUI(); } $(id).classList.add("show"); }
+function closeSheet(id){ $(id).classList.remove("show"); }
+function toggleVoice(){
+  voiceOn = !voiceOn; localStorage.setItem("rd_voice", voiceOn ? "1" : "0");
+  if (!voiceOn && window.speechSynthesis) speechSynthesis.cancel();
+  refreshVoiceUI();
+  sysMsg(voiceOn ? "Awaaz mein jawab ON hai." : "Awaaz mein jawab OFF hai.", "ok");
+}
+
+$("send").onclick = function(){ if (busy) stopFlag = true; else send($("inp").value); };
+$("inp").oninput = resize;
+$("inp").onkeydown = function(e){ if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send($("inp").value); } };
+$("vbtn").onclick = toggleVoice;
+$("vtog").onclick = toggleVoice;
+$("setbtn").onclick = function(){ openSheet("sheet"); };
+$("sheetx").onclick = function(){ closeSheet("sheet"); };
+document.querySelectorAll("[data-close]").forEach(function(b){ b.onclick = function(){ closeSheet(b.getAttribute("data-close")); }; });
+["sheet","howsheet"].forEach(function(id){ $(id).onclick = function(e){ if (e.target.id === id) closeSheet(id); }; });
+$("elsave").onclick = function(){
+  localStorage.setItem("rd_el_key", $("elkey").value.trim());
+  localStorage.setItem("rd_el_voice", $("elvoice").value.trim());
+  sysMsg("✓ Awaaz ki settings save ho gayi.", "ok");
+};
+$("eltest").onclick = function(){ speak("Hello, main Rudhar hoon. Krrish ka assistant. Kaise ho?", true); };
+$("tnotif").onclick = function(){ doNotify("Ye Rudhar ka test notification hai."); };
+$("tsave").onclick = doSave;
+$("clr").onclick = function(){ if (busy) return; hist = []; localStorage.removeItem("rd_hist"); $("log").innerHTML = ""; greet(); };
+$("ovx").onclick = function(){ $("ov").classList.remove("show"); $("ovf").srcdoc = ""; };
+
+function greet(){
+  var s = NATIVE ? P.status() : "demo";
+  document.body.classList.remove("chatting");
+  sysMsg("Rudhar online. Command do, Krrish.", "ok");
+  if (NATIVE && s === "off") {
+    var d = sysMsg("Phone control ke liye Accessibility ON karo.", "warn");
+    var b = document.createElement("button"); b.textContent = "Accessibility kholo";
+    b.onclick = function(){ P.openAccessibility(); };
+    d.appendChild(b);
+  }
+  showHome();
+}
+function buildRain(){
+  var rows = [], n = 0;
+  for (var r = 0; r < 60; r++) {
+    var line = "";
+    for (var c = 0; c < 28; c++) line += Math.random() < 0.5 ? "0" : "1";
+    rows.push(line);
+  }
+  $("rain").textContent = rows.join("\n");
+}
+
+// ---------- matrix rain under the chat (red 0/1, KRRISH, glitch) ----------
+var RF = { wrap: null, cv: null, ctx: null, cols: 0, rows: 0, cw: 10, lh: 14,
+           cells: null, mask: null, drops: null, spd: null, lastW: 0, lastH: 0, last: 0,
+           glitchAt: 0, glitchUntil: 0, band: [0, 0], shift: 0, name: "KRRISH" };
+function rainBuild(){
+  RF.wrap = document.createElement("div"); RF.wrap.className = "rainfill";
+  RF.cv = document.createElement("canvas"); RF.wrap.appendChild(RF.cv);
+  RF.ctx = RF.cv.getContext("2d");
+}
+function ensureRain(){
+  if (!RF.wrap) rainBuild();
+  var log = $("log");
+  if (RF.wrap.parentNode !== log) log.appendChild(RF.wrap);
+}
+function rainMask(){
+  var off = document.createElement("canvas"); off.width = RF.cols; off.height = RF.rows;
+  var o = off.getContext("2d");
+  o.fillStyle = "#000"; o.fillRect(0, 0, off.width, off.height);
+  o.fillStyle = "#fff"; o.textAlign = "center"; o.textBaseline = "middle";
+  var fs = Math.max(4, Math.floor(RF.rows * 0.7));
+  o.font = "bold " + fs + "px monospace";
+  while (o.measureText(RF.name).width > RF.cols * 0.84 && fs > 4) { fs--; o.font = "bold " + fs + "px monospace"; }
+  o.fillText(RF.name, RF.cols / 2, RF.rows / 2 + 0.5);
+  var d = o.getImageData(0, 0, RF.cols, RF.rows).data;
+  RF.mask = new Array(RF.cols * RF.rows);
+  for (var i = 0; i < RF.cols * RF.rows; i++) RF.mask[i] = d[i * 4] > 110 ? 1 : 0;
+}
+function rainSize(){
+  var w = RF.wrap.clientWidth, h = RF.wrap.clientHeight;
+  if (!w || !h) return false;
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  RF.cv.width = Math.round(w * dpr); RF.cv.height = Math.round(h * dpr);
+  RF.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  RF.lastW = w; RF.lastH = h;
+  RF.cols = Math.max(8, Math.floor(w / RF.cw));
+  RF.rows = Math.max(6, Math.floor(h / RF.lh));
+  var n = RF.cols * RF.rows;
+  RF.cells = new Array(n);
+  for (var i = 0; i < n; i++) RF.cells[i] = Math.random() < 0.5 ? "0" : "1";
+  RF.drops = []; RF.spd = [];
+  for (var c = 0; c < RF.cols; c++) { RF.drops.push(Math.random() * RF.rows); RF.spd.push(0.15 + Math.random() * 0.35); }
+  rainMask();
+  return true;
+}
+function rainFrame(ts){
+  requestAnimationFrame(rainFrame);
+  if (!RF.wrap || !RF.wrap.isConnected) return;
+  if (ts - RF.last < 55) return;
+  RF.last = ts;
+  if (!RF.cells || RF.wrap.clientWidth !== RF.lastW || RF.wrap.clientHeight !== RF.lastH) { if (!rainSize()) return; }
+  var cols = RF.cols, rows = RF.rows, ctx = RF.ctx, cw = RF.cw, lh = RF.lh, c, r, i;
+  // falling heads
+  for (c = 0; c < cols; c++) {
+    RF.drops[c] += RF.spd[c];
+    if (RF.drops[c] - 9 > rows) { RF.drops[c] = -Math.random() * rows * 0.5; RF.spd[c] = 0.15 + Math.random() * 0.35; }
+  }
+  // flicker digits (never the KRRISH cells, so the name stays readable)
+  for (i = 0; i < 45; i++) {
+    var k = Math.floor(Math.random() * RF.cells.length);
+    if (!RF.mask[k]) RF.cells[k] = RF.cells[k] === "0" ? "1" : "0";
+  }
+  // glitch: a short band of rows where the name jumps sideways and flashes
+  if (ts > RF.glitchAt) {
+    RF.glitchUntil = ts + 120 + Math.random() * 180;
+    var b0 = Math.floor(Math.random() * rows);
+    RF.band = [b0, b0 + 1 + Math.floor(Math.random() * 3)];
+    RF.shift = (Math.random() < 0.5 ? -1 : 1) * (1 + Math.floor(Math.random() * 3));
+    RF.glitchAt = ts + 1400 + Math.random() * 2600;
+  }
+  var glitch = ts < RF.glitchUntil;
+  // paint
+  ctx.globalAlpha = 1;
+  ctx.fillStyle = "#070102";
+  ctx.fillRect(0, 0, RF.wrap.clientWidth, RF.wrap.clientHeight);
+  ctx.font = "12px ui-monospace, Menlo, Consolas, monospace";
+  ctx.textBaseline = "top";
+  for (r = 0; r < rows; r++) {
+    var inBand = glitch && r >= RF.band[0] && r <= RF.band[1];
+    for (c = 0; c < cols; c++) {
+      i = r * cols + c;
+      var sc = inBand ? (c - RF.shift + cols) % cols : c;
+      var isName = RF.mask[r * cols + sc] === 1;
+      var d = RF.drops[c] - r;
+      var color, alpha;
+      if (isName)            { color = inBand ? "#ffffff" : "#ff2d4f"; alpha = 1; }
+      else if (d >= 0 && d < 1) { color = "#ffd6dd"; alpha = 1; }
+      else if (d >= 1 && d < 9) { color = "#ff1f3d"; alpha = 1 - d / 10; }
+      else                   { color = "#ff1f3d"; alpha = 0.16; }
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = color;
+      ctx.fillText(RF.cells[i], c * cw + (inBand ? Math.random() * 1.5 : 0), r * lh + 1);
+    }
+  }
+  ctx.globalAlpha = 1;
+}
+
+// ---------- extras: models, photo, history, alarms, timers, reminders, calc, quotes ----------
+var MODEL_LIST = [], MODEL_LOADED = false, PENDING_IMG = null;
+var QUOTES = [
+  "Mushkil waqt bhi guzar jayega, bas ruke mat.",
+  "Code likhte raho, bugs apne aap samajh aane lagenge.",
+  "Har expert kabhi beginner tha.",
+  "Aaj ka kaam aaj hi, kal ka bojh nahi.",
+  "Chhoti shuruaat bhi badi manzil tak le jaati hai.",
+  "Sawal poochna galat nahi, bina poochhe rehna galat hai.",
+  "Apne aap par bharosa rakho, Krrish.",
+  "Ek line bolo, aur kaam dikhao."
+];
+function errText(e){
+  var m = (e && e.message) || "";
+  if (/failed to fetch|networkerror|load failed|network/i.test(m)) return "Internet ya server se connect nahi ho paya. Net check karke dobara try karo.";
+  if (/timeout/i.test(m)) return "Server ko jawab dene mein bahut der lag rahi hai.";
+  if (/roka/i.test(m)) return "Kaam roka gaya.";
+  return m || "Kuch gadbad ho gayi.";
+}
+function isVision(id){
+  for (var i = 0; i < MODEL_LIST.length; i++) if (MODEL_LIST[i].id === id) return MODEL_LIST[i].vision;
+  return false;
+}
+function fillModelSel(){
+  var sel = $("modelsel"); if (!sel) return;
+  var cur = localStorage.getItem("rd_model") || "auto";
+  sel.innerHTML = "";
+  var add = function(v, label){ var o = document.createElement("option"); o.value = v; o.textContent = label; sel.appendChild(o); };
+  add("auto", "Auto (free)");
+  MODEL_LIST.slice(0, 120).forEach(function(m){
+    if (m.id !== "openrouter/auto") add(m.id, m.id.replace(/:free$/, "") + (m.vision ? "  [photo]" : ""));
+  });
+  var has = false;
+  for (var i = 0; i < sel.options.length; i++) if (sel.options[i].value === cur) has = true;
+  if (!has) add(cur, cur);
+  sel.value = cur;
+  sel.onchange = function(){ localStorage.setItem("rd_model", sel.value); sysMsg("Model set: " + sel.value, "ok"); };
+}
+function resizeImage(file, maxSide, cb){
+  var fr = new FileReader();
+  fr.onload = function(){
+    var img = new Image();
+    img.onload = function(){
+      var k = Math.min(1, maxSide / Math.max(img.width, img.height));
+      var c = document.createElement("canvas");
+      c.width = Math.max(1, Math.round(img.width * k)); c.height = Math.max(1, Math.round(img.height * k));
+      c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+      cb(c.toDataURL("image/jpeg", 0.82));
+    };
+    img.onerror = function(){ sysMsg("Photo load nahi hui.", "err"); };
+    img.src = fr.result;
+  };
+  fr.readAsDataURL(file);
+}
+function userPhoto(url){
+  var row = document.createElement("div"); row.className = "row me";
+  var d = document.createElement("div"); d.className = "um";
+  var im = document.createElement("img"); im.src = url;
+  im.style.cssText = "max-width:200px;border-radius:8px;display:block";
+  d.appendChild(im); row.appendChild(d); $("log").appendChild(row); scroll();
+}
+function persistHist(){
+  var ghost = null; try { ghost = localStorage.getItem("rd_ghost"); } catch(e) {}
+  if (ghost === "1") { try { localStorage.removeItem("rd_hist"); } catch(e) {} return; }
+  try {
+    localStorage.setItem("rd_hist", JSON.stringify(hist.slice(-40).map(function(h){ return { role: h.role, content: h.content }; })));
+  } catch(e) {}
+}
+function restoreChat(){
+  var raw = localStorage.getItem("rd_hist"); if (!raw) return;
+  var arr; try { arr = JSON.parse(raw); } catch(e) { return; }
+  if (!Array.isArray(arr) || !arr.length) return;
+  hist = arr.filter(function(x){ return x && (x.role === "user" || x.role === "assistant") && typeof x.content === "string"; });
+  hist.forEach(function(h){ if (h.role === "user") userBubble(h.content); else botBubble(h.content); });
+  sysMsg("Pichli chat wapas load ho gayi. Naya session chahiye to + dabao.", "");
+}
+function parseHM(t){
+  var m = /(\d{1,2})(?::(\d{2}))?\s*(?:baje|am|pm)/i.exec(t);
+  if (!m) return null;
+  var h = parseInt(m[1], 10), mi = m[2] ? parseInt(m[2], 10) : 0;
+  if (/pm|shaam|sham|raat|dopahar|evening|night/i.test(t) && h < 12) h += 12;
+  if (/subah|morning|\bam\b/i.test(t) && h === 12) h = 0;
+  if (h > 23 || mi > 59) return null;
+  return { h: h, m: mi };
+}
+function pad2(n){ return ("0" + n).slice(-2); }
+function startTimer(secs, label){
+  if (NATIVE && P.timer) {
+    var r = P.timer(secs, label);
+    return sysMsg(r === "ok" ? "Timer set: " + secs + " second. Clock app mein dikhega." : "Timer set nahi hua.", r === "ok" ? "ok" : "err");
+  }
+  setTimeout(function(){ sysMsg("Timer khatam: " + label, "ok"); }, secs * 1000);
+  sysMsg("Timer set (" + secs + " second). Browser mein tab khula rehna chahiye.", "ok");
+}
+function setAlarm(h, mi, label){
+  if (NATIVE && P.alarm) {
+    var r = P.alarm(h, mi, label);
+    return sysMsg(r === "ok" ? "Alarm set: " + pad2(h) + ":" + pad2(mi) : "Alarm set nahi hua. Clock app check karo.", r === "ok" ? "ok" : "err");
+  }
+  sysMsg("Alarm APK mein phone ki clock app se set hota hai. Abhi ye browser hai.", "warn");
+}
+function setReminder(h, mi, text){
+  var d = new Date(); d.setHours(h, mi, 0, 0);
+  if (d.getTime() <= Date.now()) d.setDate(d.getDate() + 1);
+  addRem(d, text || "Reminder", false);
+  sysMsg("Reminder set: " + fmtWhen(d.getTime()) + " — " + (text || "Reminder"), "ok");
+}
+function extrasRoute(t){
+  var m;
+  if (/^(time|samay|date|aaj ki date|abhi kitne baje( hain)?|kitne baje( hain)?)\??$/i.test(t)) {
+    sysMsg("Abhi: " + new Date().toLocaleString("hi-IN"), "ok"); return true;
+  }
+  if (/^(quote|motivation|aaj ka quote)$/i.test(t)) {
+    sysMsg(QUOTES[Math.floor(Math.random() * QUOTES.length)], "ok"); return true;
+  }
+  var expr = null;
+  if ((m = /^(?:calc|calculate|hisaab)\s*:?\s*(.+)$/i.exec(t))) expr = m[1];
+  else if (/^[\d\s+\-*\/().%]+$/.test(t) && /[+\-*\/%]/.test(t) && /\d/.test(t)) expr = t;
+  if (expr !== null) {
+    if (/^[\d\s+\-*\/().%]+$/.test(expr)) {
+      try { var v = Function('"use strict";return (' + expr + ');')(); sysMsg(expr.trim() + " = " + v, "ok"); }
+      catch(e) { sysMsg("Ye calculation samajh nahi aaya.", "err"); }
+    } else sysMsg("Calculator sirf numbers aur + - * / ( ) % samajhta hai.", "warn");
+    return true;
+  }
+  var tm = /(\d+)\s*(sec|second|seconds|min|mins|minute|minutes|ghanta|ghante|hour|hours|hr)\w*\s*(?:ka\s+|ki\s+|ke\s+)?timer|timer\s*(\d+)\s*(sec|second|seconds|min|mins|minute|minutes|ghanta|ghante|hour|hours|hr)?/i.exec(t);
+  if (tm) {
+    var num = parseInt(tm[1] || tm[3], 10), unit = (tm[2] || tm[4] || "min").toLowerCase();
+    var secs = /^s/.test(unit) ? num : (/^(h|gh)/.test(unit) ? num * 3600 : num * 60);
+    startTimer(secs, "Rudhar timer " + num + " " + unit);
+    return true;
+  }
+  if (/\balarm\b/i.test(t)) {
+    var hm = parseHM(t);
+    if (hm) { setAlarm(hm.h, hm.m, (t.indexOf(":") >= 0 ? t.slice(t.indexOf(":") + 1) : "Rudhar alarm").trim()); return true; }
+  }
+  if (/yaad dilao|remind/i.test(t)) {
+    var hm2 = parseHM(t);
+    if (hm2) { setReminder(hm2.h, hm2.m, (t.indexOf(":") >= 0 ? t.slice(t.indexOf(":") + 1) : t).trim()); return true; }
+  }
+  return false;
+}
+$("attach").onclick = function(){
+  if (PENDING_IMG) { PENDING_IMG = null; sysMsg("Photo hata diya.", "warn"); return; }
+  $("pick").click();
+};
+$("pick").onchange = function(){
+  var f = this.files && this.files[0]; this.value = "";
+  if (!f) return;
+  if (f.type && f.type.indexOf("image/") === 0) {
+    resizeImage(f, 1024, function(url){
+      PENDING_IMG = url;
+      sysMsg("Photo ready. Ab sawal likho ya bhejo, AI photo dekh kar jawab dega. (📎 dubara dabao to hata do)", "ok");
+    });
+  } else {
+    readTextFile(f);
+  }
+};
+
+// ---------- Termux coding agent: AI writes, runs, reads output, fixes (sandbox ~/rudhar) ----------
+var TERMUX_WAIT = {}, TERMUX_SEQ = 1;
+var TERMUX_SYS = "Tum Rudhar ka Termux coding agent ho. User ka task Android Termux mein karna hai. " +
+  "Sirf ek JSON object do, koi aur text nahi. Format: " +
+  "{\"done\":false,\"file\":\"main.py\",\"code\":\"poora code\",\"run\":\"python3 ~/rudhar/main.py\"} " +
+  "ya install ke liye {\"done\":false,\"install\":\"python\"} (sirf python ya nodejs) " +
+  "ya kaam poora hone par {\"done\":true,\"say\":\"Hinglish summary\"}. " +
+  "Rules: file sirf ~/rudhar/ mein banao, naam simple rakho (letters, digits, . _ -). " +
+  "run sirf python3, node ya bash ~/rudhar/ wali file ke liye ho. Network download, sudo, rm, system files, passwords " +
+  "ya kisi bhi hacking, exploit, malware ya attack wale code ko mana karo. Agar output mein error ho to code theek karke dobara do. " +
+  "Maximum 6 steps mein kaam khatam karo.";
+window.onTermuxResult = function(str){
+  var o; try { o = JSON.parse(str); } catch(e) { return; }
+  var res = TERMUX_WAIT[o.id];
+  if (res) { delete TERMUX_WAIT[o.id]; res(o); }
+};
+function termuxRun(cmd){
+  var id = TERMUX_SEQ++;
+  return new Promise(function(resolve){
+    TERMUX_WAIT[id] = resolve;
+    var r = P.termuxRun(cmd, id);
+    if (r !== "sent") {
+      delete TERMUX_WAIT[id];
+      return resolve({ id: id, stdout: "", stderr: "Termux nahi chala (" + r + "). Termux install karo aur permission do.", exitCode: -1 });
+    }
+    setTimeout(function(){
+      if (TERMUX_WAIT[id]) { delete TERMUX_WAIT[id]; resolve({ id: id, stdout: "", stderr: "Timeout: Termux ne 90 second mein jawab nahi diya.", exitCode: -1 }); }
+    }, 90000);
+  });
+}
+async function termuxAgent(task){
+  if (!NATIVE) return sysMsg("Termux agent sirf APK mein chalega.", "warn");
+  if (busy) return;
+  if (!(await confirmUI("Termux mein ye task khud chalaun? \"" + task + "\"\nMax 6 steps, sirf ~/rudhar folder mein.", false)))
+    return sysMsg("Termux task cancel.");
+  busy = true; stopFlag = false; setBusy(true);
+  var history = [];
+  for (var step = 1; step <= 6 && !stopFlag; step++){
+    sysMsg("Termux agent step " + step + " / 6 ...");
+    var plan = null;
+    try {
+      var reply = await ask([
+        { role: "system", content: TERMUX_SYS },
+        { role: "user", content: "Task: " + task + "\n\nAb tak:\n" + (history.slice(-6).join("\n---\n") || "(kuch nahi)") + "\n\nSirf JSON do." }
+      ], false);
+      var mm = /\{[\s\S]*\}/.exec(reply);
+      plan = mm ? JSON.parse(mm[0]) : null;
+    } catch(e) { sysMsg(errText(e), "err"); break; }
+    if (!plan) { sysMsg("AI ka plan samajh nahi aaya.", "err"); break; }
+    if (plan.done) { var say = plan.say || "Kaam ho gaya."; botBubble(say); speak(say); break; }
+
+    var cmd, label;
+    if (plan.install) {
+      var inst = String(plan.install).toLowerCase();
+      if (!/^(python|nodejs)$/.test(inst)) { sysMsg("Ye install allowed nahi hai.", "warn"); break; }
+      cmd = "pkg install -y " + inst; label = cmd;
+    } else if (plan.file && typeof plan.code === "string" && plan.run) {
+      var f = String(plan.file), runC = String(plan.run).trim();
+      if (!/^[\w.-]+$/.test(f)) { sysMsg("File ka naam galat hai: " + f, "err"); break; }
+      if (!/^(python3|node|bash) ~\/rudhar\/[\w.-]+$/.test(runC)) { sysMsg("Ye run command allowed nahi: " + runC, "warn"); break; }
+      if (plan.code.length > 60000) { sysMsg("Code bahut bada hai, chhota karke maango.", "err"); break; }
+      var b64 = bytesToB64(new TextEncoder().encode(plan.code));
+      cmd = "mkdir -p ~/rudhar && echo " + b64 + " | base64 -d > ~/rudhar/" + f + " && " + runC;
+      label = runC;
+      botBubble("```" + (/\.py$/.test(f) ? "python" : /\.js$/.test(f) ? "js" : "text") + " file=" + f + "\n" + plan.code + "\n```");
+    } else { sysMsg("AI ka plan adhoora tha.", "err"); break; }
+
+    if (DANGER_RE.test(label)) { sysMsg("Ye command block hai (khatarnak).", "err"); break; }
+    sysMsg("Termux mein chala raha hoon: " + label, "");
+    var res = await termuxRun(cmd);
+    var out = (res.stdout || "") + (res.stderr ? "\nSTDERR: " + res.stderr : "") + "\nexit: " + res.exitCode;
+    sysMsg(out.slice(0, 700), res.exitCode === 0 ? "ok" : "warn");
+    history.push((plan.install ? "install " + plan.install : "file " + plan.file + " run: " + plan.run) + "\nOutput:\n" + out.slice(0, 1200));
+    await sleep(300);
+  }
+  if (stopFlag) sysMsg("Termux agent roka gaya.", "warn");
+  busy = false; setBusy(false);
+}
+
+// ---------- smart reminders, notifications, calendar, routines, text files, project + screenshot commands ----------
+var REM_KEY = "rd_rem", REM_TIMERS = {}, PENDING_DOC = null;
+function parseWhen(t){
+  var now = new Date(), m;
+  if ((m = /(\d+)\s*(minute|min|mins|minutes|ghante|ghanta|hour|hours|hr)\s*(?:baad|ke baad|later)/i.exec(t))) {
+    var mult = /^(h|gh)/i.test(m[2]) ? 3600000 : 60000;
+    return new Date(now.getTime() + parseInt(m[1], 10) * mult);
+  }
+  var hm = parseHM(t);
+  if (!hm) return null;
+  var d = new Date(now.getTime());
+  d.setHours(hm.h, hm.m, 0, 0);
+  if (/\bkal\b|\btomorrow\b/i.test(t)) d.setDate(d.getDate() + 1);
+  else if (d.getTime() <= now.getTime()) d.setDate(d.getDate() + 1);
+  return d;
+}
+function fmtWhen(ms){ return new Date(ms).toLocaleString("hi-IN"); }
+function loadRems(){ try { var a = JSON.parse(localStorage.getItem(REM_KEY) || "[]"); return Array.isArray(a) ? a : []; } catch(e) { return []; } }
+function saveRems(a){ try { localStorage.setItem(REM_KEY, JSON.stringify(a)); } catch(e) {} }
+function scheduleRem(rem){
+  if (NATIVE && P.remind) return P.remind(String(rem.at), rem.text, !!rem.daily, rem.code);
+  if (REM_TIMERS[rem.code]) clearTimeout(REM_TIMERS[rem.code]);
+  REM_TIMERS[rem.code] = setTimeout(function(){ fireRem(rem); }, Math.min(Math.max(0, rem.at - Date.now()), 2147483000));
+  return "ok";
+}
+function fireRem(rem){
+  delete REM_TIMERS[rem.code];
+  sysMsg("⏰ Reminder: " + rem.text, "ok");
+  var rs = loadRems();
+  if (rem.daily) {
+    rem.at += 86400000;
+    rs.forEach(function(x){ if (x.code === rem.code) x.at = rem.at; });
+    saveRems(rs); scheduleRem(rem);
+  } else {
+    saveRems(rs.filter(function(x){ return x.code !== rem.code; }));
+  }
+}
+function addRem(when, text, daily){
+  var rem = { code: Date.now() % 2000000000, at: when.getTime(), text: text, daily: !!daily };
+  var rs = loadRems(); rs.push(rem); saveRems(rs);
+  var r = scheduleRem(rem);
+  if (NATIVE && r !== "ok") sysMsg("Reminder native mein set nahi hua (" + r + ").", "err");
+  return rem;
+}
+function restoreRems(){
+  var now = Date.now();
+  var rs = loadRems().filter(function(r){ return r.daily || r.at > now; });
+  rs.forEach(function(r){ while (r.at < now) r.at += 86400000; });
+  saveRems(rs);
+  rs.forEach(function(r){ scheduleRem(r); });
+}
+function listRemsMsg(){
+  var rs = loadRems();
+  if (!rs.length) return sysMsg("Abhi koi reminder set nahi hai.", "");
+  botBubble(rs.map(function(r, i){ return (i + 1) + ". " + fmtWhen(r.at) + (r.daily ? " (roz)" : "") + " — " + r.text; }).join("\n") + "\n\nBand karne ke liye: reminder 1 band karo");
+}
+function cancelRemByIndex(n){
+  var rs = loadRems(), r = rs[n - 1];
+  if (!r) return sysMsg("Ye number ka reminder nahi mila.", "warn");
+  if (NATIVE && P.cancelRemind) P.cancelRemind(r.code);
+  if (REM_TIMERS[r.code]) { clearTimeout(REM_TIMERS[r.code]); delete REM_TIMERS[r.code]; }
+  rs.splice(n - 1, 1); saveRems(rs);
+  sysMsg("Reminder band kar diya: " + r.text, "ok");
+}
+
+function loadRoutines(){ try { return JSON.parse(localStorage.getItem("rd_routines") || "{}") || {}; } catch(e) { return {}; } }
+function saveRoutines(o){ try { localStorage.setItem("rd_routines", JSON.stringify(o)); } catch(e) {} }
+function routineSave(name, body){
+  var rs = loadRoutines(), key = name.toLowerCase();
+  rs[key] = body.split(";").map(function(x){ return x.trim(); }).filter(Boolean);
+  saveRoutines(rs);
+  sysMsg("Routine save: " + name + " (" + rs[key].length + " steps)", "ok");
+}
+async function routineRun(name){
+  var steps = loadRoutines()[name.toLowerCase()];
+  if (!steps) return sysMsg("Routine nahi mili: " + name, "warn");
+  sysMsg("Routine chal rahi hai: " + name, "ok");
+  for (var i = 0; i < steps.length; i++) {
+    if (stopFlag) break;
+    if (/^routine/i.test(steps[i])) continue;
+    while (busy) await sleep(300);
+    sysMsg("Step " + (i + 1) + ": " + steps[i]);
+    await send(steps[i]);
+    await sleep(1200);
+  }
+  sysMsg("Routine khatam: " + name, "ok");
+}
+function routineDelete(name){
+  var rs = loadRoutines(), key = name.toLowerCase();
+  if (!rs[key]) return sysMsg("Routine nahi mili: " + name, "warn");
+  delete rs[key]; saveRoutines(rs);
+  sysMsg("Routine delete: " + name, "ok");
+}
+function routineList(){
+  var names = Object.keys(loadRoutines());
+  sysMsg(names.length ? "Routines: " + names.join(", ") : "Abhi koi routine nahi. Bolo: routine morning banao: time; quote", "ok");
+}
+
+function readTextFile(f){
+  if (/\.pdf$/i.test(f.name)) return sysMsg("PDF abhi nahi padhta. Text file bhejo (txt, md, json, csv, code).", "warn");
+  if (f.size > 300000) return sysMsg("File bahut badi hai. 300 KB se chhoti file bhejo.", "warn");
+  var fr = new FileReader();
+  fr.onload = function(){
+    var txt = String(fr.result || "").slice(0, 60000);
+    PENDING_DOC = { name: f.name, text: txt };
+    sysMsg("File ready: " + f.name + " (" + txt.length + " characters). Ab sawal likho.", "ok");
+  };
+  fr.onerror = function(){ sysMsg("File read nahi hui.", "err"); };
+  fr.readAsText(f);
+}
+
+function newFeatureRoute(t){
+  var m;
+  // reminders: list and cancel first, then create (so "reminder 1 band karo" is never a new reminder)
+  if (/^reminders?\s+(dikhao|list|dekho)$/i.test(t)) { listRemsMsg(); return true; }
+  if ((m = /^reminder\s+(\d+)\s+(band karo|cancel|hatao)$/i.exec(t))) { cancelRemByIndex(parseInt(m[1], 10)); return true; }
+  if (/^(?:yaad dilao|remind(?: me)?|reminder)\b/i.test(t) || (/\byaad dilao\b/i.test(t) && parseWhen(t))) {
+    var when = parseWhen(t);
+    if (!when) { sysMsg("Time samajh nahi aaya. Jaise: 'kal subah 7 baje yaad dilao: dawa', 'yaad dilao 10 minute baad: chai', 'roz 8 baje yaad dilao: paani piyo'.", "warn"); return true; }
+    var text = t.indexOf(":") >= 0 ? t.slice(t.indexOf(":") + 1).trim() : t.replace(/^(?:yaad dilao|remind(?: me)?|reminder)\s*/i, "").trim();
+    var daily = /\b(roz|rozana|daily|har din)\b/i.test(t);
+    addRem(when, text || "Reminder", daily);
+    sysMsg("Reminder set: " + fmtWhen(when.getTime()) + (daily ? " (roz)" : "") + " — " + (text || "Reminder"), "ok");
+    return true;
+  }
+  // notifications: read the recent ones (needs notification access)
+  if (/^(notifications?|notif)(\s+(padho|dikhao|read|list|dekho))?$/i.test(t)) {
+    if (!NATIVE || !P.notifications) { sysMsg("Notification reader full APK mein chalega.", "warn"); return true; }
+    if (P.notifAccess() !== "on") { sysMsg("Pehle notification access do: Settings mein 'Rudhar notifications' ko allow karo.", "warn"); P.openNotifAccess(); return true; }
+    var list = []; try { list = JSON.parse(P.notifications()) || []; } catch(e) { list = []; }
+    if (!list.length) sysMsg("Abhi koi naya notification nahi.", "ok");
+    else botBubble(list.slice(0, 15).map(function(x, i){ return (i + 1) + ". " + x; }).join("\n"));
+    return true;
+  }
+  // calendar: opens a prefilled event for you to save
+  if ((m = /^(?:calendar|calender)\s+(?:mein|me)\s+(.+)$/i.exec(t))) {
+    if (!NATIVE || !P.calendarAdd) { sysMsg("Calendar entry full APK mein chalegi.", "warn"); return true; }
+    var rest = m[1].trim(), w = parseWhen(rest) || new Date(Date.now() + 3600000);
+    var title = rest.replace(/\b(kal|aaj|subah|shaam|raat|dopahar)\b|\d{1,2}(?::\d{2})?\s*(?:baje|am|pm)/ig, "").replace(/\s+/g, " ").trim() || "Rudhar event";
+    var r = P.calendarAdd(title, String(w.getTime()));
+    sysMsg(r === "ok" ? "Calendar khul raha hai: " + title + " — " + fmtWhen(w.getTime()) + ". Save dabao." : "Calendar nahi khula.", r === "ok" ? "ok" : "err");
+    return true;
+  }
+  // routines: named lists of commands ("routine morning banao: time; quote")
+  if ((m = /^routine\s+(.+?)\s+banao\s*:\s*(.+)$/i.exec(t))) { routineSave(m[1].trim(), m[2]); return true; }
+  if ((m = /^routine\s+(.+?)\s+(?:chalao|run karo)$/i.exec(t))) { routineRun(m[1].trim()); return true; }
+  if ((m = /^routine\s+(.+?)\s+(?:hatao|delete)$/i.exec(t))) { routineDelete(m[1].trim()); return true; }
+  if (/^routines?\s+(dikhao|list|dekho)$/i.test(t)) { routineList(); return true; }
+  // project generator: AI makes several files and the ZIP button packs them
+  if ((m = /^(project|website|app)\s+banao\s*:?\s*(.+)$/i.exec(t))) {
+    send("Ek poora " + m[1] + " banao: " + m[2] + ". Stack ke hisaab se files banao (HTML/CSS/JS, JSX, ya Python). " +
+         "Har file alag code block mein do, file=NAME format mein (jaise index.html, style.css, script.js, README.md). " +
+         "Sab files ek hi reply mein do taaki ZIP ban sake.");
+    return true;
+  }
+  // screenshot / design to code (needs a photo attached with the 📎 button)
+  if (/^(screenshot|design|photo|image)\s+se\s+(html|code|website|app)(\s+banao)?$/i.test(t)) {
+    if (!PENDING_IMG) { sysMsg("Pehle 📎 se screenshot ya design ki photo bhejo.", "warn"); return true; }
+    send("Is screenshot ya design ko dekh kar ek single index.html banao (HTML + CSS + JS), file=index.html format mein. Layout, colors aur text jitna ho sake waisa rakho.");
+    return true;
+  }
+  return false;
+}
+
+
+// ---------- v3: ghost mode, link checker, password generator, PIN lock, safety guard ----------
+var FORBID_RE = /\b(nmap|hydra|sqlmap|metasploit|burp ?suite|aircrack|exploit (banao|likho|code)|malware|ransomware|keylogger|ddos|phishing (page|site) (banao|bana)|fake (call|police|message|sms)|police (ka )?(fake )?call|emergency call kar|\bclone\b.*\b(website|site|page|login)\b|\b(website|site|page|login)\b.*\bclone\b|scan my wifi|wifi scan|wifi (ke )?devices?|password (crack|todo|hack)|hack (karo|kar do|kaise|karna)|bomb (message|sms))\b/i;
+function refuseMsg(){ sysMsg("Ye kaam Rudhar nahi karega (hacking, attack tools, fake calls, dusron ke devices ya websites par). Iske badle main ye kar sakta hun: link check, password banana, ghost mode, PIN lock, ya security tips.", "err"); }
+var SHORT_HOSTS = ["bit.ly","tinyurl.com","goo.gl","t.co","is.gd","cutt.ly","rb.gy","ow.ly","shorturl.at","tiny.cc"];
+var SUS_TLDS = ["zip","mov","xyz","top","click","tk","ml","ga","cf","gq","icu","rest","cam","loan","work"];
+var LURE_RE = /login|log-in|signin|verify|verification|update|secure|account|bank|free|gift|reward|kyc|otp|confirm|prize|bonus|wallet/i;
+var BRANDS = ["paypal","google","facebook","instagram","whatsapp","amazon","apple","microsoft","netflix","paytm","phonepe"];
+function checkLink(raw){
+  var s = String(raw).trim(), reasons = [], score = 0, u;
+  try { u = new URL(/^https?:\/\//i.test(s) ? s : "https://" + s); }
+  catch(e) { return { score: 0, verdict: "Ye link samajh nahi aaya", reasons: ["URL galat lag raha hai"] }; }
+  var host = u.hostname.toLowerCase(), path = (u.pathname + u.search).toLowerCase();
+  var parts = host.split("."), tld = parts[parts.length - 1];
+  if (u.protocol === "http:") { score += 2; reasons.push("HTTPS nahi hai (http)"); }
+  if (/^\d{1,3}(\.\d{1,3}){3}$/.test(host)) { score += 3; reasons.push("domain ki jagah seedha IP address hai"); }
+  if (host.indexOf("xn--") >= 0) { score += 2; reasons.push("punycode domain (lookalike naam ho sakta hai)"); }
+  if (u.username || s.indexOf("@") >= 0) { score += 3; reasons.push("URL mein @ hai, jo asli site ko chhupa sakta hai"); }
+  if (parts.length > 4) { score += 1; reasons.push("bahut zyada subdomains"); }
+  if (SHORT_HOSTS.indexOf(host) >= 0) { score += 2; reasons.push("URL shortener hai, asli destination chhupa hai"); }
+  if (SUS_TLDS.indexOf(tld) >= 0) { score += 2; reasons.push("shaq wala domain extension: ." + tld); }
+  if ((host.match(/-/g) || []).length >= 3) { score += 1; reasons.push("domain mein bahut hyphens"); }
+  var lure = (host + path).match(LURE_RE);
+  if (lure) { score += 1; reasons.push("shaq wala shabd: " + lure[0]); }
+  var second = parts.length >= 2 ? parts[parts.length - 2] : "";
+  BRANDS.forEach(function(b){
+    if (second !== b && second.indexOf(b) >= 0) { score += 3; reasons.push("brand ka naam (" + b + ") lookalike domain mein hai"); }
+    else if (parts.slice(0, -2).indexOf(b) >= 0) { score += 3; reasons.push("brand ka naam (" + b + ") subdomain mein hai, asli domain nahi"); }
+  });
+  var verdict = score >= 5 ? "HIGH RISK: mat kholo" : score >= 2 ? "CAUTION: soch-samajh kar kholo" : "Safe dikh raha hai (phir bhi bharosa mat karo)";
+  return { score: score, verdict: verdict, reasons: reasons, host: host };
+}
+function showLinkReport(raw){
+  var r = checkLink(raw);
+  var cls = r.score >= 5 ? "err" : r.score >= 2 ? "warn" : "ok";
+  var lines = ["Link: " + (r.host || raw), r.verdict].concat(r.reasons.length ? r.reasons.map(function(x){ return "- " + x; }) : ["- koi shaq wali baat nahi mili"]);
+  sysMsg(lines.join("\n") + "\n\nNote: ye heuristic check hai, pakka guarantee nahi. Sach mein scan ke liye Google Safe Browsing ya VirusTotal jaise service use karo.", cls);
+}
+function makePassword(len){
+  var L = "abcdefghijkmnopqrstuvwxyz", U = "ABCDEFGHJKLMNPQRSTUVWXYZ", D = "23456789", S = "!@#$%^&*-_=+?";
+  var all = L + U + D + S;
+  function rnd(n){ var a = new Uint32Array(1); crypto.getRandomValues(a); return a[0] % n; }
+  var out = [];
+  for (var i = 0; i < len; i++) out.push(all.charAt(rnd(all.length)));
+  var sets = [L, U, D, S];
+  for (var k = 0; k < sets.length; k++) out[k] = sets[k].charAt(rnd(sets[k].length));
+  for (var j = out.length - 1; j > 0; j--) { var r = rnd(j + 1), tmp = out[j]; out[j] = out[r]; out[r] = tmp; }
+  return out.join("");
+}
+function ghostOn(){
+  try { localStorage.setItem("rd_ghost", "1"); localStorage.removeItem("rd_hist"); } catch(e) {}
+  hist = []; $("log").innerHTML = ""; ensureRain();
+  sysMsg("Ghost mode ON. Ab chat save nahi hogi, aur purani history mita di gayi. (Ye sirf is phone ke local data par lagu hai.)", "ok");
+}
+function ghostOff(){ try { localStorage.removeItem("rd_ghost"); } catch(e) {} sysMsg("Ghost mode OFF. Ab chat phir se save hogi.", "ok"); }
+function ghostClear(){
+  hist = []; try { localStorage.removeItem("rd_hist"); } catch(e) {}
+  $("log").innerHTML = ""; ensureRain(); sysMsg("Chat mita di gayi.", "ok");
+}
+function pinHash(salt, pin){
+  var h = 2166136261, str = salt + ":" + pin;
+  for (var r = 0; r < 2000; r++) for (var i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
+  return h.toString(16);
+}
+function setPin(pin){
+  var salt = Math.random().toString(16).slice(2, 10);
+  try { localStorage.setItem("rd_pin", salt + ":" + pinHash(salt, pin)); } catch(e) {}
+}
+function checkPin(pin){
+  var st = null; try { st = localStorage.getItem("rd_pin"); } catch(e) {}
+  if (!st) return true;
+  var parts = st.split(":");
+  return pinHash(parts[0], pin) === parts[1];
+}
+function showLock(){ $("lock").classList.add("show"); $("lockpin").value = ""; $("lockmsg").textContent = ""; setTimeout(function(){ $("lockpin").focus(); }, 100); }
+function lockIfSet(){ var st = null; try { st = localStorage.getItem("rd_pin"); } catch(e) {} if (st) showLock(); }
+function tryUnlock(){
+  if (checkPin($("lockpin").value.trim())) { $("lock").classList.remove("show"); sysMsg("Unlock ho gaya.", "ok"); }
+  else { rd5WatchLogAttempt(); $("lockmsg").textContent = "Galat PIN"; $("lockpin").value = ""; }
+}
+$("lockbtn").onclick = tryUnlock;
+$("lockpin").onkeydown = function(e){ if (e.key === "Enter") tryUnlock(); };
+
+function securityRoute(t){
+  var m;
+  if (FORBID_RE.test(t)) {
+    var localLab = /(?:127\.0\.0\.1|localhost|juice shop|dvwa|intentionally vulnerable|my own lab|mere apne lab|authorized lab|authorized target|written permission)/i.test(t);
+    if (!(typeof RD_AGG_MODE !== "undefined" && RD_AGG_MODE && localLab)) { refuseMsg(); return true; }
+  }
+  if (/^ghost\s+on$/i.test(t)) { ghostOn(); return true; }
+  if (/^ghost\s+off$/i.test(t)) { ghostOff(); return true; }
+  if (/^ghost\s+clear$/i.test(t)) { ghostClear(); return true; }
+  if ((m = /^(?:password|pasword)\s+banao(?:\s+(\d{1,3}))?$/i.exec(t))) {
+    var len = Math.min(64, Math.max(12, m[1] ? parseInt(m[1], 10) : 16));
+    sysMsg("Password (" + len + " characters). Ise copy karke rakh lo, ye kahin save nahi hota:\n" + makePassword(len), "ok");
+    return true;
+  }
+  if ((m = /^(?:link check karo|link check|check link)\s*:?\s*(\S+)$/i.exec(t)) || (m = /^((?:https?:\/\/|www\.)\S+)$/i.exec(t)) || (m = /^(?:[a-z0-9-]+\.)+(?:com|in|net|org|io|xyz|top|zip|ly|me|co|app|link|site|ai|tk|ml|ga|cf|gq|click|mov)(?:\/\S*)?$/i.exec(t))) { showLinkReport(m[1] || t); return true; }
+  if ((m = /^pin\s+lock\s+set\s+(\d{4,8})$/i.exec(t))) { setPin(m[1]); sysMsg("PIN lock set ho gaya. Ab app kholne par PIN maanga jayega. (Ye casual lock hai, asli security nahi.)", "ok"); return true; }
+  if ((m = /^pin\s+lock\s+hatao\s+(\d{4,8})$/i.exec(t))) {
+    if (!checkPin(m[1])) { sysMsg("Galat PIN, lock nahi hataya.", "err"); return true; }
+    try { localStorage.removeItem("rd_pin"); } catch(e) {}
+    sysMsg("PIN lock hata diya.", "ok"); return true;
+  }
+  if (/^lock\s+karo$/i.test(t)) {
+    var st = null; try { st = localStorage.getItem("rd_pin"); } catch(e) {}
+    if (!st) sysMsg("Pehle PIN set karo: pin lock set 1234", "warn"); else showLock();
+    return true;
+  }
+  return false;
+}
+
+
+// ---------- RUDHAR v3 add-on pack: 10 feature routes (original UI/styles retained) ----------
+var RD3_ALERT_KEY = "rd3_self_alert";
+function rd3Msg(title, body, kind){ sysMsg(title + "\n" + body, kind || "ok"); }
+function rd3FakeCall(caller){
+  var old = document.getElementById("rd3-call-demo"); if (old) old.remove();
+  var box = document.createElement("div"); box.id = "rd3-call-demo";
+  box.style.cssText = "position:fixed;inset:0;z-index:80;background:linear-gradient(160deg,#061b13,#020604);color:#e8fff1;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;padding:28px;text-align:center;font-family:system-ui,sans-serif";
+  var tag = document.createElement("div"); tag.textContent = "RUDHAR · DEMO INCOMING CALL"; tag.style.cssText="letter-spacing:2px;color:#8bffbd;font-size:12px";
+  var avatar = document.createElement("div"); avatar.textContent="☎"; avatar.style.cssText="width:112px;height:112px;border-radius:50%;display:grid;place-items:center;background:#123d2a;border:2px solid #6dffa8;font-size:48px;box-shadow:0 0 32px #1c7548";
+  var name = document.createElement("h2"); name.textContent = caller || "Rudhar Demo Caller"; name.style.cssText="font-size:28px;margin:8px";
+  var sub = document.createElement("p"); sub.textContent="SIMULATED CALL · REAL CALL NAHI HAI"; sub.style.cssText="color:#9acbb0;font-size:12px";
+  var row = document.createElement("div"); row.style.cssText="display:flex;gap:24px;margin-top:30px";
+  function b(label,bg,fn){var x=document.createElement("button");x.textContent=label;x.style.cssText="border:0;border-radius:30px;padding:16px 22px;background:"+bg+";color:white;font-weight:700";x.onclick=fn;return x;}
+  row.appendChild(b("Answer demo","#168447",function(){sub.textContent="Demo call connected. Koi real call nahi hai."; }));
+  row.appendChild(b("End call","#c52e43",function(){box.remove();}));
+  box.append(tag,avatar,name,sub,row); document.body.appendChild(box);
+}
+function rd3NetworkHelp(){
+  rd3Msg("NETWORK RADAR · OWNER NETWORK ONLY", "Browser HTML ko Android ki Wi-Fi device list scan karne ki permission nahi hoti, isliye main fake scan results nahi dikhaunga. Apne router ke official app/admin page mein Connected devices / Clients kholo; ya Android Settings → Wi-Fi → connected network → details dekho. Sirf apne network ko check karo.", "warn");
+  if (NATIVE) { var d=$("log").lastElementChild; var b=document.createElement("button"); b.textContent="Wi-Fi settings kholne ki koshish"; b.onclick=function(){ var r=P.openApp("Settings"); sysMsg("Settings request: "+r,"ok"); }; d.appendChild(b); }
+}
+function rd3TermuxHelp(){
+  var msg="TERMUX GOD MODE · SECURITY LAB\n\n"+
+  "BASIC\npwd — current folder\nls -la — files/folders dekho\npython --version — Python check\npkg update — package list update\ntermux-setup-storage — shared storage permission\n\n"+
+  "SECURITY TOOLS\nSQLmap: sirf apne local/staging test app par low-impact baseline test. `sqlmap guide` type karo.\nHydra: login/password auditing tool; yahan brute-force command generate/execute nahi hota. `hydra guide` type karo.\nNmap: apne lab/own network ki inventory ke liye; `nmap guide` type karo.\n\n"+
+  "Rudhar browser HTML se Termux command apne-aap execute nahi karta. Native APK integration aur confirmation zaroori hai. Sirf systems par test karo jinhe tum own karte ho ya jinka written permission hai.";
+  rd3Msg("TERMUX ASSISTANT",msg,"ok");
+}
+function rd3SecurityToolGuide(tool){
+  var msg="";
+  if(tool==="sqlmap"){
+    msg="SQLMAP · AUTHORIZED LAB ONLY\n\nPackage availability check:\npkg update\npkg search sqlmap\n\nInstall tabhi karo jab Termux repository mein package listed ho.\n\nLow-impact example — sirf local lab app ke liye:\nsqlmap -u \"http://127.0.0.1:8080/item.php?id=1\" --batch --risk=1 --level=1\n\n127.0.0.1 tumhare phone/lab par chalne wali app ko refer karta hai. Apni actual test app ka endpoint use karo; production site par pehle written approval aur backup lo. `--dump`, `--os-shell` ya data-changing options se shuru mat karo. Is command ko browser page khud execute nahi karta.";
+  } else if(tool==="hydra"){
+    msg="HYDRA · LOGIN SECURITY AUDIT\n\nPackage availability check:\npkg update\npkg search hydra\n\nHydra password/login guessing ke liye use hota hai, isliye Rudhar brute-force commands ya password-list attack steps generate nahi karega. Apne lab mein login security verify karne ke safer tareeke:\n• test account use karo; real users ke accounts nahi\n• rate limiting aur temporary lockout enabled hain ya nahi check karo\n• MFA, strong password policy, logging aur alerting verify karo\n• test ke liye service owner ki written permission aur strict attempt limit rakho\n\nPackage search mein package na mile to untrusted scripts se install mat karo.";
+  } else {
+    msg="NMAP · OWN NETWORK INVENTORY\n\nPackage availability check:\npkg update\npkg search nmap\n\nSirf apne lab ya authorized network par inventory/diagnostics karo. Public IP ranges ya unknown networks scan mat karo. Rudhar is guide se koi scan automatically run nahi karta.";
+  }
+  rd3Msg(tool.toUpperCase()+" GUIDE",msg,"warn");
+}
+function rd3VoiceSet(){
+  var phrase=window.prompt("Demo voice passphrase set karo (secret phrase use na karo):");
+  if(!phrase) return rd3Msg("VOICE SECURITY","Cancel kar diya.","warn");
+  try{localStorage.setItem("rd3_voice_phrase",phrase);}catch(e){}
+  rd3Msg("VOICE SECURITY SET","Demo passphrase save ho gaya. Ye voice biometrics nahi hai; browser mein ise bypass kiya ja sakta hai, isliye ise asli identity/security lock mat samajhna.","warn");
+}
+function rd3VoiceTest(){
+  var saved=null;try{saved=localStorage.getItem("rd3_voice_phrase");}catch(e){}
+  if(!saved) return rd3Msg("VOICE SECURITY","Pehle `voice lock set` command use karo.","warn");
+  var got=window.prompt("Apna demo passphrase type karo:");
+  rd3Msg("VOICE CHECK",got===saved?"Phrase match hua. Dhyan rahe: ye typed phrase check hai, awaaz ki asli pehchan nahi.":"Phrase match nahi hua.",got===saved?"ok":"err");
+}
+function rd3WebsiteStarter(promptText){
+  var safe=String(promptText||"My Website").replace(/[<>]/g,"").slice(0,100) || "My Website";
+  var title=safe.replace(/https?:\/\//i,"").split(/[\/\s]/)[0] || "My Website";
+  var html='<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<title>'+title.replace(/&/g,"&amp;").replace(/"/g,"&quot;")+'</title>\n<style>\n*{box-sizing:border-box}body{margin:0;font:16px/1.6 system-ui,sans-serif;background:#090d18;color:#f5f7ff}header{padding:24px 8%;display:flex;justify-content:space-between;align-items:center;background:#111a2c}header b{color:#ff3658;font-size:1.3rem}nav a{color:#e9edff;margin-left:18px;text-decoration:none}.hero{padding:90px 8%;background:radial-gradient(circle at 80% 20%,#54203c,#111a2c 55%);min-height:55vh}.hero h1{font-size:clamp(2.2rem,7vw,4.5rem);line-height:1.05;max-width:760px}.hero p{max-width:620px;color:#c7cde0}.btn{display:inline-block;background:#ff3658;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;margin-top:12px}section{padding:48px 8%}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}.card{padding:22px;background:#121a2b;border:1px solid #293653;border-radius:14px}footer{padding:24px 8%;color:#aab3ca;border-top:1px solid #293653}\n</style>\n</head>\n<body><header><b>'+title.replace(/&/g,"&amp;").replace(/</g,"&lt;")+'</b><nav><a href="#about">About</a><a href="#features">Features</a></nav></header><main><section class="hero"><h1>A bold new way to get things done.</h1><p>An original, responsive starter page inspired by this brief: '+safe.replace(/&/g,"&amp;").replace(/</g,"&lt;")+'. Customize the text, images, and colors for your own project.</p><a class="btn" href="#features">Explore</a></section><section id="about"><h2>Built for your next idea</h2><p>Replace this section with your own content and branding.</p></section><section id="features"><h2>What you get</h2><div class="cards"><article class="card"><h3>Responsive</h3><p>Works across phone and desktop screens.</p></article><article class="card"><h3>Modern UI</h3><p>Clean cards, strong contrast, and clear actions.</p></article><article class="card"><h3>Customizable</h3><p>Edit the HTML and CSS to make it yours.</p></article></div></section></main><footer>Original starter template · Replace with your own content.</footer></body></html>';
+  LAST_FILES=[{name:"index.html",lang:"html",content:html}];
+  botBubble("Original website starter ready hai. Ye kisi third-party website ka exact copy/source scrape nahi karta; apne design aur content se customize karo.");
+  var el=$("log").lastElementChild; if(el) el.appendChild(fileCard("index.html","html",html));
+}
+function advancedFeatureRoute(t){
+  var m;
+  // 1. Ghost mode is implemented by the existing securityRoute; aliases are supported here.
+  if (/^(?:ghost mode|ghost mode on|privacy mode on)$/i.test(t)) { ghostOn(); return true; }
+  if (/^(?:ghost mode off|privacy mode off)$/i.test(t)) { ghostOff(); return true; }
+  // 2. Browser can notice tab/app focus changes, but cannot reliably detect screenshots or other apps opening.
+  if (/^(?:self hack alert|security alert)\s+on$/i.test(t)) { try{localStorage.setItem(RD3_ALERT_KEY,"1");}catch(e){} rd3Msg("SELF HACK ALERT ON","Rudhar tab/background se wapas aane par alert dega. HTML browser screenshot lena ya doosri app khulna reliably detect nahi kar sakta.","warn"); return true; }
+  if (/^(?:self hack alert|security alert)\s+off$/i.test(t)) { try{localStorage.removeItem(RD3_ALERT_KEY);}catch(e){} rd3Msg("SELF HACK ALERT OFF","Focus-change alerts band hain.","ok"); return true; }
+  // 3. Honest network radar help; web pages cannot enumerate the LAN directly.
+  if (/^(?:network radar|scan my wifi|wifi scan|scan wifi)$/i.test(t)) { rd3NetworkHelp(); return true; }
+  // 4. Fictional local demo only; never places a real call.
+  if ((m=/^(?:fake call|demo call|rudhar emergency call)(?:\s+(.+))?$/i.exec(t))) { rd3FakeCall(m[1]||"Rudhar Demo Caller"); return true; }
+  // 5. Existing heuristic link checker handles these commands below.
+  if ((m=/^(?:phishing detector|check phishing|link scan)\s*:?[ \t]*(https?:\/\/\S+|www\.\S+|\S+\.\S+)$/i.exec(t))) { showLinkReport(m[1]); return true; }
+  // 6. Existing crypto-based password generator handles this command.
+  if (/^(?:password fortress|strong password|password banao)(?:\s+\d{1,3})?$/i.test(t)) { var n=/\d+/.exec(t); var len=Math.min(64,Math.max(12,n?parseInt(n[0],10):16)); sysMsg("PASSWORD FORTRESS · "+len+" characters\n"+makePassword(len)+"\nIs password ko share mat karna aur password manager mein save karna.","ok"); return true; }
+  // 7. Termux security lab guides. SQLmap example is scoped to localhost; no Hydra brute-force commands.
+  if (/^(?:termux god mode|termux help|termux commands|termux security lab|security lab)$/i.test(t)) { rd3TermuxHelp(); return true; }
+  if (/^(?:sqlmap guide|sqlmap help|sqlmap setup)$/i.test(t)) { rd3SecurityToolGuide("sqlmap"); return true; }
+  if (/^(?:hydra guide|hydra help|hydra setup)$/i.test(t)) { rd3SecurityToolGuide("hydra"); return true; }
+  if (/^(?:nmap guide|nmap help|nmap setup)$/i.test(t)) { rd3SecurityToolGuide("nmap"); return true; }
+  // 8. Local demo phrase check; not a voiceprint or secure authentication.
+  if (/^voice lock set$/i.test(t)) { rd3VoiceSet(); return true; }
+  if (/^voice lock test$/i.test(t)) { rd3VoiceTest(); return true; }
+  if (/^voice lock remove$/i.test(t)) { try{localStorage.removeItem("rd3_voice_phrase");}catch(e){} rd3Msg("VOICE SECURITY","Demo phrase remove ho gaya.","ok"); return true; }
+  // 9. Create an original editable starter page rather than copying another site's protected source.
+  if ((m=/^(?:website clone|website template|site template)\s*:?\s*(.*)$/i.exec(t))) { rd3WebsiteStarter(m[1]||"My Website"); return true; }
+  // 10. Existing Navya bridge supports app-based messaging in the native APK.
+  if (/^(?:navya se baat|navya +rudhar|navya rudhar link)$/i.test(t)) { doNavya("Navya, Rudhar AI ke saath ek friendly conversation shuru karo. Apna introduction do aur AI safety ke baare mein baat karo."); return true; }
+  return false;
+}
+
+// Best-effort focus-change alerts. These are not proof of hacking and don't detect screenshots.
+(function(){
+  var wasHidden=false;
+  document.addEventListener("visibilitychange",function(){ if(document.hidden){wasHidden=true;return;} if(wasHidden){wasHidden=false;var on=false;try{on=localStorage.getItem(RD3_ALERT_KEY)==="1";}catch(e){} if(on) rd3Msg("SECURITY NOTICE","Rudhar tab/background mein tha aur ab wapas aaya. Ye normal app switching bhi ho sakti hai; ye hacking ya screenshot ka proof nahi hai.","warn");} });
+})();
+
+
+
+// ---------- RUDHAR v4: privacy-aware mobile features ----------
+var RD4_NOTE_TIMER = null, RD4_VAULT_UNLOCKED = null;
+function rd4Msg(title, body, kind){ sysMsg(title + "\n" + body, kind || "ok"); }
+function rd4Esc(s){ return String(s).replace(/[&<>"']/g,function(c){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]);}); }
+function rd4GhostNote(text, seconds){
+  text=String(text||'').trim(); seconds=Math.max(5,Math.min(60,Number(seconds)||10));
+  if(!text){ rd4Msg('GHOST NOTE','Use: ghost note: tumhara message','warn'); return; }
+  var old=document.getElementById('rd4-note'); if(old) old.remove(); if(RD4_NOTE_TIMER) clearTimeout(RD4_NOTE_TIMER);
+  var box=document.createElement('div'); box.id='rd4-note';
+  box.style.cssText='position:fixed;inset:0;z-index:95;background:#070101;color:#ffc1cd;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px;text-align:center;font:16px/1.6 monospace';
+  var label=document.createElement('div'); label.textContent='RUDHAR · LOCAL GHOST NOTE'; label.style.cssText='color:#ff1e3c;letter-spacing:2px;margin-bottom:20px';
+  var body=document.createElement('div'); body.textContent=text; body.style.cssText='max-width:520px;white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #bf0f29;padding:22px;width:100%;background:#110104';
+  var timer=document.createElement('div'); timer.style.cssText='margin-top:18px;color:#ff6470';
+  var close=document.createElement('button'); close.textContent='Close now'; close.style.cssText='margin-top:16px;padding:10px 18px;border:1px solid #ff1e3c;color:#ffc1cd';
+  var end=Date.now()+seconds*1000; function tick(){var left=Math.max(0,Math.ceil((end-Date.now())/1000));timer.textContent='This local note clears in '+left+'s';if(left<=0){box.remove();return;}}
+  close.onclick=function(){clearInterval(RD4_NOTE_TIMER);box.remove();}; box.append(label,body,timer,close); document.body.appendChild(box); tick(); RD4_NOTE_TIMER=setInterval(tick,250);
+  setTimeout(function(){clearInterval(RD4_NOTE_TIMER);if(box.isConnected)box.remove();},seconds*1000+100);
+  rd4Msg('GHOST NOTE','Local screen par '+seconds+' seconds ke liye dikhaya. Ye kisi doosre person ko send nahi hota aur screenshots/recording ko block nahi kar sakta.','warn');
+}
+async function rd4Hash(text){var data=new TextEncoder().encode(String(text));var buf=await crypto.subtle.digest('SHA-256',data);return Array.from(new Uint8Array(buf)).map(function(x){return x.toString(16).padStart(2,'0');}).join('');}
+async function rd4VoiceSet(){
+  var phrase=prompt('Demo phrase set karo. Bank/account password jaisa secret mat use karo:'); if(!phrase)return;
+  try{localStorage.setItem('rd4_voice_hash',await rd4Hash(phrase.trim().toLowerCase()));rd4Msg('VOICE LOCK SET','Phrase ka hash is browser ke local storage mein save hua. Ye speaker ki identity verify nahi karta; sirf speech-to-text transcript match karta hai.','warn');}
+  catch(e){rd4Msg('VOICE LOCK','Secure crypto API available nahi. App ko HTTPS ya compatible APK WebView mein kholo.','err');}
+}
+function rd4VoiceTest(){
+  var hash=null;try{hash=localStorage.getItem('rd4_voice_hash');}catch(e){}
+  if(!hash)return rd4Msg('VOICE LOCK','Pehle `voice lock set` use karo.','warn');
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR)return rd4Msg('VOICE LOCK','Is browser/WebView mein speech recognition supported nahi. Voice lock ko native Android speech API se integrate karna hoga.','warn');
+  var rec=new SR();rec.lang='en-IN';rec.interimResults=false;rec.maxAlternatives=1;
+  rd4Msg('VOICE LOCK','Ab apna demo phrase bolo. Speech recognition service transcript process kar sakti hai; isliye private phrase mat bolo.','warn');
+  rec.onresult=async function(e){var heard=(e.results[0][0].transcript||'').trim().toLowerCase();var got=await rd4Hash(heard);rd4Msg('VOICE CHECK',got===hash?'Transcript match hua. Ye voice identity/biometric lock nahi hai.':'Transcript match nahi hua. Heard text: '+heard,'ok');};
+  rec.onerror=function(e){rd4Msg('VOICE LOCK','Recognition fail: '+(e.error||'unknown')+'. Browser permission/internet support check karo.','warn');};
+  try{rec.start();}catch(e){rd4Msg('VOICE LOCK','Microphone start nahi hua. Permission check karo.','warn');}
+}
+function rd4VaultRead(){try{return JSON.parse(localStorage.getItem('rd4_vault')||'null');}catch(e){return null;}}
+async function rd4VaultKey(password,salt){var base=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveKey']);return crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:210000,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['encrypt','decrypt']);}
+async function rd4VaultUnlock(){
+  var v=rd4VaultRead();var pass=prompt('Vault master password (bhoolne par data recover nahi hoga):');if(!pass)return null;
+  try{
+    if(!v){var salt=crypto.getRandomValues(new Uint8Array(16));var key=await rd4VaultKey(pass,salt);var iv=crypto.getRandomValues(new Uint8Array(12));var plain=new TextEncoder().encode('[]');var enc=await crypto.subtle.encrypt({name:'AES-GCM',iv:iv},key,plain);v={salt:Array.from(salt),iv:Array.from(iv),data:Array.from(new Uint8Array(enc))};localStorage.setItem('rd4_vault',JSON.stringify(v));RD4_VAULT_UNLOCKED=[];return RD4_VAULT_UNLOCKED;}
+    var key2=await rd4VaultKey(pass,new Uint8Array(v.salt));var dec=await crypto.subtle.decrypt({name:'AES-GCM',iv:new Uint8Array(v.iv)},key2,new Uint8Array(v.data));RD4_VAULT_UNLOCKED=JSON.parse(new TextDecoder().decode(dec));return RD4_VAULT_UNLOCKED;
+  }catch(e){rd4Msg('VAULT','Master password galat ho sakta hai ya vault data read nahi hua.','err');return null;}
+}
+async function rd4VaultSave(arr,pass){var v=rd4VaultRead();var salt=new Uint8Array(v.salt);var key=await rd4VaultKey(pass,salt);var iv=crypto.getRandomValues(new Uint8Array(12));var enc=await crypto.subtle.encrypt({name:'AES-GCM',iv:iv},key,new TextEncoder().encode(JSON.stringify(arr)));localStorage.setItem('rd4_vault',JSON.stringify({salt:Array.from(salt),iv:Array.from(iv),data:Array.from(new Uint8Array(enc))}));RD4_VAULT_UNLOCKED=arr;}
+async function rd4VaultAdd(payload){
+  var bits=payload.split('|').map(function(x){return x.trim();});if(bits.length<3||!bits[0]||!bits[2])return rd4Msg('PASSWORD VAULT','Use: vault add: label | username | password','warn');
+  var pass=prompt('Vault master password enter karo (new vault ke liye naya password banao):');if(!pass)return;
+  try{var arr=await rd4VaultUnlockWith(pass);if(!arr)return;arr.push({label:bits[0],username:bits[1]||'',password:bits.slice(2).join('|'),created:new Date().toISOString()});await rd4VaultSave(arr,pass);rd4Msg('VAULT SAVED','Entry encrypted form mein local storage mein save hui. Master password bhoolne par recover nahi hogi. Sensitive data ke liye dedicated audited password manager zyada safe hai.','ok');}
+  catch(e){rd4Msg('VAULT','Save fail hua. Secure crypto support check karo.','err');}
+}
+async function rd4VaultUnlockWith(pass){
+  var v=rd4VaultRead();if(!v){var salt=crypto.getRandomValues(new Uint8Array(16));var key=await rd4VaultKey(pass,salt);var iv=crypto.getRandomValues(new Uint8Array(12));var enc=await crypto.subtle.encrypt({name:'AES-GCM',iv:iv},key,new TextEncoder().encode('[]'));localStorage.setItem('rd4_vault',JSON.stringify({salt:Array.from(salt),iv:Array.from(iv),data:Array.from(new Uint8Array(enc))}));RD4_VAULT_UNLOCKED=[];return RD4_VAULT_UNLOCKED;}
+  var key2=await rd4VaultKey(pass,new Uint8Array(v.salt));var dec=await crypto.subtle.decrypt({name:'AES-GCM',iv:new Uint8Array(v.iv)},key2,new Uint8Array(v.data));RD4_VAULT_UNLOCKED=JSON.parse(new TextDecoder().decode(dec));return RD4_VAULT_UNLOCKED;
+}
+async function rd4VaultList(){var pass=prompt('Vault master password:');if(!pass)return;try{var arr=await rd4VaultUnlockWith(pass);rd4Msg('PASSWORD VAULT',arr.length?arr.map(function(x,i){return (i+1)+'. '+x.label+' — '+(x.username||'(no username)');}).join('\n'):'Vault empty hai. Add: vault add: label | username | password','ok');}catch(e){rd4Msg('VAULT','Password incorrect ya data corrupt hai.','err');}}
+async function rd4VaultGet(label){var pass=prompt('Vault master password:');if(!pass)return;try{var arr=await rd4VaultUnlockWith(pass);var item=arr.find(function(x){return x.label.toLowerCase()===label.toLowerCase();});if(!item)return rd4Msg('VAULT','Label nahi mila. `vault list` use karo.','warn');rd4Msg('VAULT ENTRY',item.label+'\nUsername: '+item.username+'\nPassword: '+item.password+'\n\nScreen share/recording se bachao.','warn');}catch(e){rd4Msg('VAULT','Master password incorrect ya data corrupt hai.','err');}}
+function rd4Tracker(){
+  if(!navigator.geolocation)return rd4Msg('DEVICE TRACKER','Geolocation supported nahi.','warn');
+  rd4Msg('DEVICE TRACKER','Location permission allow karo. Ye sirf abhi ke device ki location read karega jab app khuli ho; phone off/lost hone par remote tracking nahi kar sakta.','warn');
+  navigator.geolocation.getCurrentPosition(function(pos){var o={lat:pos.coords.latitude,lon:pos.coords.longitude,accuracy:Math.round(pos.coords.accuracy),time:new Date().toISOString()};try{localStorage.setItem('rd4_last_location',JSON.stringify(o));}catch(e){}var url='https://www.google.com/maps?q='+o.lat+','+o.lon;var a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.textContent='Open current location in Maps';a.style.cssText='display:inline-block;padding:8px;border:1px solid #ff1e3c;color:#ffc1cd;margin:8px';var row=document.createElement('div');row.className='row';var box=document.createElement('div');box.className='sys ok';box.textContent='Current location: '+o.lat+', '+o.lon+'\nAccuracy about '+o.accuracy+' m\n'+o.time+'\n';box.appendChild(a);row.appendChild(box);$('log').appendChild(row);scroll();},function(e){rd4Msg('DEVICE TRACKER','Location nahi mili: '+(e.message||e.code)+'. Permission aur GPS check karo.','err');},{enableHighAccuracy:true,timeout:12000,maximumAge:0});
+}
+function rd4LastLocation(){var x=null;try{x=JSON.parse(localStorage.getItem('rd4_last_location')||'null');}catch(e){}if(!x)return rd4Msg('DEVICE TRACKER','Is app ne abhi tak location save nahi ki. `find my phone` use karo jab phone tumhare paas ho.','warn');rd4Msg('LAST SAVED LOCATION','Lat/Lon: '+x.lat+', '+x.lon+'\nAccuracy: '+x.accuracy+' m\nSaved: '+x.time+'\nYe sirf last time app open hone par save hui location hai, live/remote tracking nahi.','warn');}
+function rd4LeakCheck(){
+  var box=document.createElement('div');box.className='sys';box.textContent='DARK WEB / BREACH CHECK\nRudhar khud se dark web scan nahi kar sakta. Email yahan enter karne ki zaroorat nahi; official Have I Been Pwned website par jaakar email check karo. Password kabhi enter mat karna.';
+  var a=document.createElement('a');a.href='https://haveibeenpwned.com/';a.target='_blank';a.rel='noopener noreferrer';a.textContent='Open Have I Been Pwned';a.style.cssText='display:inline-block;margin:10px;padding:8px;border:1px solid #ff1e3c;color:#ffc1cd';box.appendChild(document.createElement('br'));box.appendChild(a);$('log').appendChild(box);scroll();
+}
+function rd4WifiAlert(){rd4Msg('WI-FI RADAR','HTML/WebView app ko router ke connected-client list ya background Wi-Fi events ka direct access nahi hota. Router ki official app mein Connected Devices/Clients aur notifications enable karo. APK mein native Android implementation alag se banana padega; Rudhar fake intruder alerts nahi dikhayega.','warn');if(NATIVE&&P.openApp){var b=document.createElement('button');b.textContent='Open Settings';b.onclick=function(){P.openApp('Settings');};var row=$('log').lastElementChild;if(row)row.appendChild(b);}}
+function rd4MemorySave(text){var arr=[];try{arr=JSON.parse(localStorage.getItem('rd4_navya_memory')||'[]');}catch(e){}arr.push({text:text.slice(0,1000),time:new Date().toISOString()});arr=arr.slice(-50);try{localStorage.setItem('rd4_navya_memory',JSON.stringify(arr));rd4Msg('NAVYA MEMORY','Memory local device par save hui. '+arr.length+' item(s).','ok');}catch(e){rd4Msg('NAVYA MEMORY','Storage available nahi.','err');}}
+function rd4MemoryRecall(){var arr=[];try{arr=JSON.parse(localStorage.getItem('rd4_navya_memory')||'[]');}catch(e){}rd4Msg('NAVYA MEMORY',arr.length?arr.map(function(x,i){return (i+1)+'. '+x.text+' ['+x.time+']';}).join('\n'):'Abhi koi memory saved nahi. Use: navya memory save: ...','ok');}
+function rd4FeatureRoute(t){var m;
+  if(/^ai key set$/i.test(t)){var k=prompt('OpenRouter API key enter karo. Isse chat mein mat bhejna. Key is browser/app storage mein save hogi; production APK ke liye backend proxy safer hai.');if(k){KEY=k.trim();try{localStorage.setItem('rudhar_ai_key',KEY);}catch(e){}rd4Msg('AI KEY','Key is app storage mein set hui. APK share karne se pehle personal key use mat karo; backend proxy best hai.','warn');}return true;}
+  if(/^ai key clear$/i.test(t)){KEY='';try{localStorage.removeItem('rudhar_ai_key');}catch(e){}rd4Msg('AI KEY','Saved API key clear kar di. AI chat ke liye `ai key set` chahiye.','ok');return true;}
+  if((m=/^ghost note\s*:\s*([\s\S]+)$/i.exec(t))){var sec=10;var sm=/\s+(\d{1,2})\s*(?:sec|seconds?)\s*$/i.exec(m[1]);var msg=m[1];if(sm){sec=Number(sm[1]);msg=msg.slice(0,sm.index);}rd4GhostNote(msg,sec);return true;}
+  if(/^voice lock set$/i.test(t)){rd4VoiceSet();return true;} if(/^voice lock test$/i.test(t)){rd4VoiceTest();return true;} if(/^voice lock remove$/i.test(t)){localStorage.removeItem('rd4_voice_hash');rd4Msg('VOICE LOCK','Demo voice phrase hash removed.','ok');return true;}
+  if(/^(?:wifi intruder alert|wifi radar alert|new wifi device|wifi intruder)$/i.test(t)){rd4WifiAlert();return true;}
+  if((m=/^(?:phishing detector v2|scan link|check link)\s*:\s*(\S+)$/i.exec(t))){showLinkReport(m[1]);return true;}
+  if((m=/^vault add\s*:\s*([\s\S]+)$/i.exec(t))){rd4VaultAdd(m[1]);return true;} if(/^vault list$/i.test(t)){rd4VaultList();return true;} if((m=/^vault get\s*:\s*(.+)$/i.exec(t))){rd4VaultGet(m[1].trim());return true;} if(/^vault lock$/i.test(t)){RD4_VAULT_UNLOCKED=null;rd4Msg('VAULT','In-memory vault session cleared.','ok');return true;}
+  if(/^(?:fake call|mummy calling|bacha le)$/i.test(t)){rd3FakeCall('Mummy calling · DEMO');return true;}
+  if(/^(?:screenshot to code|screenshot se code|design to code|image to html)$/i.test(t)){if(!PENDING_IMG){rd4Msg('SCREENSHOT TO CODE','Pehle 📎 button se screenshot attach karo, phir `screenshot se html` bhejo.','warn');return true;}send('Is attached screenshot ko reference bana kar original editable HTML/CSS/JS starter banao. Layout, spacing, colors aur visible text ko approximate karo. Kisi app ka private source code extract karne ka daawa mat karo.');return true;}
+  if(/^(?:dark web leak check|email breach check|check data leak)$/i.test(t)){rd4LeakCheck();return true;}
+  if(/^(?:find my phone|track my device|current location)$/i.test(t)){rd4Tracker();return true;} if(/^(?:last location|show last location)$/i.test(t)){rd4LastLocation();return true;}
+  if((m=/^navya memory save\s*:\s*([\s\S]+)$/i.exec(t))){rd4MemorySave(m[1]);return true;} if(/^(?:navya memory|navya memory recall|what do you remember)$/i.test(t)){rd4MemoryRecall();return true;} if(/^navya memory clear$/i.test(t)){localStorage.removeItem('rd4_navya_memory');rd4Msg('NAVYA MEMORY','Saved memories deleted from this browser.','ok');return true;}
+  return false;
+}
+
+
+// ---------- RUDHAR v5: practical privacy tools + JARVIS voice commands ----------
+var RD5_VOICE_ACTIVE = false, RD5_RECOGNITION = null, RD5_RESTART_TIMER = null;
+function rd5FeatureMsg(title, body, kind){ rd4Msg(title, body, kind || 'ok'); }
+function rd5Esc(s){ return String(s).replace(/[&<>"']/g,function(c){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]);}); }
+function rd5LoadWatchLog(){try{return JSON.parse(localStorage.getItem('rd5_watch_log')||'[]');}catch(e){return [];}}
+function rd5WatchLogAttempt(){
+  var on=false;try{on=localStorage.getItem('rd5_watch_guard')==='1';}catch(e){}
+  if(!on)return;
+  var a=rd5LoadWatchLog();a.push({time:new Date().toISOString(),event:'Incorrect PIN attempt'});a=a.slice(-50);
+  try{localStorage.setItem('rd5_watch_log',JSON.stringify(a));}catch(e){}
+}
+function rd5WatchStatus(){
+  var on=false;try{on=localStorage.getItem('rd5_watch_guard')==='1';}catch(e){}
+  var a=rd5LoadWatchLog();
+  rd5FeatureMsg('WATCH GUARD', 'Status: '+(on?'ON':'OFF')+'\nRecorded failed PIN attempts: '+a.length+'\n'+(a.length?a.slice(-10).map(function(x){return x.time+' — '+x.event;}).join('\n'):'No failed attempts logged.')+'\n\nPrivacy note: this guard logs locally and visibly. It does not secretly activate the camera or take photos.','warn');
+}
+function rd5OtpBlur(){
+  if(!PENDING_IMG)return rd5FeatureMsg('OTP PRIVACY BLUR','Pehle 📎 se screenshot attach karo, phir `otp blur` bhejo. Image device par manually select kiye hue area ko blur karne ke liye editor khulega.','warn');
+  var old=document.getElementById('rd5-blur-modal');if(old)old.remove();
+  var modal=document.createElement('div');modal.id='rd5-blur-modal';modal.style.cssText='position:fixed;inset:0;z-index:120;background:#050509;color:#fff;display:flex;flex-direction:column;padding:12px;gap:10px;font:14px system-ui,sans-serif;overflow:auto';
+  var head=document.createElement('div');head.textContent='OTP PRIVACY BLUR · LOCAL EDITOR';head.style.cssText='font-weight:800;color:#ff536b;letter-spacing:1px';
+  var note=document.createElement('div');note.textContent='OTP ko image mein automatically OCR se identify nahi kiya gaya. Finger se OTP ya private detail ke area par rectangle draw karo, phir Blur dabao. Image yahan local canvas par edit hoti hai; blur screenshot/recording ko prevent nahi karta.';note.style.cssText='font-size:12px;color:#d2d2dc;line-height:1.5';
+  var wrap=document.createElement('div');wrap.style.cssText='flex:1;min-height:200px;display:flex;align-items:center;justify-content:center;overflow:auto;background:#15151d;border:1px solid #4a2630;border-radius:10px';
+  var canvas=document.createElement('canvas');canvas.style.cssText='display:block;max-width:100%;max-height:62vh;touch-action:none;object-fit:contain';wrap.appendChild(canvas);
+  var row=document.createElement('div');row.style.cssText='display:flex;gap:8px;flex-wrap:wrap';
+  function btn(label,fn){var b=document.createElement('button');b.textContent=label;b.style.cssText='padding:10px 13px;border-radius:8px;background:#281019;border:1px solid #ff536b;color:#fff;font-weight:700';b.onclick=fn;row.appendChild(b);return b;}
+  var ctx=canvas.getContext('2d');var img=new Image();var start=null,sel=null,base=null;
+  img.onload=function(){canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;ctx.drawImage(img,0,0);base=ctx.getImageData(0,0,canvas.width,canvas.height);};img.onerror=function(){note.textContent='Image load nahi hui. Dobara attach karo.';};img.src=PENDING_IMG;
+  function point(e){var r=canvas.getBoundingClientRect();return {x:Math.max(0,Math.min(canvas.width,(e.clientX-r.left)*canvas.width/r.width)),y:Math.max(0,Math.min(canvas.height,(e.clientY-r.top)*canvas.height/r.height))};}
+  canvas.addEventListener('pointerdown',function(e){if(!canvas.width)return;start=point(e);sel=null;canvas.setPointerCapture(e.pointerId);});
+  canvas.addEventListener('pointermove',function(e){if(!start)return;var q=point(e);ctx.putImageData(base,0,0);ctx.strokeStyle='#ff3154';ctx.lineWidth=Math.max(2,canvas.width/350);ctx.setLineDash([8,5]);ctx.strokeRect(start.x,start.y,q.x-start.x,q.y-start.y);ctx.setLineDash([]);});
+  canvas.addEventListener('pointerup',function(e){if(!start)return;var q=point(e);sel={x:Math.min(start.x,q.x),y:Math.min(start.y,q.y),w:Math.abs(q.x-start.x),h:Math.abs(q.y-start.y)};ctx.putImageData(base,0,0);if(sel.w>3&&sel.h>3){ctx.strokeStyle='#ff3154';ctx.lineWidth=Math.max(2,canvas.width/350);ctx.setLineDash([8,5]);ctx.strokeRect(sel.x,sel.y,sel.w,sel.h);ctx.setLineDash([]);}start=null;});
+  btn('Blur selected area',function(){if(!sel||sel.w<4||sel.h<4)return rd5FeatureMsg('OTP BLUR','Pehle image par rectangle draw karo.','warn');ctx.putImageData(base,0,0);var pad=Math.max(8,Math.round(Math.min(sel.w,sel.h)*.12));var x=Math.max(0,Math.floor(sel.x-pad)),y=Math.max(0,Math.floor(sel.y-pad)),w=Math.min(canvas.width-x,Math.ceil(sel.w+pad*2)),h=Math.min(canvas.height-y,Math.ceil(sel.h+pad*2));var off=document.createElement('canvas');off.width=w;off.height=h;var oc=off.getContext('2d');oc.drawImage(canvas,x,y,w,h,0,0,w,h);ctx.save();ctx.filter='blur('+Math.max(8,Math.round(Math.min(w,h)*.12))+'px)';ctx.drawImage(off,x,y,w,h);ctx.restore();base=ctx.getImageData(0,0,canvas.width,canvas.height);sel=null;rd5FeatureMsg('OTP BLUR','Selected area blur ho gaya. Zaroorat ho to doosra area bhi select karke blur karo.','ok');});
+  btn('Use blurred image',function(){if(!canvas.width)return;try{PENDING_IMG=canvas.toDataURL('image/jpeg',.92);modal.remove();rd5FeatureMsg('OTP BLUR READY','Blurred image ab attachment ke roop mein ready hai. Ab normal message bhejo to AI ko ye edited image milegi. Share karne se pehle image check kar lo.','ok');}catch(e){rd5FeatureMsg('OTP BLUR','Edited image export nahi hui.','err');}});
+  btn('Download image',function(){if(!canvas.width)return;var a=document.createElement('a');a.href=canvas.toDataURL('image/png');a.download='rudhar-privacy-blurred.png';a.click();});
+  btn('Cancel',function(){modal.remove();});modal.append(head,note,wrap,row);document.body.appendChild(modal);
+}
+function rd5ScamCheck(raw){
+  var n=String(raw||'').replace(/[\s()+-]/g,'');if(n.indexOf('91')===0&&n.length===12)n=n.slice(2);
+  if(!/^\d{10}$/.test(n))return rd5FeatureMsg('SCAM CALL CHECK','India ke 10-digit mobile number ka format enter karo: `scam check 9876543210`.','warn');
+  var flags=[];if(/^([0-9])\1{5,}$/.test(n))flags.push('Number mein repeated digits hain.');if(!/^[6-9]/.test(n))flags.push('Number common Indian mobile starting range se match nahi karta; number spoofed bhi ho sakta hai.');
+  var text='Number: '+n+'\nResult: Reputation verify nahi ki ja sakti—Rudhar ke paas live caller-report database nahi hai. Koi fake spam percentage nahi dikhaya jayega.\n\n'+(flags.length?'Local format flags:\n• '+flags.join('\n• ')+'\n\n':'Koi strong local format flag nahi mila; iska matlab safe hona nahi hai.\n\n')+'Safety: OTP/PIN mat do, payment/remote-access app install mat karo, urgency ya threat par bharosa mat karo. Suspected fraud ko India ke official Sanchar Saathi/Chakshu channel par report/check karo.';
+  rd5FeatureMsg('SCAM CALL CHECK',text,'warn');
+}
+function rd5Shredder(){
+  var old=document.getElementById('rd5-shredder');if(old)old.remove();
+  var box=document.createElement('div');box.id='rd5-shredder';box.style.cssText='position:fixed;inset:0;z-index:115;background:#070101;color:#ffc1cd;padding:22px;display:flex;flex-direction:column;gap:14px;overflow:auto;font:14px/1.5 system-ui,sans-serif';
+  var h=document.createElement('h2');h.textContent='RUDHAR FILE SHREDDER · SAFE CLEANUP';h.style.color='#ff536b';
+  var p=document.createElement('p');p.textContent='Browser/WebView kisi picked file ko asli storage se securely overwrite/delete nahi kar sakta. Flash storage wear-leveling ki wajah se “7 baar overwrite = unrecoverable” guarantee bhi nahi hoti. Ye tool RUDHAR ka local chat/memory data clear kar sakta hai; original file ko Android File Manager se manually delete karo aur Trash/Recycle Bin bhi empty karo.';
+  function b(label,fn,danger){var x=document.createElement('button');x.textContent=label;x.style.cssText='padding:12px;border:1px solid '+(danger?'#ff536b':'#8c4250')+';background:#1b0810;color:#fff;border-radius:8px;text-align:left';x.onclick=fn;box.appendChild(x);}
+  b('Clear RUDHAR chat history',function(){if(!confirm('RUDHAR ki saved chat history delete karni hai?'))return;try{localStorage.removeItem('rd_hist');}catch(e){}hist=[];$('log').innerHTML='';ensureRain();rd5FeatureMsg('CLEANUP','Saved chat history clear kar di. Ye phone ki doosri files delete nahi karta.','ok');box.remove();},true);
+  b('Clear Navya memory',function(){if(!confirm('Navya ki saved local memory delete karni hai?'))return;try{localStorage.removeItem('rd4_navya_memory');}catch(e){}rd5FeatureMsg('CLEANUP','Navya memory clear kar di.','ok');box.remove();},true);
+  b('Clear password vault (permanent)',function(){if(!confirm('Password vault permanently clear karna hai? Isse saved vault entries delete hongi.'))return;if(!confirm('Last confirmation: vault delete kar doon?'))return;try{localStorage.removeItem('rd4_vault');}catch(e){}RD4_VAULT_UNLOCKED=null;rd5FeatureMsg('CLEANUP','Local vault data delete kar diya.','warn');box.remove();},true);
+  b('Close',function(){box.remove();},false);box.prepend(h,p);document.body.appendChild(box);
+}
+function rd5VoiceStop(){RD5_VOICE_ACTIVE=false;if(RD5_RESTART_TIMER)clearTimeout(RD5_RESTART_TIMER);try{if(RD5_RECOGNITION)RD5_RECOGNITION.stop();}catch(e){}RD5_RECOGNITION=null;rd5FeatureMsg('JARVIS VOICE','Voice commands band hain.','ok');}
+function rd5NormalizeVoice(text){var t=String(text||'').trim();var rules=[[/ghost\s+(?:on|mode on)\s+kar/i,'ghost mode on'],[/ghost\s+(?:off|mode off)\s+kar/i,'ghost mode off'],[/otp\s+blur\s+on\s+kar/i,'otp blur'],[/scam\s+check\s+kar\s+(\d[\d\s+-]{8,})/i,'scam check $1'],[/bacha\s+le/i,'bacha le'],[/watch\s+guard\s+on\s+kar/i,'watch guard on'],[/watch\s+guard\s+off\s+kar/i,'watch guard off']];for(var i=0;i<rules.length;i++)if(rules[i][0].test(t))return t.replace(rules[i][0],rules[i][1]);return t;}
+function rd5VoiceStart(){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){rd5FeatureMsg('JARVIS VOICE','Is browser/WebView mein speech recognition supported nahi. APK mein native Android SpeechRecognizer integration chahiye.','warn');return;}
+  if(RD5_VOICE_ACTIVE)return rd5FeatureMsg('JARVIS VOICE','Voice command already ON hai. Band karne ke liye `jarvis voice off` bolo ya type karo.','warn');
+  RD5_VOICE_ACTIVE=true;
+  function listen(){if(!RD5_VOICE_ACTIVE)return;var rec=new SR();RD5_RECOGNITION=rec;rec.lang='hi-IN';rec.interimResults=false;rec.maxAlternatives=1;rec.continuous=false;
+    rec.onresult=function(e){var heard=(e.results&&e.results[0]&&e.results[0][0]&&e.results[0][0].transcript)||'';if(!heard)return;var command=rd5NormalizeVoice(heard);rd5FeatureMsg('JARVIS HEARD','Heard: '+heard+'\nCommand: '+command,'ok');if(/^jarvis voice off$/i.test(command)){rd5VoiceStop();return;}send(command);};
+    rec.onerror=function(e){if(RD5_VOICE_ACTIVE)rd5FeatureMsg('JARVIS VOICE','Recognition issue: '+(e.error||'unknown')+'. Microphone/internet permission check karo.','warn');};
+    rec.onend=function(){RD5_RECOGNITION=null;if(RD5_VOICE_ACTIVE)RD5_RESTART_TIMER=setTimeout(listen,700);};
+    try{rec.start();}catch(e){RD5_VOICE_ACTIVE=false;rd5FeatureMsg('JARVIS VOICE','Mic start nahi hua. Permission check karo.','err');}
+  }
+  rd5FeatureMsg('JARVIS VOICE ON','Ab short commands bolo: “Ghost mode on”, “OTP blur on kar”, “Scam check kar 9876543210”, “Watch Guard on”. Commands send hone se pehle screen par transcript dikhaya jayega.','ok');listen();
+}
+function rd5FeatureRoute(t){var m;
+  if(/^(?:otp blur|otp auto blur|blur otp|privacy blur)$/i.test(t)){rd5OtpBlur();return true;}
+  if((m=/^(?:scam check|scam call check|caller check|number check)\s*:?[ \t]*(\+?91[\s-]*)?([0-9][0-9\s()+-]{8,})$/i.exec(t))){rd5ScamCheck((m[1]||'')+m[2]);return true;}
+  if(/^(?:scam call detector|scam detector help)$/i.test(t)){rd5FeatureMsg('SCAM CALL DETECTOR','Use: `scam check 9876543210`. Ye local format/safety hints deta hai; live Truecaller-style crowd reports ya spam percentage nahi hai.','warn');return true;}
+  if(/^(?:shredder|file shredder|secure cleanup|privacy cleanup)$/i.test(t)){rd5Shredder();return true;}
+  if(/^(?:jarvis voice on|voice command on|jarvis start listening)$/i.test(t)){rd5VoiceStart();return true;}
+  if(/^(?:jarvis voice off|voice command off|jarvis stop listening)$/i.test(t)){rd5VoiceStop();return true;}
+  if(/^(?:watch guard on|enable watch guard)$/i.test(t)){try{localStorage.setItem('rd5_watch_guard','1');}catch(e){}rd5FeatureMsg('WATCH GUARD ON','Failed PIN attempts ka timestamp local device par log hoga. Ye feature chupke se camera nahi chalata aur photos nahi leta.','ok');return true;}
+  if(/^(?:watch guard off|disable watch guard)$/i.test(t)){try{localStorage.removeItem('rd5_watch_guard');}catch(e){}rd5FeatureMsg('WATCH GUARD OFF','Failed-attempt logging band hai.','ok');return true;}
+  if(/^(?:watch guard|watch guard status|watch guard log)$/i.test(t)){rd5WatchStatus();return true;}
+  if(/^watch guard clear log$/i.test(t)){try{localStorage.removeItem('rd5_watch_log');}catch(e){}rd5FeatureMsg('WATCH GUARD','Local failed-attempt log clear ho gaya.','ok');return true;}
+  return false;
+}
+
+
+
+// ---------- RUDHAR v6: APK-aware assistant, privacy controls and safe automation ----------
+var RD6_GHOST_TIMER = null;
+function rd6Msg(title,body,kind){ rd4Msg(title,body,kind||'ok'); }
+function rd6GodHelp(){
+  rd6Msg('RUDHAR v6 · GOD MODE COMMANDS',
+    'PRIVACY / NOTES\n• ghost protocol on / ghost protocol off — local chat auto-clear timer\n• ghost note: message 10 sec — temporary local note\n• otp blur — attach screenshot and manually select private area\n\nSECURITY\n• auto network scan — available connection diagnostics\n• phishing hunter: https://example.com — heuristic link check\n• dark web leak hunter — open trusted breach checker\n• voice dna lock set / voice dna lock test — speech transcript demo, not biometrics\n• intruder vault / watch guard status — visible failed-PIN log\n• password fortress / auto password save — generate a password; optional encrypted vault\n• military shredder — local RUDHAR cleanup options\n\nDAILY / DEVICE\n• chat backup now — download chat + Navya memory JSON\n• daily backup on/off — preference only; reliable 2 AM background backup needs native Android WorkManager\n• sos location — get current location, then choose whether to share\n• calculator vault — opens RUDHAR PIN lock; it cannot hide Gallery apps/photos\n• termux open — open Termux if native bridge is configured\n• screenshot se code — attach an image first\n\nLIMITS: browser HTML cannot silently read clipboard, intercept all links/screenshots, scan every Wi-Fi client, silently use camera, or reliably run in background. APK features require native Android implementation and explicit permissions.', 'ok');
+}
+function rd6NetworkScan(){
+  var c=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
+  var lines=['Network diagnostics (browser-visible only)','Online: '+(navigator.onLine?'Yes':'No')];
+  if(c){if(c.type)lines.push('Connection type: '+c.type);if(c.effectiveType)lines.push('Effective type: '+c.effectiveType);if(typeof c.downlink==='number')lines.push('Estimated downlink: '+c.downlink+' Mbps');if(typeof c.rtt==='number')lines.push('Estimated RTT: '+c.rtt+' ms');if(typeof c.saveData==='boolean')lines.push('Data saver: '+(c.saveData?'On':'Off'));}
+  else lines.push('Connection details: browser does not expose them.');
+  lines.push('Wi-Fi name, local IP and connected-device list are not exposed to ordinary web pages. Use your router app / Android Settings for those.');
+  rd6Msg('AUTO NETWORK SCAN',lines.join('\n'),'warn');
+}
+function rd6GhostEnable(){
+  if(!confirm('Ghost Protocol ON karna hai? 30 seconds baad RUDHAR ki visible chat aur locally saved chat history clear hogi. Ye remote copies, screenshots, downloads ya server logs delete nahi karta.'))return;
+  try{localStorage.setItem('rd6_ghost_until',String(Date.now()+30000));localStorage.setItem('rd_ghost','1');}catch(e){}
+  rd6Msg('GHOST PROTOCOL ON','30-second local auto-clear timer active hai. Timer background mein pause ho sakta hai; app dobara khulne par expiry check hogi. Ye screenshot blocking ya remote message self-destruct nahi hai.','warn');
+  rd6GhostSchedule();
+}
+function rd6GhostDisable(){if(RD6_GHOST_TIMER)clearInterval(RD6_GHOST_TIMER);RD6_GHOST_TIMER=null;try{localStorage.removeItem('rd6_ghost_until');localStorage.removeItem('rd_ghost');}catch(e){}rd6Msg('GHOST PROTOCOL OFF','Auto-clear timer band kar diya.','ok');}
+function rd6GhostSchedule(){if(RD6_GHOST_TIMER)clearInterval(RD6_GHOST_TIMER);RD6_GHOST_TIMER=setInterval(function(){var until=0;try{until=Number(localStorage.getItem('rd6_ghost_until')||0);}catch(e){}if(!until){clearInterval(RD6_GHOST_TIMER);RD6_GHOST_TIMER=null;return;}if(Date.now()<until)return;clearInterval(RD6_GHOST_TIMER);RD6_GHOST_TIMER=null;try{localStorage.removeItem('rd_hist');localStorage.removeItem('rd6_ghost_until');localStorage.removeItem('rd_ghost');}catch(e){}hist=[];var log=$('log');if(log)log.innerHTML='';ensureRain();sysMsg('GHOST PROTOCOL','Local chat/history clear ho gayi. Ye external copies, screenshots, downloads, backups ya server logs delete nahi karta.','warn');},500);}
+(function(){try{if(Number(localStorage.getItem('rd6_ghost_until')||0)>Date.now())rd6GhostSchedule();else localStorage.removeItem('rd6_ghost_until');}catch(e){}})();
+function rd6BackupNow(){
+  var data={app:'RUDHAR AI',exportedAt:new Date().toISOString(),notice:'Contains chat text and Navya memory only. API keys, password vault, OTPs and other secrets are intentionally excluded.',chat:[],navyaMemory:[]};
+  try{data.chat=JSON.parse(localStorage.getItem('rd_hist')||'[]');}catch(e){}
+  try{data.navyaMemory=JSON.parse(localStorage.getItem('rd4_navya_memory')||'[]');}catch(e){}
+  var blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download='rudhar-backup-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},1500);
+  rd6Msg('CHAT BACKUP','Backup JSON download start kiya. Is file mein private chats ho sakti hain—secure jagah par rakho. Browser band hone par automatic 2 AM backup guarantee nahi hota.','ok');
+}
+function rd6SosLocation(){
+  if(!navigator.geolocation)return rd6Msg('SOS LOCATION','Is device/browser mein location support nahi hai.','err');
+  if(!confirm('Current location read karun? Share karne se pehle tumhe alag se confirm karna hoga.'))return;
+  rd6Msg('SOS LOCATION','Location permission allow karo…','warn');
+  navigator.geolocation.getCurrentPosition(function(pos){var lat=pos.coords.latitude,lon=pos.coords.longitude;var url='https://maps.google.com/?q='+lat+','+lon;var row=document.createElement('div');row.className='row';var box=document.createElement('div');box.className='sys warn';box.textContent='SOS location ready\nAccuracy: about '+Math.round(pos.coords.accuracy)+' m\nKisi ko automatically send nahi kiya gaya.';var open=document.createElement('button');open.textContent='Open map';open.style.cssText='margin:8px;padding:8px;border:1px solid #ff1e3c';open.onclick=function(){window.open(url,'_blank','noopener');};var share=document.createElement('button');share.textContent='Share location…';share.style.cssText='margin:8px;padding:8px;border:1px solid #ff1e3c';share.onclick=async function(){try{if(navigator.share)await navigator.share({title:'My SOS location',text:'My current location: '+lat+', '+lon,url:url});else{await navigator.clipboard.writeText(url);rd6Msg('SOS LOCATION','Map link clipboard mein copy hua. Ab tum khud trusted contact ko bhej sakte ho.','ok');}}catch(e){rd6Msg('SOS LOCATION','Share cancel hua ya unavailable hai. Link: '+url,'warn');}};box.appendChild(document.createElement('br'));box.append(open,share);row.appendChild(box);$('log').appendChild(row);scroll();try{localStorage.setItem('rd4_last_location',JSON.stringify({lat:lat,lon:lon,accuracy:Math.round(pos.coords.accuracy),time:new Date().toISOString()}));}catch(e){}},function(e){rd6Msg('SOS LOCATION','Location nahi mili: '+(e.message||e.code)+'. GPS aur permission check karo.','err');},{enableHighAccuracy:true,timeout:15000,maximumAge:0});
+}
+function rd6PasswordSave(){
+  var len=20;var p=makePassword(len);var label=prompt('Vault entry ka label (e.g. Test account):');if(!label)return rd6Msg('PASSWORD FORTRESS','Save cancel kiya. Generated password ko chat history mein nahi dikhaya.','warn');
+  var username=prompt('Username/email (optional):')||'';
+  rd4VaultAdd(label+' | '+username+' | '+p);
+  rd6Msg('PASSWORD FORTRESS','Strong random password generate hua. Agar vault save complete hua to confirmation alag aayega. Master password private rakho.','ok');
+}
+function rd6CalculatorVault(){
+  var pin=null;try{pin=localStorage.getItem('rd_pin');}catch(e){}
+  if(!pin){rd6Msg('RUDHAR PIN LOCK','Ye sirf RUDHAR interface ko lock karta hai, Gallery ya doosri apps ko nahi. PIN set karne ke liye type karo: pin lock set 1234 (apna unique PIN use karo).','warn');return;}
+  showLock();rd6Msg('RUDHAR PIN LOCK','App lock screen khol di. Ye calculator disguise nahi hai aur Android Gallery ko hide nahi karta.','warn');
+}
+// ---------- RUDHAR Aggressive Mode: authorized ethical-hacking toolkit ----------
+var RD_AGG_MODE = false;
+try { RD_AGG_MODE = localStorage.getItem('rd_aggressive_mode') === '1'; } catch(e) {}
+function rdAggRefresh(){var b=document.getElementById('rdAggBadge');if(b)b.style.display=RD_AGG_MODE?'block':'none';}
+function rdAggSet(on){RD_AGG_MODE=!!on;try{localStorage.setItem('rd_aggressive_mode',RD_AGG_MODE?'1':'0');}catch(e){}rdAggRefresh();
+  if(RD_AGG_MODE){rd6Msg('⚡ AGGRESSIVE MODE ON','Ethical Hacking Toolkit active. Main authorized lab/own-device testing, hardening, threat analysis aur defensive workflows par focus karunga. Unauthorized targets, credential theft, malware, stealth ya destructive actions supported nahi.\n\nCommands: `ethical hacking toolkit`, `lab checklist`, `web security audit`, `local network audit`, `aggressive mode off`.','ok');}
+  else {rd6Msg('AGGRESSIVE MODE OFF','Normal RUDHAR mode wapas active hai.','ok');}}
+function rdAggToolkit(){rd6Msg('⚡ ETHICAL HACKING TOOLKIT',
+'Use only on your own devices, localhost, intentionally vulnerable training labs, or systems with written permission.\n\n'+
+'1. Nmap — lab/localhost service inventory: `nmap -sV 127.0.0.1` (sirf apne local lab par).\n'+
+'2. OWASP ZAP — authorized test web app par passive scan; start with passive mode.\n'+
+'3. Burp Suite Community — apne test browser/app ke requests inspect karo; test accounts use karo.\n'+
+'4. Wireshark — apne device/lab ka traffic analyze karo; private traffic capture/share mat karo.\n'+
+'5. Semgrep — apne source code mein insecure patterns check karo.\n'+
+'6. Trivy / npm audit / pip-audit — apni dependencies aur container images ke known vulnerabilities check karo.\n'+
+'7. Lynis — apne Linux machine ki configuration audit.\n'+
+'8. OWASP Juice Shop / DVWA — intentionally vulnerable practice targets.\n\n'+
+'Start: `lab checklist` ya `web security audit`. Ye HTML tool commands ko khud execute nahi karta; Termux/native execution ke liye explicit confirmation aur safe setup chahiye.','ok');}
+function rdAggChecklist(){rd6Msg('LAB CHECKLIST',
+'1) Target ownership/written permission confirm karo.\n2) Test scope, allowed IP/domain aur time window likho.\n3) Production ke bajay staging/lab use karo; backup lo.\n4) Test account + non-sensitive sample data use karo.\n5) Pehle passive checks/dependency audit chalao.\n6) Findings ko evidence, impact, fix aur retest ke saath record karo.\n7) Test ke baad temporary accounts/keys remove karo.','ok');}
+function rdAggRoute(t){
+  if(/^(?:aggressive mode|aggressive mode on|mode aggressive|switch to aggressive mode|switch mode aggressive|ethical hacking mode|pentest mode on|red team mode on|aggressive on|aggressive mod on|aggressive mode chalu|aggressive mode start|aggressive mode activate|aggressive mode (?:on karo|chalu karo|start karo|activate karo)|ai ko aggressive mode me (?:switch|chalu|on) karo|aggressive mode me jao)$/i.test(t)){rdAggSet(true);return true;}
+  if(/^(?:aggressive mode off|normal mode|switch to normal mode|mode normal|aggressive off|aggressive mode band|ethical hacking mode off|pentest mode off|red team mode off)$/i.test(t)){rdAggSet(false);return true;}
+  if(/^(?:aggressive mode status|mode status|current mode|kaunsa mode|which mode)$/i.test(t)){rd6Msg('MODE STATUS',RD_AGG_MODE?'AGGRESSIVE MODE ON — authorized ethical hacking/lab assistance active.':'NORMAL MODE — general assistant active.','ok');return true;}
+  if(/^(?:ethical hacking toolkit|aggressive tools|hacking toolkit|pentest toolkit|toolkit|tools kit|ethical hacking tools)$/i.test(t)){if(!RD_AGG_MODE){rd6Msg('TOOLKIT LOCKED','Pehle `aggressive mode on` bolo.','warn');return true;}rdAggToolkit();return true;}
+  if(/^(?:lab checklist|pentest checklist|authorized test checklist)$/i.test(t)){if(!RD_AGG_MODE){rd6Msg('AGGRESSIVE MODE OFF','Pehle `aggressive mode on` bolo.','warn');return true;}rdAggChecklist();return true;}
+  if(/^(?:web security audit|website security audit|web audit plan)$/i.test(t)){if(!RD_AGG_MODE){rd6Msg('AGGRESSIVE MODE OFF','Pehle `aggressive mode on` bolo.','warn');return true;}rd6Msg('WEB SECURITY AUDIT','Authorized staging/lab ke liye: (1) scope confirm, (2) TLS/security headers check, (3) dependency audit, (4) passive ZAP scan, (5) login/session/cookie settings manually review, (6) findings ko reproduce aur document karo, (7) fix ke baad retest. Login bypass, data extraction ya production exploitation nahi.','ok');return true;}
+  if(/^(?:local network audit|my device security audit|linux hardening audit)$/i.test(t)){if(!RD_AGG_MODE){rd6Msg('AGGRESSIVE MODE OFF','Pehle `aggressive mode on` bolo.','warn');return true;}rd6Msg('LOCAL SECURITY AUDIT','Apne device par hi: OS/packages update karo; listening services review karo; firewall status check karo; unused services band karo; SSH keys/password policy review karo; backups aur disk encryption verify karo. Linux lab mein `ss -tulpen`, `ufw status`, aur `lynis audit system` jaise read-only/audit checks samajhne mein help kar sakta hun. HTML khud ye commands execute nahi karta.','ok');return true;}
+  return false;
+}
+rdAggRefresh();
+
+function rd6FeatureRoute(t){var m;
+  if(/^(?:rudhar god mode|god mode help|rudhar help|all features)$/i.test(t)){rd6GodHelp();return true;}
+  if(/^(?:ghost protocol on|self destruct mode on|auto clear chat on)$/i.test(t)){rd6GhostEnable();return true;}
+  if(/^(?:ghost protocol off|self destruct mode off|auto clear chat off)$/i.test(t)){rd6GhostDisable();return true;}
+  if(/^(?:auto network scan|network scan now|wifi radar status|wifi intruder trap)$/i.test(t)){rd6NetworkScan();rd4WifiAlert();return true;}
+  if(/^(?:dark web leak hunter|dark web leak check|email breach check)$/i.test(t)){rd4LeakCheck();return true;}
+  if((m=/^(?:phishing hunter|auto phishing guard|scan this link|phishing hunter ai)\s*:?\s*(https?:\/\/\S+|www\.\S+|\S+\.\S+)$/i.exec(t))){showLinkReport(m[1]);return true;}
+  if(/^(?:phishing hunter|auto phishing guard|phishing hunter ai)$/i.test(t)){rd6Msg('PHISHING HUNTER','Link manually paste karo: `phishing hunter: https://example.com`. Clipboard/background links ko HTML silently monitor nahi kar sakta. Check heuristic hai, definitive malware scan nahi.','warn');return true;}
+  if(/^(?:voice dna lock set|voice lock set)$/i.test(t)){rd4VoiceSet();return true;}
+  if(/^(?:voice dna lock test|voice lock test)$/i.test(t)){rd4VoiceTest();return true;}
+  if(/^(?:voice dna lock remove|voice lock remove)$/i.test(t)){try{localStorage.removeItem('rd4_voice_hash');}catch(e){}rd6Msg('VOICE LOCK','Demo transcript phrase remove hua. Ye biometric voiceprint nahi hai.','ok');return true;}
+  if(/^(?:intruder selfie vault|intruder vault|watch guard camera)$/i.test(t)){rd5WatchStatus();rd6Msg('INTRUDER VAULT','Privacy-safe mode: failed PIN attempts ka local timestamp log hi rakha jayega. Secret camera/photo/location capture nahi hoga. Camera testing ke liye visible consent aur native Android permission flow zaroori hai.','warn');return true;}
+  if(/^(?:military shredder|file shredder|secure cleanup)$/i.test(t)){rd5Shredder();return true;}
+  if(/^(?:auto password save|password fortress save|generate and save password)$/i.test(t)){rd6PasswordSave();return true;}
+  if(/^(?:chat backup now|backup chat|export chat backup|auto chat saver)$/i.test(t)){rd6BackupNow();return true;}
+  if((m=/^(?:mummy|mom|mother) ko bol\s*:?\s*(.+)$/i.exec(t))){doSms('Mummy',m[1].trim());return true;}
+  if((m=/^auto sms\s+(?:to\s+)?([^:]+)\s*:\s*(.+)$/i.exec(t))){doSms(m[1].trim(),m[2].trim());return true;}
+  if(/^daily backup on$/i.test(t)){try{localStorage.setItem('rd6_daily_backup','1');}catch(e){}rd6Msg('DAILY BACKUP','Preference saved. Reliable 2 AM background backup ke liye APK mein native Android WorkManager, file permissions aur user-visible setup chahiye. Browser timer band hone par run nahi kar sakta. Abhi `chat backup now` use karo.','warn');return true;}
+  if(/^daily backup off$/i.test(t)){try{localStorage.removeItem('rd6_daily_backup');}catch(e){}rd6Msg('DAILY BACKUP','Daily backup preference off kar di.','ok');return true;}
+  if(/^(?:sos location|send sos location|emergency location|auto location sender)$/i.test(t)){rd6SosLocation();return true;}
+  if(/^(?:calculator vault|privacy locker|auto app locker|app locker)$/i.test(t)){rd6CalculatorVault();return true;}
+  if(/^(?:termux open|open termux|termux connect|termux auto-connect)$/i.test(t)){if(NATIVE&&P&&P.openApp){var r=P.openApp('Termux');rd6Msg('TERMUX CONNECT','Native app request: '+r+'. Command execute karne se pehle confirmation required rahegi.','ok');}else rd6Msg('TERMUX CONNECT','HTML mode se Termux auto-open nahi hota. APK mein native bridge configure karo; phir safe command confirmation ke saath bhejo.','warn');return true;}
+  if(/^(?:auto otp protector|otp protector|blur otp automatically)$/i.test(t)){rd5OtpBlur();return true;}
+  if(/^(?:voice commands|jarvis commands)$/i.test(t)){rd6Msg('JARVIS COMMANDS','Type `jarvis voice on` and allow microphone. Supported commands include “Ghost mode on”, “OTP blur on kar”, “Scam check kar 9876543210”, “Watch Guard on”. Voice recognition support varies by Android WebView; this is not voice biometrics.','ok');return true;}
+  return false;
+}
+
+buildRain();
+refreshVoiceUI();
+greet();
+fillModelSel();
+restoreRems();
+restoreChat();
+lockIfSet();
+ensureRain();
+requestAnimationFrame(rainFrame);
+
+function fitDesk(){
+  var W = 980;
+  var vw = window.innerWidth;
+  var vh = (window.visualViewport && window.visualViewport.height) || window.innerHeight;
+  var s = Math.min(vw / W, 1);
+  var a = document.querySelector(".app");
+  a.style.width = W + "px";
+  a.style.height = (vh / s) + "px";
+  a.style.transform = "translate(" + Math.max(0, (vw - W * s) / 2) + "px,0) scale(" + s + ")";
+}
+window.addEventListener("resize", fitDesk);
+if (window.visualViewport) window.visualViewport.addEventListener("resize", fitDesk);
+fitDesk();
+</script>
+</body>
+</html>
