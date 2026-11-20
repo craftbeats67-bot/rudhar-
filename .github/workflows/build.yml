@@ -19,7 +19,7 @@ jobs:
           gradle-version: '8.9'
       - name: Prepare project
         run: |
-          unzip -o rudhar-android.zip
+          unzip -o rudhar-android-2.zip
           HTML=$(ls *.html | head -n1)
           echo "Using $HTML"
           mkdir -p app/src/main/assets
